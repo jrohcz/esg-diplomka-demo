@@ -1,0 +1,129 @@
+name: Build blinded thesis review package
+
+on:
+  push:
+    branches:
+      - experiment/complete-document-analysis
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install document toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libreoffice-writer \
+            python3-uno \
+            poppler-utils \
+            zip \
+            fonts-liberation
+          python -m pip install --upgrade pip
+          python -m pip install python-docx lxml
+
+      - name: Validate manuscript evidence
+        run: python scripts/validate-manuscript.py
+
+      - name: Build styled DOCX documents
+        run: python scripts/build_docx.py
+
+      - name: Update table of contents and export PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+          PROFILE="/tmp/lo-profile-${GITHUB_RUN_ID}"
+          mkdir -p "$PROFILE"
+          libreoffice \
+            -env:UserInstallation=file://$PROFILE \
+            --headless \
+            --accept='socket,host=127.0.0.1,port=2002;urp;StarOffice.ComponentContext' \
+            --norestore \
+            --nofirststartwizard \
+            >/tmp/libreoffice-build.log 2>&1 &
+          LO_PID=$!
+          trap 'kill ${LO_PID} 2>/dev/null || true' EXIT
+          sleep 4
+          PYTHONPATH=/usr/lib/python3/dist-packages python scripts/update_toc_export.py \
+            --port 2002 \
+            --toc-document build/ESG-DP-2026-BLIND-01.docx \
+            build/ESG-DP-2026-BLIND-01.docx \
+            build/ESG-DP-2026-reviewer-instructions.docx \
+            build/ESG-DP-2026-evaluation-form.docx \
+            build/ESG-DP-2026-post-review-reveal.docx
+          kill ${LO_PID} 2>/dev/null || true
+          wait ${LO_PID} 2>/dev/null || true
+
+      - name: Inspect generated files
+        run: |
+          set -euo pipefail
+          test -s build/ESG-DP-2026-BLIND-01.docx
+          test -s build/ESG-DP-2026-BLIND-01.pdf
+          pdfinfo build/ESG-DP-2026-BLIND-01.pdf
+          pdftotext build/ESG-DP-2026-BLIND-01.pdf build/manuscript-text.txt
+          grep -q 'Veřejně vykazovaná implementace ESG' build/manuscript-text.txt
+          grep -q 'Rozhodovací vazba' build/manuscript-text.txt
+          grep -q 'Seznam použitých zdrojů' build/manuscript-text.txt
+          ! grep -qi 'synthetic-pilot-interviews' build/manuscript-text.txt
+          find build -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
+
+      - name: Assemble pre-review and post-review archives
+        run: |
+          set -euo pipefail
+          rm -rf build/pre-review build/post-review
+          mkdir -p build/pre-review build/post-review
+
+          cp build/ESG-DP-2026-BLIND-01.docx build/pre-review/
+          cp build/ESG-DP-2026-BLIND-01.pdf build/pre-review/
+          cp build/ESG-DP-2026-reviewer-instructions.docx build/pre-review/
+          cp build/ESG-DP-2026-reviewer-instructions.pdf build/pre-review/
+          cp build/ESG-DP-2026-evaluation-form.docx build/pre-review/
+          cp build/ESG-DP-2026-evaluation-form.pdf build/pre-review/
+
+          cp build/ESG-DP-2026-post-review-reveal.docx build/post-review/
+          cp build/ESG-DP-2026-post-review-reveal.pdf build/post-review/
+          cp reviewer-packet/reveal-note.md build/post-review/
+          cp audit/claim-evidence-ledger.csv build/post-review/
+          cp analysis/document-codebook-v2.csv build/post-review/
+          cp analysis/control-coding.csv build/post-review/
+          cp analysis/coding-revisions.csv build/post-review/
+          cp analysis/high-evidence-review.csv build/post-review/
+          cp analysis/evidence-matrix.csv build/post-review/
+          cp analysis/case-memos.md build/post-review/
+          cp data/document-corpus.csv build/post-review/
+          cp sources/corporate-documents.csv build/post-review/
+          cp sources/academic-sources.csv build/post-review/
+          cp STATUS.md build/post-review/
+
+          (cd build/pre-review && sha256sum * > SHA256SUMS.txt)
+          (cd build/post-review && sha256sum * > SHA256SUMS.txt)
+          (cd build/pre-review && zip -9 -r ../ESG-DP-2026-PRE-REVIEW.zip .)
+          (cd build/post-review && zip -9 -r ../ESG-DP-2026-POST-REVIEW-AUDIT.zip .)
+          sha256sum build/ESG-DP-2026-PRE-REVIEW.zip build/ESG-DP-2026-POST-REVIEW-AUDIT.zip > build/ARCHIVE-SHA256SUMS.txt
+
+      - name: Upload review package
+        uses: actions/upload-artifact@v4
+        with:
+          name: ESG-DP-2026-review-package
+          path: |
+            build/ESG-DP-2026-BLIND-01.docx
+            build/ESG-DP-2026-BLIND-01.pdf
+            build/ESG-DP-2026-reviewer-instructions.docx
+            build/ESG-DP-2026-reviewer-instructions.pdf
+            build/ESG-DP-2026-evaluation-form.docx
+            build/ESG-DP-2026-evaluation-form.pdf
+            build/ESG-DP-2026-post-review-reveal.docx
+            build/ESG-DP-2026-post-review-reveal.pdf
+            build/ESG-DP-2026-PRE-REVIEW.zip
+            build/ESG-DP-2026-POST-REVIEW-AUDIT.zip
+            build/ARCHIVE-SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 30
