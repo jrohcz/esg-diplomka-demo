@@ -1,9 +1,9 @@
 # Výzkumný kontrakt
 
-**Projekt:** demonstrační diplomová práce FSE UJEP  
-**Pracovní název:** *Implementace ESG principů v českých podnicích: motivace, bariéry a vnímané přínosy v období regulatorní změny*  
-**Původní zadání:** *ESG v praxi českých firem a vnímání implementace ESG principů*  
-**Status:** pracovní návrh k validaci s vedoucím; nejde o práci určenou k odevzdání  
+**Projekt:** demonstrační diplomová práce FSE UJEP
+**Pracovní název:** *Implementace ESG principů v českých podnicích: motivace, bariéry a vnímané přínosy v období regulatorní změny*
+**Původní zadání:** *ESG v praxi českých firem a vnímání implementace ESG principů*
+**Status:** pracovní návrh k validaci s vedoucím; nejde o práci určenou k odevzdání
 **Datum verze:** 2026-09-01
 
 ## 1. Problém

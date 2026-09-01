@@ -1,0 +1,1 @@
+event_id,timestamp_iso,researcher,stage,artifact_path,artifact_version,ai_system,model_version,interface,purpose,input_classification,prompt_ref,input_summary,output_summary,human_decision,verification_method,evidence_refs,changes_made,risk_flags,personal_data_included,disclosure_required,reviewer,review_date,status,notes
