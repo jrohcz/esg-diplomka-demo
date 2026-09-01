@@ -1,7 +1,7 @@
 # Zmrazené výstupy ESG-DP-2026-BLIND-01
 
 **Datum verze:** 1. 9. 2026  
-**Zdrojový commit sestavení:** a864a330747bdc45596f6299d920c6fe014f0489
+**Zdrojový commit sestavení:** b92911da9908bfa353dc8e039bdbf60e3f65e2fc
 
 ## 01-send-to-reviewers
 
