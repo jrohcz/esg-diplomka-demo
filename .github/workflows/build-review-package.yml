@@ -34,7 +34,7 @@ jobs:
         run: python scripts/validate-manuscript.py
 
       - name: Build styled DOCX documents
-        run: python scripts/build_docx.py
+        run: python scripts/build_docx_v2.py
 
       - name: Update table of contents and export PDFs
         shell: bash
@@ -68,10 +68,13 @@ jobs:
           test -s build/ESG-DP-2026-BLIND-01.docx
           test -s build/ESG-DP-2026-BLIND-01.pdf
           pdfinfo build/ESG-DP-2026-BLIND-01.pdf
+          pdfinfo build/ESG-DP-2026-BLIND-01.pdf | grep -q 'A4'
           pdftotext build/ESG-DP-2026-BLIND-01.pdf build/manuscript-text.txt
           grep -q 'Veřejně vykazovaná implementace ESG' build/manuscript-text.txt
           grep -q 'Rozhodovací vazba' build/manuscript-text.txt
           grep -q 'Seznam použitých zdrojů' build/manuscript-text.txt
+          grep -q 'externě podpořený konkrétní výsledek' build/manuscript-text.txt
+          ! grep -q '46\. překryv' build/manuscript-text.txt
           ! grep -qi 'synthetic-pilot-interviews' build/manuscript-text.txt
           find build -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
 
