@@ -1,60 +1,89 @@
-# ESG diplomka — demonstrační projekt
+# ESG diplomka — experimentální hodnoticí rukopis
 
-> **DEMONSTRAČNÍ PROJEKT, NIKOLI HOTOVÁ DIPLOMOVÁ PRÁCE.** Soubory v `data/` a `analysis/` označené jako syntetické obsahují výhradně uměle vytvořená data. Neproběhl žádný rozhovor a syntetický pilot nesmí být prezentován jako empirický výsledek.
+> **VÝZKUMNÝ ARTEFAKT, NIKOLI SKUTEČNĚ ODEVZDÁVANÁ DIPLOMOVÁ PRÁCE.**
+>
+> Projekt testuje, zda současný velký jazykový model dokáže vytvořit úplný, auditovatelný a odborně hodnotitelný rukopis. Neusiluje o získání akademického titulu, neobsahuje falešné čestné prohlášení a nesmí být vydáván za práci konkrétního studenta.
 
-Demonstrační výzkumný projekt k tématu:
+## Název rukopisu
 
-> **Implementace ESG principů v českých podnicích: motivace, bariéry a vnímané přínosy v období regulatorní změny**
+**Veřejně vykazovaná implementace ESG ve vybraných velkých podnicích působících v České republice**
 
-FSE UJEP · Ekonomika a management veřejného sektoru.
+Výzkum používá komparativní kvalitativní analýzu oficiálních firemních reportů za rok 2024. Původní syntetický rozhovorový pilot zůstává v repozitáři pouze jako historický demonstrační materiál a **není použit v empirické části finálního rukopisu**.
 
-Projekt ukazuje transparentní proces: výzkumný kontrakt, ověřené akademické a regulatorní zdroje, metodologii rozhovorů, šablony evidence, syntetický pilot, analýzu a audit využití AI. Není určen k odevzdání jako studentská práce; školní, etické, GDPR a citační požadavky musí před empirickou fází potvrdit vedoucí a UJEP.
+## Stav
 
-## Stav k 1. 9. 2026
+- úplný text od abstraktu po závěr;
+- čtyři kontrastní případy: ČEZ Group, MONETA Money Bank, O2 Czech Republic a Škoda Auto;
+- 45 klíčových důkazních segmentů s přesnými lokátory;
+- finální kódovací slovník E0–E4;
+- případová mema a mezipřípadová evidenční matice;
+- desetiprocentní kontrolní kódování;
+- druhá kontrola všech devíti položek E3/E4;
+- claim-evidence ledger pro hlavní tvrzení rukopisu;
+- zaslepené pokyny a formulář pro nezávislé hodnotitele;
+- samostatná odtajňovací zpráva o produkčním procesu;
+- deterministický validační skript.
 
-- všech **19 cílových artefaktů** existuje;
-- akademický registr obsahuje **17/17 DOI ověřených přes Crossref**;
-- regulatorní přehled rozlišuje účinné právo EU, transpozici, delegovaný akt a návrh;
-- všech 7 CSV souborů prochází striktním Python `csv` parserem se stabilním počtem sloupců;
-- syntetická data a syntetická analýza jsou výrazně označeny a odděleny od budoucího empirického korpusu;
-- úplný merge audit je v [`STATUS.md`](STATUS.md).
+## Rukopis
 
-## Artefakty
+Pořadí zdrojových kapitol je uvedeno v [`thesis/README.md`](thesis/README.md):
 
-### Návrh a metodologie
+- `chapters/front-matter.md`
+- `chapters/00-introduction.md`
+- `chapters/01-theoretical-framework.md`
+- `chapters/02-regulatory-context.md`
+- `chapters/03-methodology.md`
+- `chapters/04-results.md`
+- `chapters/05-discussion.md`
+- `chapters/06-conclusion.md`
+- `chapters/references.md`
 
-- `notes/research-contract.md`
-- `notes/thesis-outline.md`
-- `notes/methodology.md`
-- `notes/literature-map.md`
-- `notes/esg-regulatory-czech-2026.md`
-- `notes/ujep-requirements.md`
-- `notes/ai-workflow-and-audit.md`
+Sestavení DOCX podporuje `scripts/build-manuscript.sh`.
 
-### Zdroje
+## Empirický a analytický audit
 
-- `sources/academic-sources.csv`
-- `sources/regulatory-sources.csv`
-- `sources/ujep-sources.csv`
+- `sources/corporate-documents.csv` — registr firemních dokumentů;
+- `data/document-corpus.csv` — první kolo důkazních segmentů;
+- `analysis/document-codebook-v2.csv` — finální slovník;
+- `analysis/coding-revisions.csv` — změny po kontrole;
+- `analysis/control-coding.csv` — kontrolní vzorek;
+- `analysis/high-evidence-review.csv` — kontrola E3/E4;
+- `analysis/evidence-matrix.csv` — mezipřípadová syntéza;
+- `analysis/case-memos.md` — vnitropřípadové interpretace;
+- `audit/claim-evidence-ledger.csv` — vazba tvrzení na důkazy.
 
-### Výzkumné šablony
+## Balíček pro hodnotitele
 
-- `templates/interview-guide.md`
-- `templates/consent-and-information-sheet.md`
-- `templates/respondent-matrix.csv`
-- `templates/evidence-ledger.csv`
-- `audit/ai-use-log-template.csv`
+- [`reviewer-packet/README.md`](reviewer-packet/README.md) — podmínky zaslepení;
+- [`reviewer-packet/evaluation-form.md`](reviewer-packet/evaluation-form.md) — posudkový formulář;
+- [`reviewer-packet/reveal-note.md`](reviewer-packet/reveal-note.md) — předat až po uzavření známky.
 
-### Demonstrační kapitola a syntetický pilot
+## Hlavní metodické pravidlo
 
-- `chapters/01-theoretical-framework-demo.md`
-- `data/synthetic-pilot-interviews.md` — **SYNTHETICKÁ / NE EMPIRICKÁ DATA**
-- `analysis/codebook-v1.csv` — **KÓDOVÁNÍ SYNTHETICKÉHO PILOTU**
-- `analysis/synthetic-pilot-analysis.md` — **SYNTHETICKÁ / NE EMPIRICKÁ ANALÝZA**
+Jednotkou hodnocení není firma, ale konkrétní tvrzení. Škála rozlišuje:
+
+- **E0:** deklarace;
+- **E1:** aktivita nebo výstup;
+- **E2:** formalizovaný proces nebo řízený výsledek;
+- **E3:** vazba na kapitál, riziko, produkt, dodavatele, odměnu nebo provoz;
+- **E4:** přesně vymezený výsledek se silnou externí podporou.
+
+Assurance je evidováno samostatně. Externě ověřená zpráva není automaticky důkazem manažerské integrace ani skutečného dopadu.
+
+## Validace
+
+```bash
+python scripts/validate-manuscript.py
+bash scripts/build-manuscript.sh
+```
+
+Validátor kontroluje strukturu CSV, počet a distribuci segmentů, pokrytí kontroly E3/E4, claim ledger a to, že finální empirický text necituje syntetický pilot.
 
 ## Kritická omezení
 
-1. Metadata a DOI nenahrazují četbu plných textů a kontrolu konkrétních tvrzení proti stranám originálu.
-2. Právní závěr pro konkrétní českou firmu vyžaduje aktuální konsolidované právo, českou transpozici a individuální posouzení.
-3. Šablony souhlasu a GDPR jsou pracovní; před náborem je musí potvrdit správce údajů / UJEP.
-4. Syntetický pilot testuje proces, nikoli realitu českých podniků.
+1. Firemní report je oficiální sebeprezentace, nikoli nezávislý audit provozu.
+2. Čtyři velké podniky nejsou reprezentativním vzorkem české ekonomiky.
+3. Analýza hodnotí reporty za rok 2024; pozdější právní a organizační změny nejsou zpětně promítány.
+4. Dokumentový design neověřuje zkušenost zaměstnanců, dodavatelů, zákazníků ani komunit.
+5. Vysoká třída důkazu u konkrétního segmentu není celkovým ESG ratingem firmy.
+6. Skutečná schopnost autora práci obhájit vyžaduje samostatný experiment.
