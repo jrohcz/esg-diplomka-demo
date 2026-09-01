@@ -1,6 +1,6 @@
 # Formulář nezávislého posudku
 
-**Identifikátor rukopisu:** ESG-DP-2026-BLIND-01  
+**Identifikátor rukopisu:** ESG-DP-2026-REVIEW  
 **Hodnotitel:**  
 **Instituce / odborná oblast:**  
 **Datum převzetí:**  
