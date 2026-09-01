@@ -1,6 +1,8 @@
 # Sestavení rukopisu
 
-## Zaslepená hodnoticí verze
+## Kanonická hodnoticí verze
+
+Identifikátor finálního rukopisu je `ESG-DP-2026-REVIEW`.
 
 Pořadí zdrojových souborů:
 
@@ -14,21 +16,27 @@ Pořadí zdrojových souborů:
 8. `chapters/06-conclusion.md`
 9. `chapters/references.md`
 
-Zaslepená verze neobsahuje produkční audit ani informaci o konkrétním modelu. Titulní strana ji výslovně označuje jako experimentální rukopis, který není podáván k získání akademického titulu.
+Hodnoticí dokument neobsahuje produkční audit ani informaci o konkrétním modelu. Titulní strana jej výslovně označuje jako experimentální rukopis, který není podáván k získání akademického titulu.
 
 ## Balíček pro hodnotitele
 
 - `reviewer-packet/README.md` — instrukce před hodnocením;
 - `reviewer-packet/evaluation-form.md` — posudkový formulář;
-- `reviewer-packet/reveal-note.md` — předat až po uzamčení posudku.
+- `reviewer-packet/reveal-note.md` — předat až po uzavření původního posudku.
+
+Hotové soubory se publikují do:
+
+- `deliverables/final/01-send-to-reviewers/`;
+- `deliverables/final/02-after-review/`;
+- `deliverables/final/03-source-and-audit/`.
 
 ## Reprodukční podklady
 
 - `sources/corporate-documents.csv` — registr empirického korpusu;
-- `data/document-corpus.csv` — první kolo důkazních segmentů;
+- `data/document-corpus.csv` — důkazní segmenty;
 - `analysis/document-codebook-v2.csv` — finální slovník;
 - `analysis/coding-revisions.csv` — změny po kontrolním kódování;
-- `analysis/control-coding.csv` — desetiprocentní kontrolní vzorek;
+- `analysis/control-coding.csv` — kontrolní vzorek;
 - `analysis/high-evidence-review.csv` — druhá kontrola E3/E4;
 - `analysis/evidence-matrix.csv` — mezipřípadová matice;
 - `analysis/case-memos.md` — případová mema;
@@ -36,8 +44,12 @@ Zaslepená verze neobsahuje produkční audit ani informaci o konkrétním model
 
 ## Příkaz pro sestavení
 
-Skript `scripts/build-manuscript.sh` používá Pandoc. Výsledné DOCX je vhodné následně otevřít v kancelářském editoru, aktualizovat obsah a zkontrolovat zalomení tabulek. PDF se vytváří z finálního DOCX, aby obě hodnoticí verze měly shodnou sazbu.
+```bash
+bash scripts/build-manuscript.sh
+```
 
-## Verze
+Skript nejprve spustí datovou a strukturální validaci, následně vytvoří formátované DOCX dokumenty, aktualizuje obsah pomocí LibreOffice a exportuje PDF. GitHub workflow navíc připraví ZIP balíčky, kontrolní součty a publikuje jedinou kanonickou sadu výstupů do `deliverables/final/`.
 
-Hodnotitelům vždy posílejte soubory se stejným identifikátorem verze. Posudek musí být uzavřen před otevřením `reviewer-packet/reveal-note.md` nebo historie repozitáře.
+## Pravidlo rozesílání
+
+Hodnotitelům vždy posílejte pouze obsah `01-send-to-reviewers` se shodným identifikátorem a kontrolním součtem. Posudek musí být uzavřen před otevřením `reviewer-packet/reveal-note.md`, auditních souborů nebo historie repozitáře.
