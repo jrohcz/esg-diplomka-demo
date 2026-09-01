@@ -2,84 +2,84 @@
 
 > **VÝZKUMNÝ ARTEFAKT, NIKOLI SKUTEČNĚ ODEVZDÁVANÁ DIPLOMOVÁ PRÁCE.**
 >
-> Projekt testuje, zda současný LLM-orientovaný workflow dokáže vytvořit úplný, auditovatelný a odborně hodnotitelný rukopis. Neusiluje o získání akademického titulu, neobsahuje falešné čestné prohlášení a nesmí být vydáván za práci konkrétního studenta.
+> Projekt testuje, zda workflow založené převážně na současném velkém jazykovém modelu dokáže vytvořit úplný, auditovatelný a odborně hodnotitelný rukopis. Neusiluje o získání akademického titulu, neobsahuje falešné čestné prohlášení a nesmí být vydáván za práci konkrétního studenta.
 
 ## Rychlý vstup
 
-- **Co poslat hodnotitelům:** [`deliverables/2026-09-01/01-send-to-reviewers/`](deliverables/2026-09-01/01-send-to-reviewers/)
-- **Co předat až po uzavření posudku:** [`deliverables/2026-09-01/02-after-review/`](deliverables/2026-09-01/02-after-review/)
-- **Úplný archiv verze:** [`deliverables/2026-09-01/03-complete-build/`](deliverables/2026-09-01/03-complete-build/)
+- **Co poslat hodnotitelům:** [`deliverables/final/01-send-to-reviewers/`](deliverables/final/01-send-to-reviewers/)
+- **Co předat až po uzavření posudku:** [`deliverables/final/02-after-review/`](deliverables/final/02-after-review/)
+- **Úplný interní archiv:** [`deliverables/final/03-source-and-audit/`](deliverables/final/03-source-and-audit/)
 - **Celý postup a mapa souborů:** [`PROCESS.md`](PROCESS.md)
 - **Design zaslepeného experimentu:** [`EXPERIMENT-DESIGN.md`](EXPERIMENT-DESIGN.md)
 - **Aktuální stav a omezení:** [`STATUS.md`](STATUS.md)
 
-GitHub je soukromý pracovní archiv. Hodnotitelům se neposílá přístup do repozitáře, protože obsahuje i odtajňovací a auditní vrstvu.
+Hodnotitelům se neposílá přístup do repozitáře. Obsahuje produkční historii, auditní vrstvu a odtajňovací materiály, které by před uzavřením posudku ovlivnily zaslepení.
 
-## Název rukopisu
+## Hodnocený rukopis
 
-**Veřejně vykazovaná implementace ESG ve vybraných velkých podnicích působících v České republice**
+**Název:** *Veřejně vykazovaná implementace ESG ve vybraných velkých podnicích působících v České republice*  
+**Identifikátor:** `ESG-DP-2026-REVIEW`
 
-Výzkum používá komparativní kvalitativní analýzu oficiálních firemních reportů za rok 2024. Původní syntetický rozhovorový pilot zůstává v repozitáři pouze jako historický demonstrační materiál a **není použit v empirické části finálního rukopisu**.
+Práce používá komparativní kvalitativní analýzu oficiálních firemních reportů za rok 2024. Analyzuje ČEZ Group, MONETA Money Bank, O2 Czech Republic a Škoda Auto. Původní rozhovorový návrh byl během vývoje opuštěn; syntetický demonstrační materiál není součástí empirického korpusu ani výsledků rukopisu.
 
-## Stav finální verze
+## Stav
 
-- úplný rukopis od českého a anglického abstraktu po závěr;
-- 70 stran A4 v hodnoticí verzi;
-- čtyři kontrastní případy: ČEZ Group, MONETA Money Bank, O2 Czech Republic a Škoda Auto;
+- úplný text od českého a anglického abstraktu po závěr a seznam zdrojů;
+- kompletní závěrečná autorská a jazyková redakce všech narativních kapitol;
 - 45 klíčových důkazních segmentů s přesnými lokátory;
 - finální kódovací slovník E0–E4;
 - případová mema a mezipřípadová evidenční matice;
-- desetiprocentní kontrolní kódování;
+- kontrolní překódování přibližně deseti procent korpusu;
 - druhá kontrola všech devíti položek E3/E4;
-- claim-evidence ledger pro 31 hlavních tvrzení rukopisu;
-- zaslepené pokyny a strukturovaný formulář pro nezávislé hodnotitele;
+- claim-evidence ledger pro 31 hlavních tvrzení;
+- pokyny a strukturovaný formulář pro nezávislé hodnotitele;
 - samostatná odtajňovací zpráva;
-- reprodukovatelná validace, sazba do DOCX/PDF a automatizovaný release.
+- reprodukovatelná validace, sazba do DOCX/PDF a automatizované sestavení balíčků.
 
 ## Struktura repozitáře
 
 | Cesta | Obsah |
 |---|---|
-| `deliverables/2026-09-01/` | zmrazené soubory připravené k použití |
+| `deliverables/final/` | jediná kanonická sada hotových výstupů |
 | `chapters/` | zdrojový rukopis po kapitolách |
 | `sources/` | akademické, regulatorní a firemní zdrojové registry |
-| `data/` | empirický dokumentový korpus a historický syntetický pilot |
-| `analysis/` | codebooky, kontroly, případová mema a evidenční matice |
-| `audit/` | vazba hlavních tvrzení na důkazy a AI auditní šablona |
+| `data/` | empirický dokumentový korpus a oddělený historický demonstrační materiál |
+| `analysis/` | kódovací rámce, kontroly, případová mema a evidenční matice |
+| `audit/` | claim-evidence ledger a produkční auditní podklady |
 | `notes/` | výzkumný kontrakt, metodika, osnova, literatura a regulatorní poznámky |
-| `reviewer-packet/` | zdrojové pokyny, hodnoticí formulář a odtajnění |
-| `scripts/` | validační, build a exportní nástroje |
-| `.github/workflows/` | automatické sestavení, kontrola a publikace zmrazených výstupů |
-| `thesis/README.md` | pořadí kapitol a sestavení rukopisu |
+| `reviewer-packet/` | pokyny, hodnoticí formulář a odtajnění |
+| `scripts/` | validační, sazební a exportní nástroje |
+| `.github/workflows/` | automatické sestavení, kontrola a publikace finálních výstupů |
+| `thesis/README.md` | pořadí kapitol a způsob sestavení rukopisu |
 
 ## Hlavní metodické pravidlo
 
 Jednotkou hodnocení není firma, ale konkrétní tvrzení. Škála rozlišuje:
 
-- **E0:** deklarace;
-- **E1:** aktivita nebo výstup;
+- **E0:** deklaraci;
+- **E1:** aktivitu nebo výstup;
 - **E2:** formalizovaný proces nebo řízený výsledek;
-- **E3:** vazba na kapitál, riziko, produkt, dodavatele, odměnu nebo provoz;
+- **E3:** vazbu na kapitál, riziko, produkt, dodavatele, odměnu nebo provoz;
 - **E4:** přesně vymezený výsledek se silnou externí podporou.
 
 Assurance je evidováno samostatně. Externě ověřená zpráva není automaticky důkazem manažerské integrace ani skutečného dopadu.
 
-## Reprodukce
+## Sestavení
 
 ```bash
 python scripts/validate-manuscript.py
 bash scripts/build-manuscript.sh
 ```
 
-GitHub Actions po úspěšné validaci vytvoří DOCX, PDF, předhodnoticí ZIP, odtajňovací ZIP, kontrolní součty a uloží zmrazené výstupy do `deliverables/2026-09-01/`.
+Úspěšný build vytvoří kanonický rukopis `ESG-DP-2026-REVIEW` v DOCX a PDF, hodnoticí dokumenty, balíček k prvnímu rozeslání, samostatný odtajňovací archiv a kontrolní součty. GitHub Actions uloží hotové soubory do `deliverables/final/`.
 
-## Jak provést hodnocení
+## Postup hodnocení
 
-1. Hodnotiteli poslat pouze obsah `01-send-to-reviewers` nebo ZIP v této složce.
+1. Hodnotiteli poslat pouze ZIP nebo jednotlivé soubory ze složky `01-send-to-reviewers`.
 2. Nechat jej uzavřít známku, doporučení k obhajobě a věcný posudek.
-3. Teprve potom vyžádat odhad způsobu vzniku textu.
-4. Zachovat původní posudek beze změny.
-5. Následně předat obsah `02-after-review` a zaznamenat oddělenou reflexi po odtajnění.
+3. Teprve potom zaznamenat odhad způsobu vzniku textu.
+4. Původní posudek archivovat beze změny.
+5. Následně předat obsah `02-after-review` a případnou změnu názoru zachytit jako samostatnou reflexi.
 
 Podrobnosti jsou v [`PROCESS.md`](PROCESS.md) a [`reviewer-packet/README.md`](reviewer-packet/README.md).
 
@@ -87,8 +87,8 @@ Podrobnosti jsou v [`PROCESS.md`](PROCESS.md) a [`reviewer-packet/README.md`](re
 
 1. Firemní report je oficiální sebeprezentace, nikoli nezávislý audit provozu.
 2. Čtyři velké podniky nejsou reprezentativním vzorkem české ekonomiky.
-3. Analýza hodnotí reporty za rok 2024; pozdější změny nejsou zpětně promítány.
+3. Analýza hodnotí dokumenty za rok 2024; pozdější změny se do nich nepromítají zpětně.
 4. Dokumentový design neověřuje zkušenost zaměstnanců, dodavatelů, zákazníků ani komunit.
 5. Vysoká třída důkazu u konkrétního segmentu není celkovým ESG ratingem firmy.
-6. Skutečná schopnost člověka rukopis obhájit vyžaduje samostatný experiment.
-7. Pozitivní známka neznamená, že konkrétní použití AI studentem dovolují pravidla jeho školy.
+6. Schopnost konkrétního člověka rukopis ústně obhájit vyžaduje samostatný test.
+7. Pozitivní známka artefaktu sama neznamená, že obdobný způsob použití generativních nástrojů dovolují pravidla konkrétní školy.
