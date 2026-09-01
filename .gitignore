@@ -1,0 +1,8 @@
+.DS_Store
+*.tmp
+*.bak
+.env
+.env.*
+data/raw/
+data/transcripts-identifiable/
+outputs/private/
