@@ -1,0 +1,2 @@
+revision_id,variant_id,chapter,section,source_commit,editor_type,revision_scope,meaning_changed,citations_changed,numbers_changed,evidence_check,status,notes
+AR-000,ESG-DP-2026-BLIND-02,PROJECT,protocol,5505faebec92a3862e8dd86087e75e7d334058cc,llm-assisted,protocol only,no,no,no,not_applicable,complete,"Created the authorial revision protocol; BLIND-01 remains frozen."
