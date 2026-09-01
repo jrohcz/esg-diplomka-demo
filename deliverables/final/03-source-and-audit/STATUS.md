@@ -1,8 +1,8 @@
 # STATUS — hodnoticí rukopis ESG diplomky
 
 **Kanonický rukopis:** `ESG-DP-2026-REVIEW`  
-**Stav:** obsah a závěrečná autorská redakce dokončeny; probíhá finální sestavení a technická kontrola  
-**Datum změny:** 2. 9. 2026
+**Stav:** dokončeno a připraveno k nezávislému hodnocení  
+**Datum uzávěrky:** 2. 9. 2026
 
 ## Rukopis
 
@@ -28,41 +28,29 @@
 
 První úplné sestavení bylo věcně soudržné, ale stylisticky příliš pravidelné. Proto byly úvod, teoretická a regulatorní část, metodologie, výsledky, diskuse, závěr i oba abstrakty znovu vystavěny po významových blocích.
 
-Při redakci zůstaly uzamčeny:
+Při redakci zůstaly uzamčeny výzkumné otázky, zdrojové kotvy a citace, číselné údaje, firemní lokátory, význam evidenčních tříd, rozsah assurance a hranice dokumentového designu.
 
-- výzkumné otázky;
-- zdrojové kotvy a citace;
-- číselné údaje;
-- firemní lokátory;
-- význam evidenčních tříd;
-- rozsah assurance;
-- hranice dokumentového designu.
+Nebyla použita záměrná chybovost, synonymické přepisování, neviditelné znaky ani jiné technické zásahy. Pracovní redakční soubory a paralelní označení nejsou součástí aktuální struktury.
 
-Nebyla použita záměrná chybovost, synonymické přepisování, neviditelné znaky ani jiné technické zásahy. Pracovní redakční soubory a paralelní označení nejsou součástí finální struktury.
+## Sestavení a technická kontrola
 
-## Výstupy
+GitHub Actions úspěšně provedly datovou validaci, sestavení DOCX a PDF, aktualizaci obsahu, kontrolu klíčových částí a vytvoření všech archivů.
 
-Finální automatizovaný build připravuje:
+Kanonický rukopis má **71 stran A4**. Byla provedena vizuální kontrola všech stran finálního PDF i samostatného renderu DOCX. Kontrola zahrnovala titulní části, obsah, nadpisy, tabulky, zalomení, číslování, poznámky, seznam zdrojů a okraje. Nebyly nalezeny překryvy, useknutý text, rozpadlé znaky ani rozdělené řádky tabulek, které by bránily čtení.
 
-- `ESG-DP-2026-REVIEW.docx`;
-- `ESG-DP-2026-REVIEW.pdf`;
-- pokyny pro hodnotitele v PDF a DOCX;
-- hodnoticí formulář v PDF a DOCX;
-- `ESG-DP-2026-REVIEW-PACKAGE.zip` pro první rozeslání;
-- samostatný odtajňovací a auditní archiv;
-- úplný interní archiv sestavení;
-- kontrolní součty všech výstupů.
+Hodnoticí dokumenty používají jednotný identifikátor `ESG-DP-2026-REVIEW`. Finální PDF neobsahuje pracovní označení, názvy meziverzí ani produkční poznámky.
 
-Kanonická výstupní struktura je `deliverables/final/`.
+## Připravené výstupy
 
-## Zbývající kroky před rozesláním
+Kanonická struktura je `deliverables/final/`:
 
-1. dokončit úspěšný reprodukovatelný build DOCX a PDF;
-2. zkontrolovat sazbu a stránkování finálního PDF;
-3. ověřit nepřítomnost pracovních označení v hodnoticím balíčku;
-4. zmrazit kontrolní součty a zdrojový commit;
-5. nastavit repozitář jako neveřejný;
-6. poslat hodnotitelům pouze obsah `deliverables/final/01-send-to-reviewers/`.
+- `01-send-to-reviewers/` — rukopis v PDF a DOCX, pokyny, formulář, kontrolní součty a `ESG-DP-2026-REVIEW-PACKAGE.zip`;
+- `02-after-review/` — odtajňovací zpráva a auditní archiv;
+- `03-source-and-audit/` — úplný interní archiv sestavení, procesní dokumentace a zdrojový commit.
+
+## Poslední organizační podmínka
+
+Před rozesláním je nutné nastavit repozitář jako neveřejný a hodnotitelům neposílat jeho adresu. Hodnotitelé mají dostat pouze obsah `deliverables/final/01-send-to-reviewers/`.
 
 ## Etický status
 
