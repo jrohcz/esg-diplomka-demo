@@ -67,6 +67,15 @@ def start_numbered_section_final(doc) -> None:
     set_a4(doc.sections[-1])
 
 
+def keep_table_rows_together(doc: Document) -> None:
+    """Prevent Word/LibreOffice from splitting a single table row across pages."""
+    for table in doc.tables:
+        for row in table.rows:
+            tr_pr = row._tr.get_or_add_trPr()
+            if tr_pr.find(base.qn("w:cantSplit")) is None:
+                tr_pr.append(base.OxmlElement("w:cantSplit"))
+
+
 def polish_docx(path: Path) -> None:
     doc = Document(path)
     for section in doc.sections:
@@ -88,6 +97,7 @@ def polish_docx(path: Path) -> None:
             for run in paragraph.runs:
                 run.text = run.text.replace(" - ", " – ")
 
+    keep_table_rows_together(doc)
     doc.save(path)
 
 
