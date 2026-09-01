@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the blinded thesis and reviewer documents from the versioned Markdown sources."""
+"""Build the canonical thesis and reviewer documents from Markdown sources."""
 
 from __future__ import annotations
 
@@ -33,7 +33,7 @@ MAIN_FILES = [
 
 TITLE = "Veřejně vykazovaná implementace ESG ve vybraných velkých podnicích působících v České republice"
 TITLE_EN = "Publicly Reported ESG Implementation in Selected Large Enterprises Operating in the Czech Republic"
-DOC_ID = "ESG-DP-2026-BLIND-01"
+DOC_ID = "ESG-DP-2026-REVIEW"
 
 INLINE_RE = re.compile(
     r"(\*\*[^*]+\*\*|(?<!\*)\*[^*\n]+\*(?!\*)|`[^`]+`|\[[^\]]+\]\([^)]+\))"
