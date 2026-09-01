@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Final build wrapper with layout and terminology corrections discovered during visual QA."""
+"""Final build wrapper with layout and terminology corrections."""
 
 from __future__ import annotations
 
@@ -11,7 +11,11 @@ from docx.shared import Cm, Pt
 
 import build_docx as base
 
+FINAL_DOC_ID = "ESG-DP-2026-REVIEW"
 NUMBER_MARKER = "§NUM§"
+
+# The base builder is kept reusable; the public build has one canonical identifier.
+base.DOC_ID = FINAL_DOC_ID
 
 
 def normalize_text(text: str) -> str:
