@@ -1,6 +1,6 @@
 # Finální výstupy ESG-DP-2026-REVIEW
 
-**Zdrojový commit sestavení:** 231224249159d6b0895bfa62fe3c88e2c4f894f8
+**Zdrojový commit sestavení:** 63e2e38dc35bb924196f35e2c3e5bb51f9e25a5d
 
 ## 01-send-to-reviewers
 
