@@ -1,5 +1,7 @@
 # Pokyny pro nezávislé zaslepené hodnocení
 
+**Identifikátor rukopisu:** `ESG-DP-2026-REVIEW`
+
 ## Účel
 
 Cílem je zjistit, jakou akademickou kvalitu má předložený rukopis při běžném odborném posouzení, pokud hodnotitel před uzavřením posudku nezná podrobnosti jeho produkčního procesu.
@@ -10,9 +12,9 @@ Nejde o skutečné odevzdání kvalifikační práce a žádná osoba na základ
 
 1. zaslepený rukopis v PDF nebo DOCX;
 2. hodnoticí formulář;
-3. identifikátor zmrazené verze rukopisu.
+3. identifikátor a kontrolní součet zmrazeného rukopisu.
 
-Před uzavřením hodnocení nemá obdržet historii repozitáře, prompty, auditní log, seznam použitých nástrojů, názory jiných hodnotitelů ani souhrn očekávaných slabin.
+Před uzavřením hodnocení nemá obdržet historii repozitáře, pracovní poznámky, prompty, auditní log, seznam použitých nástrojů, názory jiných hodnotitelů ani souhrn očekávaných slabin.
 
 ## Doporučený postup
 
@@ -26,7 +28,7 @@ Před uzavřením hodnocení nemá obdržet historii repozitáře, prompty, audi
 
 Nehodnoťte chybějící skutečné jméno studenta, administrativní proces zadání, fyzickou vazbu, podpisy ani výkon při ústní obhajobě. Tvrzení, že jde o reálně odevzdanou studentskou práci, rukopis neobsahuje.
 
-Výsledek automatického AI detektoru nepoužívejte jako podklad pro akademickou známku. Případné použití detektoru zaznamenejte až po uzavření odborného hodnocení, odděleně od známky.
+Výsledek automatického detektoru nepoužívejte jako podklad pro akademickou známku. Případné použití detektoru zaznamenejte až po uzavření odborného hodnocení a odděleně od známky.
 
 ## Ověření zdrojů
 
@@ -38,10 +40,11 @@ Citované články, právní akty a firemní reporty lze běžným způsobem ote
 - celkovou známku a doporučení k obhajobě;
 - tři nejsilnější a tři nejslabší stránky;
 - nejzávažnější podmínku opravy;
+- otázky k obhajobě;
 - odhad způsobu vzniku textu a jistotu odhadu.
 
 Formulář lze vrátit jako PDF, DOCX nebo podepsaný sken. Původní odpovědi je vhodné archivovat beze změny.
 
 ## Odtajnění
 
-Po přijetí všech uzavřených posudků obdrží hodnotitel popis produkčního procesu, seznam nástrojů, historii verzí, kódovací a evidenční soubory, claim-evidence ledger a známá omezení. Následná reflexe může samostatně zachytit, zda se po odtajnění změnil jeho pohled na kvalitu nebo autorství textu.
+Po přijetí všech uzavřených posudků obdrží hodnotitel popis produkčního procesu, použitých nástrojů a lidských rozhodnutí, dále zdrojové registry, kódovací a evidenční soubory, claim-evidence ledger, kontrolní protokoly a známá omezení. Následná reflexe může samostatně zachytit, zda se po odtajnění změnil pohled na odbornou kvalitu nebo autorství textu.

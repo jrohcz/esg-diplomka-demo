@@ -1,140 +1,124 @@
 # 2 Regulatorní a reportovací kontext
 
-## 2.1 Význam regulatorního rámce pro výzkumnou otázku
+## 2.1 Proč je regulace součástí analýzy
 
-Regulace není v této práci hodnocena primárně jako právní problém, ale jako součást institucionálního prostředí, které ovlivňuje podobu firemních dokumentů a vnitřních procesů. Zavedení standardizovaných požadavků může změnit to, jak podnik vymezuje materialitu, kdo odpovídá za data, jak jsou informace kontrolovány a zda se udržitelnostní témata propojují s finančním plánováním. Současně může vytvořit jednotný jazyk, který zvyšuje formální podobnost reportů bez odpovídající podobnosti řízení.
+Právní rámec zde nevystupuje jako samostatné téma právního rozboru. Je důležitý proto, že podstatně ovlivňuje podobu dokumentů, které tvoří empirický korpus. Když regulace stanoví, jaké informace má podnik zveřejnit, mění nejen výsledný report. Často vyvolá i potřebu určit vlastníky dat, sjednotit definice, zavést kontrolu a propojit dosud oddělené útvary. Stejný tlak však může vést i k opačnému výsledku: vznikne dobře organizovaná reportingová vrstva, která splní formální požadavky, ale do běžného rozhodování zasáhne jen omezeně.
 
-Empirický korpus pokrývá rok 2024 a dokumenty zveřejněné převážně v roce 2025. Právně i analyticky je proto nutné rozlišit tři časové roviny:
+Pro interpretaci dokumentů za rok 2024 je nutné udržet tři časové roviny oddělené. První představuje rámec, podle něhož podniky informace připravovaly. Druhá zachycuje konkrétní způsob, jakým jej jednotlivé organizace aplikovaly, případně jak se na něj teprve připravovaly. Třetí tvoří pozdější změny evropského a českého práva. Ty mohou ovlivnit další reportovací období, nemění však zpětně obsah zprávy, která už byla sestavena a zveřejněna.
 
-1. rámec, podle něhož podniky připravovaly informace za rok 2024;
-2. způsob, jakým jej jednotlivé podniky aplikovaly nebo se na něj připravovaly;
-3. pozdější změny evropského a českého práva, které mohou ovlivnit další reportovací období, ale nemění obsah již vytvořených dokumentů.
-
-Práce neposuzuje právní soulad analyzovaných podniků. Neprovádí test, zda konkrétní subjekt správně určil svou působnost, zda zveřejnil každý povinný datový bod ani zda splnil požadavky assurance. Právní rámec slouží k vysvětlení struktury a významu zveřejněných informací.
+Práce proto neprovádí test právního souladu. Neověřuje, zda konkrétní podnik správně určil svou působnost, zveřejnil každý povinný datový bod nebo přesně splnil všechny požadavky na ujištění. Regulatorní kapitola má jinou úlohu: vysvětlit, proč se v reportech opakují určité kategorie a co z jejich přítomnosti lze — a nelze — analyticky vyvodit.
 
 ## 2.2 CSRD a změna logiky podávání zpráv
 
-Směrnice Evropského parlamentu a Rady (EU) 2022/2464 o podávání zpráv podniků o udržitelnosti, označovaná jako CSRD, novelizovala zejména účetní směrnici 2013/34/EU. Jejím účelem bylo rozšířit a standardizovat informace, které vymezené podniky zveřejňují o udržitelnosti, a přiblížit jejich postavení finančnímu výkaznictví. Povinné informace byly začleněny do zprávy vedení a podléhají ověření (Evropský parlament a Rada EU, 2022).
+Směrnice Evropského parlamentu a Rady (EU) 2022/2464 o podávání zpráv podniků o udržitelnosti, běžně označovaná jako CSRD, změnila zejména účetní směrnici 2013/34/EU. Jejím cílem bylo rozšířit a standardizovat zveřejňované informace o udržitelnosti a přiblížit jejich institucionální postavení finančnímu výkaznictví. Informace byly začleněny do zprávy vedení a směrnice s nimi spojila i povinné externí ujištění (Evropský parlament a Rada EU, 2022).
 
-Z hlediska této práce jsou důležité čtyři změny.
+Pro tuto práci jsou podstatné čtyři důsledky.
 
-Za prvé, CSRD pracuje se dvěma směry informační relevance. Podnik má zveřejnit informace potřebné k pochopení jeho dopadů na udržitelnost a současně informace potřebné k pochopení, jak udržitelnostní otázky ovlivňují vývoj, výkonnost a postavení podniku. Tento princip tvoří právní základ dvojí materiality.
+První se týká samotného směru informace. Podnik má vysvětlit nejen to, jak udržitelnostní otázky ovlivňují jeho vývoj, výkonnost a postavení, ale také jak jeho činnost působí na lidi a životní prostředí. Tím vzniká právní základ dvojí materiality. Obě perspektivy se mohou potkat v jednom tématu, přesto nejsou zaměnitelné: finanční riziko podniku a negativní dopad podniku představují dvě různé otázky.
 
-Za druhé, zpráva nemá obsahovat pouze výsledkové ukazatele. Má vysvětlovat podnikatelský model a strategii, odolnost, příležitosti, plány, roli správních, řídicích a dozorčích orgánů, politiky, due diligence, hlavní nepříznivé dopady, přijatá opatření a způsob měření pokroku. Regulace tak vytváří předpoklad pro sledování řetězce od tématu přes odpovědnost a opatření k metrice.
+Druhým důsledkem je rozsah požadovaného vysvětlení. Zpráva nemá být jen souborem výsledkových ukazatelů. Má popsat podnikatelský model a strategii, jejich odolnost, významné dopady, rizika a příležitosti, roli správních, řídicích a dozorčích orgánů, politiky, due diligence, opatření, zdroje, cíle i způsob sledování pokroku. Pro analýzu je to důležité, protože standard vytváří předpoklad sledovat celý řetězec od identifikovaného tématu až po metriku a odpovědnost.
 
-Za třetí, informace mají podle potřeby pokrývat vlastní činnost i hodnotový řetězec. To je významné zejména pro banku, výrobce automobilů a telekomunikační podnik. Největší dopady nemusí vznikat uvnitř vlastních budov a závodů, ale prostřednictvím financovaného portfolia, užívání výrobku, výroby dodavatelů nebo zákaznických vztahů.
+Třetí změna rozšiřuje pozornost za hranice vlastní činnosti. Informace mají podle potřeby zahrnovat hodnotový řetězec. U banky může být nejvýznamnější klimatická stopa ve financovaném portfoliu, u automobilky při výrobě komponent a užívání vozidla, u telekomunikační firmy v dodavatelském řetězci elektroniky nebo provozu infrastruktury. Report omezený pouze na kanceláře a služební vozidla by proto mohl přesně měřit okrajovou část problému a minout tu podstatnou.
 
-Za čtvrté, směrnice vytvořila vazbu mezi zveřejněním a externím ujištěním. Tím zvyšuje požadavek na auditní stopu, konsistentní definice, kontrolu hranic a odpovědnost za data. Assurance však nemá být interpretováno jako potvrzení environmentální nebo sociální dostatečnosti strategie. Ověřovatel posuzuje vymezené informace a postupy v rozsahu konkrétní zakázky.
+Čtvrtým důsledkem je požadavek na auditní stopu. Externí ujištění zvyšuje tlak na stabilní definice, doložitelné hranice, kontrolu zdrojových dat a určení odpovědnosti. Nesmí se však zaměňovat s hodnocením, zda je strategie dostatečně ambiciózní nebo zda skutečně povede k žádoucímu environmentálnímu či sociálnímu výsledku. Ověřovatel pracuje v rozsahu konkrétní zakázky a nad vymezenými informacemi.
 
-Pro empirickou analýzu z toho plyne, že podobná struktura čtyř reportů může být alespoň částečně výsledkem donucovacího institucionálního tlaku. Zveřejnění governance schématu, materialitního procesu a tabulky cílů nelze samo považovat za nezávislý důkaz stejné manažerské integrace.
+CSRD tak pomáhá vysvětlit, proč mají reporty podobnou konstrukci. Governance schéma, popis dvojí materiality nebo tabulka cílů však samy o sobě nevznikají jako nezávislé důkazy hluboké integrace. Část podobnosti je přímým výsledkem společného regulatorního tlaku.
 
 ## 2.3 ESRS jako společná informační architektura
 
-První soubor evropských standardů pro podávání zpráv o udržitelnosti byl přijat nařízením Komise v přenesené pravomoci (EU) 2023/2772 (Evropská komise, 2023). Standardy obsahují průřezové požadavky a tematické standardy pro environmentální, sociální a governance oblasti.
+První soubor evropských standardů pro podávání zpráv o udržitelnosti byl přijat nařízením Komise v přenesené pravomoci (EU) 2023/2772 (Evropská komise, 2023). Standardy tvoří průřezové požadavky a tematické části věnované environmentálním, sociálním a governance otázkám.
 
-ESRS 1 stanoví obecné zásady, včetně dvojí materiality, práce s hodnotovým řetězcem, časových horizontů a kvalitativních vlastností informací. ESRS 2 obsahuje obecná zveřejnění vztahující se ke správě, strategii, řízení dopadů, rizik a příležitostí a metrikám a cílům. Tematické standardy pak konkretizují informace například ke změně klimatu, znečištění, vodě, biodiverzitě, oběhovému hospodářství, vlastní pracovní síle, pracovníkům v hodnotovém řetězci, komunitám, spotřebitelům a obchodnímu jednání.
+ESRS 1 stanoví obecné principy, mezi nimi dvojí materialitu, práci s hodnotovým řetězcem, časové horizonty a kvalitativní vlastnosti informací. ESRS 2 požaduje obecná zveřejnění o správě, strategii, řízení dopadů, rizik a příležitostí a také o metrikách a cílech. Tematické standardy pak rozpracovávají například změnu klimatu, znečištění, vodu, biodiverzitu, oběhové hospodářství, vlastní pracovní sílu, pracovníky v hodnotovém řetězci, dotčené komunity, spotřebitele a obchodní jednání.
 
-Pro analytické účely lze strukturu ESRS zjednodušit do následujícího řetězce:
+Pro analytické účely lze tuto strukturu zjednodušit do řetězce:
 
 > **governance – strategie – významné dopady, rizika a příležitosti – politiky – opatření a zdroje – cíle – metriky**
 
-Tento řetězec je užitečný, protože umožňuje odlišit několik stupňů. Podnik může identifikovat téma, ale nemít politiku. Může mít politiku, ale neuvést zdroje. Může zveřejnit metriku, ale bez cíle nebo hranice. Může mít cíl, ale neukázat, jak ovlivňuje rozhodování. Povinná architektura tedy poskytuje mapu možných vazeb, nikoli důkaz jejich funkčnosti.
+Výhodou takového řetězce je, že zpřístupňuje mezery. Podnik může identifikovat důležité téma, ale neuvést politiku. Může popsat politiku bez zdrojů nebo konkrétního opatření. Cíl může postrádat výchozí hodnotu a metriku; metrika zase rozhodovací vazbu. Povinná architektura proto není potvrzením funkčnosti systému. Je spíše mapou, podle níž lze hledat, které články jsou přítomné a jak jsou mezi sebou propojené.
 
 ### 2.3.1 Dvojí materialita
 
-Dvojí materialita je východiskem pro určení, které tematické informace má podnik zveřejnit. Dopadová materialita posuzuje skutečné a potenciální pozitivní i negativní dopady podniku na lidi a životní prostředí. Finanční materialita posuzuje rizika a příležitosti, u nichž lze důvodně očekávat vliv na finanční vývoj, výkonnost, postavení, peněžní toky, přístup k financování nebo cenu kapitálu.
+Dvojí materialita určuje, které tematické informace mají být zveřejněny. Dopadová materialita sleduje skutečné a potenciální pozitivní i negativní působení podniku na lidi a životní prostředí. Finanční materialita se soustředí na rizika a příležitosti, u nichž lze důvodně očekávat vliv na finanční vývoj, výkonnost, postavení, peněžní toky, přístup k financování nebo cenu kapitálu.
 
-Oba směry jsou propojené, ale nejsou totožné. Negativní dopad může existovat dříve, než se promění ve finanční riziko. Finanční příležitost může být pro podnik významná, i když její pozitivní společenský dopad není prokázán. Empirická analýza proto nespojuje automaticky „materiální téma“ s pozitivním přínosem.
+V praxi se oba směry často protínají. Negativní dopad se může později změnit v právní, reputační nebo tržní riziko. Finanční příležitost může vzniknout díky nízkoemisnímu produktu. Přesto je nutné udržet pojmy oddělené. Investiční atraktivita určitého řešení ještě neprokazuje jeho pozitivní společenský dopad a existence negativního dopadu nemusí být podmíněna tím, zda jej trh už ocenil.
 
-Vysokou evidenční hodnotu má popis, který uvádí:
+Samotná materialitní matice říká poměrně málo. Vyšší výpovědní hodnotu má popis, který ukazuje, odkud organizace čerpala informace, které stakeholdery nebo jejich zástupce zapojila, jak vymezila vlastní operace a hodnotový řetězec, jak pracovala se závažností, pravděpodobností a časovým horizontem a kdo výsledek schválil. Ještě důležitější je poslední krok: zda se z materialitního výsledku stala priorita s vlastníkem, cílem a zdroji.
 
-- zdroje identifikace dopadů, rizik a příležitostí;
-- zapojení dotčených stakeholderů nebo jejich zástupců;
-- hranice vlastních operací a hodnotového řetězce;
-- kritéria závažnosti, pravděpodobnosti a časového horizontu;
-- validační a schvalovací proces;
-- převod výsledku do strategie, politik, cílů a zdrojů.
-
-Samotná materialitní matice bez vysvětlení procesu poskytuje slabší důkaz. Stejně tak detailní proces bez viditelné rozhodovací vazby dokládá formalizaci, nikoli plnou integraci.
+Detailní proces může dokazovat vysokou míru formalizace. O manažerské integraci však přesvědčivěji vypovídá až vazba na strategii, kapitál, rizikové pravidlo, produkt nebo nákup. V této práci proto materialitu neposuzuji jen jako správně sestavený seznam, ale jako možný mechanismus, který přesměruje pozornost a zdroje.
 
 ### 2.3.2 Dopady, rizika a příležitosti
 
-ESRS rozlišují dopady, rizika a příležitosti, často souhrnně označované IRO. Rozlišení je analyticky důležité. Dopad se vztahuje k působení podniku na lidi nebo životní prostředí. Riziko a příležitost se vztahují k možné finanční nebo strategické konsekvenci pro podnik. Jeden jev může mít více rolí: emise výrobku představují dopad, mohou vytvářet regulační a tržní riziko a současně příležitost pro nízkoemisní produkt.
+ESRS používají souhrnné označení IRO pro dopady, rizika a příležitosti. Toto spojení je praktické pro strukturu reportu, ale při interpretaci může svádět ke směšování. Dopad popisuje působení organizace na lidi nebo životní prostředí. Riziko a příležitost se vztahují k možné finanční či strategické konsekvenci pro podnik.
 
-Firemní report může legitimně spojovat tyto roviny, ale neměl by je zaměňovat. Investice do nízkoemisního produktu může být finanční příležitostí, aniž samotný objem investice prokazuje čistý životní dopad. Podobně řízení klimatického rizika úvěrového portfolia může chránit banku, ale nemusí automaticky snižovat financované emise.
+Jeden jev může mít všechny tři podoby. Emise výrobku představují environmentální dopad, zároveň mohou vytvářet regulatorní a tržní riziko a otevřít příležitost pro nízkoemisní produkt. Z toho však nelze odvodit, že každá investice do takového produktu má automaticky pozitivní čistý dopad. Podobně klimatické řízení úvěrového portfolia může chránit banku před ztrátou, aniž samo o sobě sníží financované emise.
+
+V empirické části je proto vždy důležité zjistit, o které rovině podnik mluví. Firemní argument může legitimně propojit dopad, riziko a příležitost, ale analytická parafráze nesmí jednu kategorii vydávat za jinou.
 
 ### 2.3.3 Politiky, opatření, zdroje, cíle a metriky
 
-Standardizovaná posloupnost umožňuje posuzovat úplnost řídicího mechanismu. Politika vyjadřuje záměr a pravidlo; opatření ukazuje, co podnik dělá; zdroje ukazují, zda je záměr podpořen kapacitou; cíl vymezuje požadovaný stav a metriku; vykázaný vývoj umožňuje posoudit pokrok.
+Posloupnost politik, opatření, zdrojů, cílů a metrik nabízí jednoduchý způsob, jak posoudit úplnost řídicího mechanismu. Politika vyjadřuje pravidlo a záměr. Opatření ukazuje, co organizace skutečně dělá. Zdroje napovídají, zda je záměr podpořen kapacitou. Cíl vymezuje budoucí stav a metrika umožňuje sledovat, zda se k němu podnik přibližuje.
 
-V praxi se často objevují neúplné řetězce. Například počet proškolených zaměstnanců je přesně měřitelný výstup, ale bez outcome metriky neukazuje, zda se změnilo jednání. Cíl snížit intenzitu emisí má základní rok a termín, ale nemusí ukazovat vývoj absolutních emisí. Dodavatelský kodex stanoví pravidlo, ale bez auditu, nápravného mechanismu nebo důsledku pro nákup neprokazuje použití.
+V reportech však řetězec často zůstane nedokončený. Počet proškolených osob je přesně změřitelný výstup, ale bez následné outcome metriky neříká, zda se změnilo chování. Cíl emisní intenzity může mít výchozí rok a termín, přesto nemusí ukázat vývoj absolutních emisí. Dodavatelský kodex stanoví pravidlo, ovšem bez kontroly, nápravného plánu nebo důsledku pro nákup ještě nedokládá jeho použití.
 
-Tato práce proto neposuzuje pouze existenci položky, ale vazby mezi položkami.
+Proto se v analýze nepočítají jen přítomné položky. Sleduje se, zda mezi nimi existuje funkční vazba a jaký závěr taková vazba unese.
 
 ## 2.4 Zpráva o udržitelnosti a omezené ujištění
 
-CSRD stanovila ověřování vykazovaných informací. Pro první fázi jde o omezené ujištění. Jeho závěr je formulován negativním způsobem: ověřovatel na základě provedených postupů neidentifikoval skutečnost, která by vedla k závěru, že informace obsahují významnou nesprávnost. Rozsah postupů je menší než u přiměřeného ujištění používaného pro finanční audit.
+CSRD spojila zveřejňované informace s povinným ověřováním. Pro první fázi jde o omezené ujištění. Závěr je formulován negativně: na základě provedených postupů ověřovatel nezjistil skutečnost, která by jej vedla k závěru, že informace obsahují významnou nesprávnost. Oproti přiměřenému ujištění používanému ve finančním auditu je rozsah postupů menší a míra jistoty nižší.
 
-Z analytického hlediska je třeba rozlišit nejméně čtyři objekty ujištění:
+Při čtení assurance reportu je třeba odlišit alespoň čtyři možné objekty. Prvním je správnost nebo úplnost konkrétní metriky, druhým soulad zveřejnění se standardem, třetím popis materialitního či kontrolního procesu a čtvrtým účinnost strategie nebo skutečný dopad. První tři mohou být podle podmínek zakázky ověřovány. Čtvrtý z ujištění zpravidla automaticky neplyne.
 
-1. správnost nebo úplnost konkrétní metriky;
-2. soulad zveřejnění se standardem;
-3. popis materialitního nebo kontrolního procesu;
-4. účinnost strategie a skutečný dopad.
+Pokud praktik ověřil výpočet emisí, získáváme silnější důvod věřit vymezené metodice a hodnotě. Neznamená to však, že podnik stanovil dostatečný cíl nebo že budou emise klesat. Ověření popisu dvojí materiality zase nepotvrzuje, že všichni stakeholdeři souhlasí s výsledným pořadím témat. Rozsah ujištění musí zůstat spojen s přesně tím tvrzením, kterého se týká.
 
-První tři mohou být v různé míře součástí zakázky. Čtvrtý zpravidla není automatickým výsledkem assurance. Pokud nezávislý praktik ověřil výpočet emisí, zvyšuje to důvěryhodnost metodiky a hodnoty. Neprokazuje to, že podnik má dostatečně ambiciózní cíl nebo že emise klesnou. Pokud ověřil popis dvojí materiality, neznamená to, že každý stakeholder souhlasí s výsledným pořadím témat.
-
-Toto omezení je zabudováno do škály E0–E4. Assurance se vždy váže ke konkrétnímu tvrzení a jeho rozsahu. Existence zprávy o omezeném ujištění nepovyšuje celý report ani firmu na E4.
+Toto omezení je zabudováno i do škály E0–E4. Assurance není vlastností celé firmy a nemění každý výrok v reportu na E4. Silná třída může být přidělena pouze konkrétnímu výsledku, který je v daném rozsahu skutečně podpořen.
 
 ## 2.5 EU Taxonomie
 
-Nařízení Evropského parlamentu a Rady (EU) 2020/852 vytvořilo klasifikační rámec environmentálně udržitelných ekonomických činností (Evropský parlament a Rada EU, 2020). Činnost je taxonomicky způsobilá, pokud je popsána v příslušném delegovaném aktu. Způsobilost sama neznamená environmentální udržitelnost. Pro taxonomickou sladěnost musí činnost podstatně přispívat alespoň k jednomu environmentálnímu cíli, významně nepoškozovat ostatní cíle, splnit minimální záruky a technická screeningová kritéria.
+Nařízení Evropského parlamentu a Rady (EU) 2020/852 vytvořilo klasifikační rámec environmentálně udržitelných ekonomických činností (Evropský parlament a Rada EU, 2020). První důležitý rozdíl vede mezi způsobilostí a sladěností. Činnost je taxonomicky způsobilá, pokud ji popisuje příslušný delegovaný akt. Teprve pro sladěnost musí podstatně přispívat alespoň k jednomu environmentálnímu cíli, významně nepoškozovat ostatní cíle, splnit minimální záruky a příslušná technická screeningová kritéria.
 
-Nařízení Komise v přenesené pravomoci (EU) 2021/2178 stanoví obsah, prezentaci a metodiku zveřejnění podle článku 8 Taxonomie (Evropská komise, 2021). Nefinanční podniky vykazují podíly způsobilých a sladěných činností na obratu, kapitálových a provozních výdajích. Finanční podniky používají odlišné ukazatele odpovídající jejich podnikatelskému modelu.
+Nařízení Komise v přenesené pravomoci (EU) 2021/2178 stanoví obsah, podobu a metodiku zveřejnění podle článku 8 Taxonomie (Evropská komise, 2021). Nefinanční podniky vykazují podíly způsobilých a sladěných činností na obratu, kapitálových a provozních výdajích. Finanční podniky používají ukazatele přizpůsobené svému podnikatelskému modelu.
 
-Pro tuto práci má Taxonomie dvě funkce. První je informační: rozlišuje, zda je činnost vůbec v klasifikačním systému a zda splňuje stanovená kritéria. Druhá je potenciálně rozhodovací: vysoký podíl taxonomicky sladěného CapEx může ukazovat, že investiční plán směřuje do klasifikovaných aktivit.
+Taxonomie má v této práci dvě role. První je informační: umožňuje zjistit, zda je činnost vůbec zahrnuta do klasifikačního systému a zda splňuje stanovená kritéria. Druhá může být rozhodovací. Pokud podnik výslovně propojí vysoký podíl sladěného CapEx s investičním plánem, klasifikace už neslouží jen ke zveřejnění, ale stává se součástí kapitálové logiky.
 
-Ani v tomto případě však KPI není univerzálním ESG skóre. Vysoká způsobilost může pouze odrážet strukturu odvětví. Vysoký sladěný CapEx se vztahuje k vymezeným environmentálním kritériím, nikoli ke všem sociálním a governance otázkám. Budoucí plánovaný podíl není realizovaným dopadem. Empirická analýza proto kóduje taxonomický údaj jako E3 pouze tehdy, když report výslovně propojuje klasifikaci s investičním nebo jiným rozhodováním.
+Ani takový údaj však nelze proměnit v celkové ESG hodnocení. Vysoká způsobilost může být daná strukturou odvětví. Sladěný CapEx se týká vymezených environmentálních podmínek, nikoli automaticky sociálních a governance otázek. A plánovaný budoucí podíl není realizovaným dopadem. V empirické analýze je proto taxonomický ukazatel zařazen jako E3 pouze tam, kde dokument doloží jeho vztah k rozhodování.
 
 ## 2.6 Česká transpozice pro první reportovací období
 
-Česká republika provedla první část CSRD zejména zákonem č. 349/2023 Sb., který novelizoval zákon č. 563/1991 Sb., o účetnictví, zákon o auditorech a zákon o podnikání na kapitálovém trhu. Pro účetní období začínající 1. ledna 2024 byla povinnost zavedena pro první úzkou skupinu velkých subjektů veřejného zájmu s více než 500 zaměstnanci. Tyto subjekty připravovaly zprávu za rok 2024 a zveřejňovaly ji v roce 2025.
+Česká republika provedla první část CSRD zejména zákonem č. 349/2023 Sb., který novelizoval zákon č. 563/1991 Sb., o účetnictví, zákon o auditorech a zákon o podnikání na kapitálovém trhu. Pro účetní období začínající 1. ledna 2024 byla povinnost zavedena pro první úzkou skupinu velkých subjektů veřejného zájmu s více než 500 zaměstnanci. Tyto organizace připravovaly zprávy za rok 2024 a zveřejňovaly je v roce 2025.
 
-Zákon o účetnictví vymezil zprávu o udržitelnosti jako samostatný oddíl výroční zprávy a převzal dvojí informační účel: vysvětlit dopady účetní jednotky na udržitelnost a vliv udržitelnosti na její vývoj, výkonnost a postavení. Současně upravil konsolidovanou zprávu o udržitelnosti a související zveřejnění.
+Zákon o účetnictví vymezil zprávu o udržitelnosti jako samostatný oddíl výroční zprávy a převzal dvojí informační účel: vysvětlit dopady účetní jednotky na udržitelnost i vliv udržitelnosti na její vývoj, výkonnost a postavení. Současně upravil konsolidované zprávy a související zveřejnění.
 
-Transpozice byla k tomuto období pouze částečná ve vztahu k původně plánovaným dalším vlnám. Pro potřeby empirického korpusu je však rozhodující, že některé analyzované společnosti připravovaly report za rok 2024 pod přímou povinností, zatímco jiné se na širší režim připravovaly, používaly dobrovolné standardy nebo skupinové požadavky. Proto nelze předpokládat shodnou právní motivaci všech čtyř případů.
+Z pohledu celého původně plánovaného náběhu šlo v této fázi o částečnou transpozici. Pro analyzovaný korpus je však rozhodující praktický rozdíl mezi podniky. Některé připravovaly report za rok 2024 pod přímou povinností, jiné se na širší režim chystaly, pracovaly s dobrovolnými standardy nebo se řídily požadavky své skupiny. Není tedy možné předpokládat, že všechny čtyři případy měly stejnou právní motivaci a stejnou míru připravenosti.
 
-Práce neprovádí vlastní právní test působnosti jednotlivých podniků. Ve výsledcích popisuje, jak organizace svůj reportovací rámec samy vymezují.
+Práce tuto působnost sama právně nepřezkoumává. Ve výsledkové kapitole vychází z toho, jak jednotlivé organizace svůj reportovací rámec vymezily ve vlastních dokumentech.
 
 ## 2.7 GRI, skupinové standardy a přechodné reportování
 
-Před ESRS používala řada podniků standardy Global Reporting Initiative (GRI) nebo vlastní skupinové rámce. GRI je orientováno především na dopady organizace na ekonomiku, životní prostředí a lidi. ESRS a GRI mají některé podobné pojmy a datové oblasti, ale nejsou zaměnitelné.
+Před ESRS využívala řada podniků standardy Global Reporting Initiative (GRI) nebo vlastní skupinové rámce. GRI se soustředí především na dopady organizace na ekonomiku, životní prostředí a lidi. S ESRS sdílí některé pojmy a datové oblasti, ale oba systémy nejsou zaměnitelné.
 
-V analyzovaném období se mohou objevit tři situace:
+V roce 2024 se proto v dokumentech objevují různé přechodové situace. Někde jde o deklarovanou aplikaci ESRS v povinné zprávě. Jinde podnik vedle regulatorního zveřejnění připraví samostatný, čtenářsky orientovaný report, který kombinuje více rámců. Další případ může zůstat u GRI a současně už provést dvojí materialitu nebo připravovat governance pro CSRD.
 
-- plná nebo deklarovaná aplikace ESRS v povinné zprávě;
-- samostatný čtenářsky orientovaný report, který čerpá z povinného zveřejnění a kombinuje více rámců;
-- GRI report doplněný o dvojí materialitu a přípravu na CSRD.
+Tato nesynchronnost je důležitá. Podnik může mít dlouho zavedenou provozní praxi, ale jeho první ESRS disclosure bude zatím neúplné. Opačně může první formálně velmi rozsáhlá zpráva vzniknout díky intenzivnímu reportingovému projektu, jehož vazba na strategii se teprve vytváří. Regulatorní zralost dokumentu proto není totožná s celkovou zralostí organizace.
 
-Tento přechod má analytický význam. Podnik může mít vyspělou provozní praxi, ale dosud neúplné ESRS governance disclosure. Naopak první formálně úplná zpráva může být výsledkem intenzivního reportingového projektu, jehož vazba na strategii se teprve vytváří. Hodnocení proto nesmí zaměnit regulatorní zralost dokumentu za celkovou zralost organizace.
+Skupinové standardy přidávají další vrstvu. Politika nebo kodex mohou vzniknout na úrovni mateřské skupiny a být převzaty českou společností. Jejich existence dokládá formální rámec, ne však automaticky stejnou intenzitu aplikace v každé právnické osobě nebo závodě. Při kódování proto musí zůstat zachována organizační hranice, kterou dokument uvádí.
 
 ## 2.8 Pozdější změny a analytické zmrazení
 
-Po analyzovaném období se evropský rámec změnil. Směrnice (EU) 2025/794 odložila některé původní reportovací vlny. Směrnice (EU) 2026/470 následně zúžila budoucí rozsah povinného reportingu a změnila některé požadavky CSRD a souvisejících předpisů. Změny reagují zejména na požadavek snížit administrativní zátěž a upravit proporcionalitu reportovacího rámce (Evropský parlament a Rada EU, 2025; 2026).
+Po roce 2024 se evropský rámec dále měnil. Směrnice (EU) 2025/794 odložila některé původně plánované reportovací vlny. Směrnice (EU) 2026/470 následně zúžila budoucí rozsah povinného reportingu a upravila některé požadavky CSRD a souvisejících předpisů. Změny reagovaly zejména na tlak snížit administrativní zátěž a zvýšit proporcionalitu systému (Evropský parlament a Rada EU, 2025; 2026).
 
-Tyto změny jsou pro diskusi relevantní ze dvou důvodů. Za prvé ukazují, že regulatorní tlak není stabilní a podniky mohou své systémy vytvářet v podmínkách měnících se očekávání. Za druhé zvyšují význam rozlišení mezi procesy zavedenými pouze pro právní compliance a procesy ukotvenými v investicích, riziku nebo podnikatelském modelu. Organizační mechanismus s provozní nebo finanční funkcí může přetrvat i při zúžení povinnosti zveřejňovat.
+Pro diskusi je tento vývoj relevantní. Ukazuje, že podniky zaváděly nové procesy v prostředí, kde nebyla dlouhodobá stabilita požadavků samozřejmá. Zároveň umožňuje položit důležitou otázku: které prvky vznikly pouze kvůli compliance a které získaly vlastní provozní nebo finanční funkci? Proces napojený na investice, riziko nebo produkt může přetrvat i tehdy, když se rozsah povinného zveřejnění později zmenší.
 
-Do empirického hodnocení za rok 2024 však nejsou pozdější změny promítány zpětně. Dokument se posuzuje podle toho, co v daném období zveřejnil a jaké mechanismy doložil. Práce netvrdí, že podnik má k 1. září 2026 stále stejnou právní povinnost ani že bude používat stejný rozsah reportu v dalších letech.
+Empirické hodnocení za rok 2024 se však podle novějších pravidel nepřepisuje. Dokument je posuzován podle svého času vzniku, deklarovaného rámce a tehdy zveřejněných mechanismů. Práce proto netvrdí, že má každý podnik k 1. září 2026 stejnou právní povinnost nebo že bude v dalších letech používat totožnou strukturu reportu.
 
-## 2.9 Analytické důsledky regulatorního kontextu
+## 2.9 Co z regulatorního kontextu plyne pro analýzu
 
-Z předchozích částí vyplývá šest pravidel pro interpretaci korpusu:
+Předchozí části lze převést do šesti praktických pravidel.
 
-1. **Strukturální podobnost není výsledková podobnost.** ESRS vysvětlují, proč reporty obsahují obdobné oddíly; nevysvětlují, zda jsou procesy stejně účinné.
-2. **Materialita není pouze seznam.** Vyšší evidenční hodnotu má převod identifikovaného tématu do vlastníka, zdroje a rozhodnutí.
-3. **Metrika není dopad.** Aktivita, provozní outcome a širší společenský nebo environmentální dopad musí být odlišeny.
-4. **Taxonomická sladěnost není celkové ESG hodnocení.** Je třeba číst konkrétní KPI, hranici a vazbu na investice.
-5. **Assurance má omezený rozsah.** Úroveň E4 lze přiřadit pouze konkrétně vymezenému a skutečně ověřenému tvrzení.
-6. **Pozdější právní změna nemění historický dokument.** Rok 2024 je uzavřeným časovým řezem a současný právní status je pouze kontextem.
+1. **Podobná struktura neznamená podobný výsledek.** ESRS vysvětlují, proč reporty obsahují obdobné oddíly. Neříkají, zda jsou procesy stejně účinné.
+2. **Materialita není jen seznam témat.** Silnější informaci nabízí až propojení vybrané priority s vlastníkem, zdroji a rozhodnutím.
+3. **Metrika není automaticky dopad.** Aktivitu, provozní outcome a širší společenský nebo environmentální efekt je nutné oddělit.
+4. **Taxonomická sladěnost není celkové ESG skóre.** Vždy je třeba číst konkrétní KPI, jeho hranici a případnou vazbu na kapitál.
+5. **Assurance má přesně vymezený rozsah.** Třída E4 může být přiřazena jen tvrzení, které je v daném rozsahu skutečně externě podpořeno.
+6. **Pozdější právní změna nemění historický dokument.** Rok 2024 zůstává uzavřeným časovým řezem; novější stav je kontext, nikoli zpětné hodnoticí měřítko.
 
-Tato pravidla převádějí právní rámec do metodologické disciplíny. Regulatorní kapitola proto není samostatným přehledem legislativy, ale zdrojem kritérií, podle nichž lze odlišit přítomnost povinné položky od zveřejněného dokladu manažerské integrace.
+Regulatorní kapitola tím dostává přímou metodickou funkci. Neslouží jako oddělený katalog legislativy, ale pomáhá rozlišit přítomnost povinné položky od zveřejněného dokladu, že se informace skutečně dostala do řízení.
