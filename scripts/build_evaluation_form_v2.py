@@ -7,6 +7,8 @@ from docx import Document
 
 import build_evaluation_form as base
 
+base.DOC_ID = "ESG-DP-2026-REVIEW"
+
 
 def replace_paragraph_text(paragraph, text: str) -> None:
     for run in paragraph.runs:
@@ -38,11 +40,9 @@ def main() -> int:
         raise RuntimeError("Could not locate the overall-evaluation labels in the generated form")
 
     replace_paragraph_text(strengths_label, "Nejsilnější stránky - uveďte tři hlavní")
-    # Move the label immediately below the section heading and above the three numbered boxes.
     strengths_label._p.getparent().remove(strengths_label._p)
     section_heading._p.addnext(strengths_label._p)
 
-    # Preserve every answer box and rating row as a single unit when paginating.
     for table in doc.tables:
         for row in table.rows:
             base.prevent_row_split(row)
