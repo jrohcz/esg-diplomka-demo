@@ -1,206 +1,326 @@
 # Osnova diplomové práce
 
-**Název (pracovní):** Implementace ESG principů v českých podnicích: motivace, bariéry a vnímané přínosy v období regulatorní změny
+**Pracovní název:** *Veřejně vykazovaná implementace ESG ve vybraných velkých podnicích působících v České republice*  
+**Verze:** 2026-09-01  
+**Výzkumný design:** komparativní kvalitativní analýza veřejných firemních reportů za rok 2024
 
-**Verze:** 2026-09-01 (korpus omezen na `sources/academic-sources.csv` + mapa literatury)
+## Přední část
 
----
+- český titulní list;
+- anglický titulní list;
+- český abstrakt a klíčová slova;
+- anglický abstract a keywords;
+- poznámka o anonymizaci autora pro účely zaslepeného hodnocení;
+- obsah;
+- seznam tabulek a zkratek.
 
-## 1. Úvod
+# Úvod
 
-- Vymezení problému: regulatorní tlak (CSRD, ESRS) dopadá na české podniky v prostředí s dosud omezenou zkušeností s formálním ESG řízením a reportingem.
-- Výzkumná mezera: empirické důkazy o tom, jak podniky v českém kontextu motivy, překážky a přínosy subjektivně interpretují, jsou dostupné jen omezeně. Kvantitativní studie převažují a málo zachycují proces implementace z perspektivy samotných organizací.
-- Účel práce: porozumět tomu, proč a jak české podniky zavádějí ESG principy, co jim v tom brání a jaké přínosy — skutečné, vnímané či očekávané — s implementací spojují.
-- Stručný přehled struktury práce.
+- praktický a akademický problém: report není totéž co implementace;
+- přechod od dobrovolného reportingu k CSRD/ESRS;
+- význam rozlišení deklarace, formalizace a manažerské integrace;
+- výzkumná mezera: standardizované reporty umožňují srovnání, ale jejich rozsah ani assurance samy nezaručují kvalitu zveřejnění;
+- cíl práce a hlavní výzkumná otázka;
+- šest dílčích výzkumných otázek;
+- vymezení čtyř případů a roku 2024;
+- struktura práce.
 
----
+# 1 Teoretická východiska
 
-## 2. Teoretický rámec [→ rozpracováno v `chapters/01-theoretical-framework-demo.md`]
+## 1.1 Od CSR k ESG
 
-### 2.1 Vymezení pojmů: CSR a ESG
+- CSR jako širší normativní a manažerský rámec;
+- ESG jako strukturování témat pro řízení, měření, finance a reporting;
+- riziko záměny označení, jednotlivé aktivity, systému řízení a reportu.
 
-- Historický vývoj konceptu podnikové odpovědnosti od Carrollovy pyramidy (Carroll, 1991) k současnému pojetí ESG.
-- Přechod od normativního CSR k měřitelnému, ratingově podloženému ESG rámci (Gillan, Koch & Starks, 2021).
-- Distinkce mezi označením ESG, konkrétní praxí, formalizovaným řízením a reportingem.
+## 1.2 Stakeholderová perspektiva
 
-### 2.2 Stakeholderová perspektiva
+- tlak investorů, zákazníků, zaměstnanců, regulátorů, bank, vlastníků a komunit;
+- rozdíl mezi existencí požadavku a jeho mocí změnit rozhodování;
+- limity současného korpusu: absence kanonického Freemanova primárního textu bude přiznána.
 
-- Odpovědnost podniku ve vztahu k organizačním stakeholderům (Carroll, 1991).
-- Přehled vztahů mezi podnikem, společenskou odpovědností a finančními aktéry (Gillan, Koch & Starks, 2021).
-- **Poznámka:** Kanonický primární zdroj stakeholderové teorie v korpusu chybí — pro finální verzi doplnit.
+## 1.3 Institucionální teorie
 
-### 2.3 Institucionální teorie: tři tlaky izomorfismu
+- donucovací, normativní a mimetické tlaky (DiMaggio & Powell, 1983);
+- standardizace reportů jako možná forma izomorfismu;
+- formální podobnost nemusí znamenat stejnou hloubku implementace.
 
-- DiMaggio a Powell (1983): donucovací, normativní a mimetický tlak jako mechanismus homogenizace organizačních polí.
-- Aplikace na ESG: stejné formuláře, politiky a pozice napříč firmami nemusejí znamenat stejnou hloubku implementace.
+## 1.4 Legitimita, greenwashing a firemní sebeprezentace
 
-### 2.4 Legitimizační teorie
+- strategické a institucionální pojetí legitimity (Suchman, 1995);
+- motivy greenwashingu a mezera mezi tvrzením a praxí (Delmas & Burbano, 2011);
+- report jako současně informační a legitimační artefakt;
+- zákaz odvozovat úmysl pouze z textu dokumentu.
 
-- Suchman (1995): strategické a institucionální přístupy k legitimitě.
-- Získávání, udržování a obnova legitimity v kontextu ESG komunikace a reportingu.
+## 1.5 Materialita a dvojí materialita
 
-### 2.5 Materialita a její role
+- materialita jako proces výběru priorit, nikoli jen matice;
+- finanční materialita versus dopadová materialita;
+- vztah tématu k vlastníkovi, metrice, zdrojům a rozhodnutí;
+- Khan et al. (2016) jako finančně orientované pojetí; ESRS jako regulatorní doplnění.
 
-- Khan, Serafeim & Yoon (2016): empirické odlišení materiálních a nemateriálních témat udržitelnosti.
-- Čtyři kroky materialitního procesu: identifikace → rozhodování o prioritách → vlastnictví a zdroje → dopad na rozhodování.
-- **Poznámka:** Současný koncept dvojí materiality není tímto zdrojem pokryt — nutné doplnění regulatorními prameny.
+## 1.6 ESG, organizační procesy a podniková výkonnost
 
-### 2.6 ESG a podniková výkonnost
+- organizační znaky vysoké úrovně udržitelnosti (Eccles et al., 2014);
+- agregovaná evidence a její limity (Friede et al., 2015);
+- endogenita, odlišná měřítka a nemožnost jednoduché kauzální interpretace;
+- kvalitativní práce zkoumá mechanismus zveřejněné integrace, nikoli finanční efekt.
 
-- Vztah udržitelnosti a organizačních procesů (Eccles, Ioannou & Serafeim, 2014).
-- Agregovaná evidence z více než 2 000 studií (Friede, Busch & Bassen, 2015).
-- Role materiality v poměřování výkonnosti (Khan, Serafeim & Yoon, 2016).
-- Review výzkumu v podnikových financích (Gillan, Koch & Starks, 2021).
+## 1.7 Ratingy a problém měření
 
-### 2.7 Divergence ESG ratingů
+- divergence rozsahu, měření a vah (Berg et al., 2022);
+- zvýhodnění velkých firem dostupností dat (Drempetic et al., 2020);
+- rating jako dílčí externí reprezentace, nikoli přímý odečet kvality ESG.
 
-- Zdroje divergence: rozsah, měření a váhy (Berg, Kölbel & Rigobon, 2022).
-- Vliv velikosti firmy na ESG skóre (Drempetic, Klein & Zwergel, 2020).
-- Důsledky: rating není neutrálním odečtem objektivní vlastnosti.
+## 1.8 Povinný reporting a kvalita zveřejnění
 
-### 2.8 Greenwashing a mezera mezi tvrzením a praxí
+- ekonomické mechanismy povinného reportingu (Christensen et al., 2021);
+- determinanty rozsahu a kvality reportingu (Hahn & Kühnen, 2013);
+- symbolické versus substantivní používání GRI, samostatného reportu a assurance (Michelon et al., 2015);
+- kritika idealizovaných reportů a chybějících negativních dopadů (Boiral, 2013).
 
-- Hybatelé greenwashingu: vnější, organizační a individuální (Delmas & Burbano, 2011).
-- Analytické dimenze nesouladu mezi komunikací a praxí.
+## 1.9 Pracovní model zveřejněné implementace
 
-### 2.9 Organizační implementace a reporting
+Pět analytických úrovní:
 
-- Propojení udržitelnosti a organizačních procesů (Eccles, Ioannou & Serafeim, 2014).
-- Ekonomická analýza povinného reportingu (Christensen, Hail & Leuz, 2021).
-- Pracovní model hloubky implementace (5 úrovní — vlastní konstrukt projektu).
+1. jazyk a závazek;
+2. konkrétní praxe;
+3. formalizace;
+4. manažerská integrace;
+5. externí vykazování a ověření.
 
-### 2.10 Integrovaný konceptuální model
+Doplňková škála evidenční síly E0–E4 rozlišuje deklaraci, aktivitu, řízený výsledek, rozhodovací vazbu a ověřitelný dopad.
 
-- Vnější a vnitřní tlaky → interpretace požadavku a materiality → organizační reakce → hloubka implementace → vnímané/doložené přínosy a náklady → komunikace, reporting a zpětná vazba.
+## 1.10 Integrovaný konceptuální rámec
 
----
+> institucionální a stakeholderové tlaky → výběr materiálních témat → odpovědnost a proces → rozhodovací vazba → metrika a výsledek → zveřejnění, ověření a zpětná vazba
 
-## 3. Metodologie
+Model je senzitivizující, nikoli kauzálně testovaný.
 
-### 3.1 Výzkumný design a filozofie
+# 2 Regulatorní a reportovací kontext
 
-- Kvalitativní design s využitím tematické analýzy (Braun & Clarke, 2006; 2021).
-- Odůvodnění: výzkumné otázky směřují k interpretaci, smyslu a procesu, nikoli k měření četnosti či kauzálních efektů.
+## 2.1 CSRD a ESRS
 
-### 3.2 Výzkumné otázky
+- účel a základní principy;
+- dvojí materialita;
+- začlenění zprávy o udržitelnosti do zprávy vedení;
+- governance, strategie, politiky, opatření, cíle a metriky;
+- omezené ujištění a jeho hranice.
 
-Hlavní výzkumná otázka: *Jak odpovědní pracovníci českých podniků vnímají implementaci ESG principů a jak se toto vnímání promítá do firemní praxe?*
+## 2.2 EU Taxonomie
 
-Dílčí otázky přebírá `notes/research-contract.md`: konkrétní praxe a jejich integrace, motivy, bariéry, síla důkazů o přínosech, přímý versus nepřímý tlak a dopad regulatorních změn 2025–2026.
+- eligibility versus alignment;
+- podíl obratu, CapEx a OpEx;
+- proč taxonomický KPI není obecné ESG skóre;
+- využití taxonomie jako potenciálního dokladu investiční vazby.
 
-### 3.3 Výběr vzorku a kritéria
+## 2.3 Rok 2024 jako analyzované období
 
-- Účelový výběr — podniky různých velikostí a sektorů s alespoň zahájenou ESG aktivitou.
-- Cílově 12–16 rozhovorů; konec náboru se řídí informační silou a analytickou dostatečností (Malterud, Siersma & Guassora, 2016), nikoli mechanickým číslem.
-- Respondenti: osoby s přímou odpovědností za ESG, udržitelnost, strategii, compliance nebo reporting.
+- první rozsáhlejší praktická aplikace ESRS u části podniků;
+- souběh ESRS, GRI, skupinových standardů a dobrovolných reportů;
+- regulatorní změny po roce 2024 budou popsány jako kontext, nikoli zpětně promítnuty do hodnocení tehdejších dokumentů.
 
-### 3.4 Sběr dat
+## 2.4 Český kontext a hranice práce
 
-- Polostrukturované rozhovory.
-- Scénář odvozený z konceptuálního modelu (kapitola 2).
-- Reporting dle COREQ (Tong, Sainsbury & Craig, 2007).
+- národní transpozice;
+- odlišné postavení subjektů;
+- práce není právním stanoviskem o scope ani compliance jednotlivých firem.
 
-### 3.5 Analýza dat
+# 3 Metodologie
 
-- Reflexivní tematická analýza (Braun & Clarke, 2006; 2021).
-- Otevřené kódování, tvorba témat, iterativní zpřesňování.
-- Porovnání případů slouží k zachycení kontrastů; design se nevydává za plnohodnotnou případovou studii.
+## 3.1 Výzkumný design
 
-### 3.6 Kvalita a limity
+- kvalitativní dokumentová analýza (Bowen, 2009);
+- řízená kvalitativní obsahová analýza (Hsieh & Shannon, 2005);
+- transparentní segmentace a coding frame (Schreier, 2012).
 
-- Důvěryhodnost, přenositelnost, reflexivita výzkumníka.
-- Etické aspekty, anonymizace, informovaný souhlas.
-- Limity: pouze korpus z CSV, chybějící triangulace dokumenty a pozorováním v této fázi.
+## 3.2 Výběr případů
 
----
+- ČEZ Group;
+- MONETA Money Bank;
+- O2 Czech Republic;
+- Škoda Auto;
+- účelový výběr podle sektorového a institucionálního kontrastu.
 
-## 4. Výsledky (předpokládaná struktura)
+## 3.3 Korpus a kritéria dokumentů
 
-### 4.1 Motivy implementace
+- oficiální reporty za rok 2024;
+- registry, verze, lokátory a data přístupu;
+- primární a doplňkové dokumenty;
+- vyloučení médií a marketingových tiskových zpráv z empirického korpusu.
 
-- Témata identifikovaná v datech: regulace, tlak odběratelů/mateřské společnosti, reputace, přístup k financování, interní hodnoty, konkurenční tlak.
-- Vztah motivů k hloubce implementace.
+## 3.4 Jednotky analýzy a kódování
 
-### 4.2 Bariéry a konflikty
+- podnik jako případ;
+- významový segment jako kódovací jednotka;
+- oddíl a metodická poznámka jako kontextová jednotka;
+- možnost více kódů na segment.
 
-- Data, kapacity, kompetence, náklady, organizační sila, nejistota ohledně regulatorního vývoje.
-- Strategie řešení nebo obcházení bariér.
+## 3.5 Kódovací rámec a evidenční síla
 
-### 4.3 Vnímané a doložené přínosy
+- rodiny kódů;
+- pravidla E0–E4;
+- pilotní revize;
+- negativní případy;
+- příklady zahrnutí a vyloučení.
 
-- Rozlišení mezi finančními, provozními, reputačními a organizačními přínosy.
-- Časový horizont: krátkodobý vs. dlouhodobý.
+## 3.6 Analytický postup
 
-### 4.4 Regulatorní změna jako katalyzátor
+- seznámení s dokumentem;
+- pilotní kódování;
+- hlavní kódování po případech;
+- případová mema;
+- mezipřípadová syntéza;
+- kontrolní kódování a druhá kontrola všech E3/E4 položek.
 
-- Změna priorit, nové pozice, nové procesy.
-- Rozdíly mezi podniky, které již měly ESG aktivity, a těmi, které začínají až nyní.
+## 3.7 Důvěryhodnost, reflexivita a audit
 
-### 4.5 Napříč případy: syntéza a typologie
+- claim-evidence ledger;
+- dohledatelné lokátory;
+- alternativní výklady;
+- audit využití AI;
+- bez předstírané interkodérské reliability.
 
-- Typologie implementačních drah (např. symbolická, adaptivní, integrativní).
-- Srovnání s konceptuálním modelem.
+## 3.8 Etika a limity
 
----
+- veřejná data právnických osob;
+- sebeprezentační charakter zdrojů;
+- nerovný rozsah reportů;
+- skupinové hranice;
+- jeden časový řez a jeden analytik.
 
-## 5. Diskuse
+# 4 Výsledky
 
-- Návrat k teoretickému rámci: co data potvrzují, co problematizují, co doplňují.
-- Institucionální tlaky v českém kontextu — specifická kombinace donucovacích (regulace), mimetických (sledování konkurentů) a normativních (profesní sítě).
-- Materialita v praxi — jak si podniky vykládají „důležité“ téma.
-- Ratingová divergence a její percepce respondenty.
-- Greenwashing jako možné riziko a jak mu respondenti rozumějí.
-- Srovnání se zahraničními studiemi.
-- Limity: velikost vzorku, sektorová omezení, chybějící triangulace.
-- Doporučení pro praxi a pro regulatorní tvorbu.
+## 4.1 Charakteristika korpusu a případů
 
----
+- typ, rozsah a standard dokumentu;
+- reportingové hranice;
+- základní profil čtyř sektorů;
+- upozornění, že rozsah dokumentu není skóre kvality.
 
-## 6. Závěr
+## 4.2 Téma 1: Standardizovaná architektura, rozdílná manažerská hloubka
 
-- Shrnutí hlavních zjištění.
-- Odpovědi na výzkumné otázky.
-- Přínos práce: empirické porozumění ESG implementaci v českém kontextu.
-- Náměty pro další výzkum: longitudinální studie, kvantitativní testování modelu, srovnání se Slovenskem / Polskem / Maďarskem.
+- podobná struktura strategie–governance–IRO–metriky;
+- rozdíly ve vazbě na konkrétní rozhodnutí;
+- ESRS jako strukturující donucovací tlak;
+- O2 jako přechodový případ GRI/ESRS.
 
----
+## 4.3 Téma 2: ESG se stává řídicí agendou tam, kde má provozní nebo finanční kotvu
 
-## 7. Literatura
+- ČEZ: přechodový a investiční plán;
+- MONETA: úvěrové portfolio, riziko a odměňování;
+- O2: energie datové infrastruktury, kyberbezpečnost a dodavatelé;
+- Škoda Auto: produkt, výroba, CapEx a dodavatelský řetězec.
 
-- Pouze zdroje citované v textu.
-- Formát: APA 7. vydání (přizpůsobeno české akademické konvenci).
-- *Dostupný korpus obsahuje 17 záznamů, všechny ověřené přes Crossref.*
+## 4.4 Téma 3: Governance je nejlépe doložena odpovědností, kadencí a korektivním mechanismem
 
----
+- orgány a výbory;
+- předávání informací;
+- spojení s odměnou;
+- rozdíl mezi existencí výboru a doložením jeho účinku.
 
-## Přílohy — předběžný seznam
+## 4.5 Téma 4: Reporty měří hlavně aktivity a provozní výsledky; dopad zůstává obtížný
 
-- Scénář rozhovoru
-- Informovaný souhlas
-- Ukázka kódovacího schématu (po analýze)
-- Seznam podniků (anonymizovaný) a respondentů
-- COREQ checklist
+- výstupové metriky versus outcome/impact;
+- hranice Scope 3 a financovaných emisí;
+- počty účastníků versus změna chování;
+- absolutní a intenzitní ukazatele;
+- metodické přepočty a srovnatelnost.
 
----
+## 4.6 Téma 5: Přiznané napětí a změna zvyšují informační hodnotu
 
-## Harmonogram (předběžný)
+- MONETA: kritika reportovací zátěže, pokles zájmu investorů, chybějící outcome cíl financovaných emisí a zrušený KPI;
+- O2: reset cílů po restrukturalizaci, růst energie a emisí, restatement a absence assurance;
+- ČEZ: trvalé dopady těžby a sociální náklady útlumu uhlí;
+- Škoda Auto: skupinové hranice a rozdíl mezi eligibility a alignment.
 
-| Fáze | Období | Závisí na |
-|---|---|---|
-| Finalizace teoretického rámce | 2026-09 | — |
-| Ověření etických, GDPR a školních podmínek | 2026-09 až 10 | Teoretický rámec |
-| Pilotní rozhovory (2–3) | 2026-10 | Potvrzení podmínek vedoucím / školou |
-| Hlavní sběr dat | 2026-11 až 2027-01 | Pilot |
-| Přepis a kódování | 2027-01 až 03 | Sběr dat |
-| Analýza a syntéza | 2027-03 až 05 | Kódování |
-| Diskuse a závěr | 2027-05 až 06 | Analýza |
-| Revize a odevzdání | 2027-06 až 08 | Celý draft |
+## 4.7 Mezipřípadová typologie
 
----
+- ČEZ: kapitálově integrovaná transformace;
+- MONETA: governance a pobídky s pragmatickou skepsí k reportingu;
+- O2: provozní a sociálně-digitální integrace v přechodu;
+- Škoda Auto: skupinově zakotvená průmyslová a dodavatelská integrace.
 
-## Poznámky k další práci
+Typologie není žebříčkem ani hodnocením celkové udržitelnosti.
 
-1. **Teoretický rámec** je rozpracován v samostatném souboru `chapters/01-theoretical-framework-demo.md`.
-2. Pro finální verzi doplnit primární zdroj stakeholderové teorie, regulatorní prameny (CSRD, ESRS) a literaturu o dvojí materialitě.
-3. Kvantitativní zdroje Friede, Busch & Bassen (2015) a Eccles, Ioannou & Serafeim (2014) slouží jako podklad pro diskusi, nikoli jako přímý testovaný model v této kvalitativní práci.
-4. Metodologické zdroje (Braun & Clarke, 2006; 2021; Tong et al., 2007; Guest et al., 2006; Malterud et al., 2016; Eisenhardt, 1989) tvoří oporu metodologické kapitoly.
+# 5 Diskuse
+
+## 5.1 Odpověď na hlavní otázku
+
+- znaky odlišující deklaraci, formalizaci a integraci;
+- rozhodovací vazba jako nejdůležitější přechodový bod;
+- omezená schopnost dokumentu prokázat skutečný dopad.
+
+## 5.2 Institucionální izomorfismus bez stejného výsledku
+
+- podobnost struktury reportů;
+- sektorově odlišné mechanismy implementace;
+- regulace jako infrastruktura srovnatelnosti, nikoli automatická změna praxe.
+
+## 5.3 Legitimita a kvalita zveřejnění
+
+- pozitivní narativ versus vyváženost;
+- samostatný report, GRI ani assurance nejsou samy známkou substantivnosti;
+- význam negativních informací, hranic a metodických poznámek.
+
+## 5.4 Materialita jako rozhodovací mechanismus
+
+- od identifikace tématu k vlastníkovi, zdrojům a rozhodnutí;
+- různé sektorové formy materiality;
+- kritika mechanického přebírání seznamu ESRS témat.
+
+## 5.5 Přínos škály E0–E4
+
+- možnost kriticky číst konkrétní tvrzení bez celkového ratingu firmy;
+- odlišení objemu reportu od evidenční síly;
+- omezení a riziko normativního nadhodnocení formalizace.
+
+## 5.6 Praktická doporučení
+
+Pro podniky:
+- spojovat tvrzení s vlastníkem, hranicí, termínem a rozhodnutím;
+- zveřejňovat změny metodiky, nesplněné cíle a trade-offy;
+- oddělovat aktivitu, výsledek a dopad.
+
+Pro čtenáře a hodnotitele:
+- nepoužívat počet stran, rating ani assurance jako zkratku;
+- hledat vazbu na CapEx, riziko, produkt, odměnu a nákup;
+- číst metodické poznámky a hranice.
+
+Pro další výzkum:
+- triangulace rozhovory, interními dokumenty a provozními daty;
+- longitudinální srovnání po změnách regulace;
+- zahrnutí středních a malých podniků.
+
+## 5.7 Limity
+
+- čtyři velké případy;
+- veřejná sebeprezentace;
+- rok 2024;
+- různé standardy a hranice;
+- bez kauzálního hodnocení dopadu;
+- jeden analytik a použití LLM pod lidskou evidenční kontrolou.
+
+# Závěr
+
+- stručná odpověď na hlavní a dílčí otázky;
+- syntéza pěti témat;
+- teoretický přínos: rozhodovací vazba jako rozlišovací znak;
+- metodický přínos: škála E0–E4 a auditní ledger;
+- praktický přínos pro čtení ESG reportů;
+- jasné vymezení, co výzkum neprokazuje.
+
+# Literatura
+
+- akademické zdroje citované v textu;
+- právní a regulatorní prameny;
+- firemní dokumenty jako samostatná část seznamu zdrojů.
+
+# Přílohy
+
+- registr korpusu;
+- kódovací rámec;
+- ukázka evidenční matice;
+- mezipřípadová souhrnná tabulka;
+- protokol kontrolního kódování;
+- pro odtajněnou experimentální verzi: audit využití generativní AI.

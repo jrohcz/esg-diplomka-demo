@@ -1,60 +1,94 @@
-# ESG diplomka — demonstrační projekt
+# ESG diplomka — experimentální hodnoticí rukopis
 
-> **DEMONSTRAČNÍ PROJEKT, NIKOLI HOTOVÁ DIPLOMOVÁ PRÁCE.** Soubory v `data/` a `analysis/` označené jako syntetické obsahují výhradně uměle vytvořená data. Neproběhl žádný rozhovor a syntetický pilot nesmí být prezentován jako empirický výsledek.
+> **VÝZKUMNÝ ARTEFAKT, NIKOLI SKUTEČNĚ ODEVZDÁVANÁ DIPLOMOVÁ PRÁCE.**
+>
+> Projekt testuje, zda současný LLM-orientovaný workflow dokáže vytvořit úplný, auditovatelný a odborně hodnotitelný rukopis. Neusiluje o získání akademického titulu, neobsahuje falešné čestné prohlášení a nesmí být vydáván za práci konkrétního studenta.
 
-Demonstrační výzkumný projekt k tématu:
+## Rychlý vstup
 
-> **Implementace ESG principů v českých podnicích: motivace, bariéry a vnímané přínosy v období regulatorní změny**
+- **Co poslat hodnotitelům:** [`deliverables/2026-09-01/01-send-to-reviewers/`](deliverables/2026-09-01/01-send-to-reviewers/)
+- **Co předat až po uzavření posudku:** [`deliverables/2026-09-01/02-after-review/`](deliverables/2026-09-01/02-after-review/)
+- **Úplný archiv verze:** [`deliverables/2026-09-01/03-complete-build/`](deliverables/2026-09-01/03-complete-build/)
+- **Celý postup a mapa souborů:** [`PROCESS.md`](PROCESS.md)
+- **Design zaslepeného experimentu:** [`EXPERIMENT-DESIGN.md`](EXPERIMENT-DESIGN.md)
+- **Aktuální stav a omezení:** [`STATUS.md`](STATUS.md)
 
-FSE UJEP · Ekonomika a management veřejného sektoru.
+GitHub je soukromý pracovní archiv. Hodnotitelům se neposílá přístup do repozitáře, protože obsahuje i odtajňovací a auditní vrstvu.
 
-Projekt ukazuje transparentní proces: výzkumný kontrakt, ověřené akademické a regulatorní zdroje, metodologii rozhovorů, šablony evidence, syntetický pilot, analýzu a audit využití AI. Není určen k odevzdání jako studentská práce; školní, etické, GDPR a citační požadavky musí před empirickou fází potvrdit vedoucí a UJEP.
+## Název rukopisu
 
-## Stav k 1. 9. 2026
+**Veřejně vykazovaná implementace ESG ve vybraných velkých podnicích působících v České republice**
 
-- všech **19 cílových artefaktů** existuje;
-- akademický registr obsahuje **17/17 DOI ověřených přes Crossref**;
-- regulatorní přehled rozlišuje účinné právo EU, transpozici, delegovaný akt a návrh;
-- všech 7 CSV souborů prochází striktním Python `csv` parserem se stabilním počtem sloupců;
-- syntetická data a syntetická analýza jsou výrazně označeny a odděleny od budoucího empirického korpusu;
-- úplný merge audit je v [`STATUS.md`](STATUS.md).
+Výzkum používá komparativní kvalitativní analýzu oficiálních firemních reportů za rok 2024. Původní syntetický rozhovorový pilot zůstává v repozitáři pouze jako historický demonstrační materiál a **není použit v empirické části finálního rukopisu**.
 
-## Artefakty
+## Stav finální verze
 
-### Návrh a metodologie
+- úplný rukopis od českého a anglického abstraktu po závěr;
+- 70 stran A4 v hodnoticí verzi;
+- čtyři kontrastní případy: ČEZ Group, MONETA Money Bank, O2 Czech Republic a Škoda Auto;
+- 45 klíčových důkazních segmentů s přesnými lokátory;
+- finální kódovací slovník E0–E4;
+- případová mema a mezipřípadová evidenční matice;
+- desetiprocentní kontrolní kódování;
+- druhá kontrola všech devíti položek E3/E4;
+- claim-evidence ledger pro 31 hlavních tvrzení rukopisu;
+- zaslepené pokyny a strukturovaný formulář pro nezávislé hodnotitele;
+- samostatná odtajňovací zpráva;
+- reprodukovatelná validace, sazba do DOCX/PDF a automatizovaný release.
 
-- `notes/research-contract.md`
-- `notes/thesis-outline.md`
-- `notes/methodology.md`
-- `notes/literature-map.md`
-- `notes/esg-regulatory-czech-2026.md`
-- `notes/ujep-requirements.md`
-- `notes/ai-workflow-and-audit.md`
+## Struktura repozitáře
 
-### Zdroje
+| Cesta | Obsah |
+|---|---|
+| `deliverables/2026-09-01/` | zmrazené soubory připravené k použití |
+| `chapters/` | zdrojový rukopis po kapitolách |
+| `sources/` | akademické, regulatorní a firemní zdrojové registry |
+| `data/` | empirický dokumentový korpus a historický syntetický pilot |
+| `analysis/` | codebooky, kontroly, případová mema a evidenční matice |
+| `audit/` | vazba hlavních tvrzení na důkazy a AI auditní šablona |
+| `notes/` | výzkumný kontrakt, metodika, osnova, literatura a regulatorní poznámky |
+| `reviewer-packet/` | zdrojové pokyny, hodnoticí formulář a odtajnění |
+| `scripts/` | validační, build a exportní nástroje |
+| `.github/workflows/` | automatické sestavení, kontrola a publikace zmrazených výstupů |
+| `thesis/README.md` | pořadí kapitol a sestavení rukopisu |
 
-- `sources/academic-sources.csv`
-- `sources/regulatory-sources.csv`
-- `sources/ujep-sources.csv`
+## Hlavní metodické pravidlo
 
-### Výzkumné šablony
+Jednotkou hodnocení není firma, ale konkrétní tvrzení. Škála rozlišuje:
 
-- `templates/interview-guide.md`
-- `templates/consent-and-information-sheet.md`
-- `templates/respondent-matrix.csv`
-- `templates/evidence-ledger.csv`
-- `audit/ai-use-log-template.csv`
+- **E0:** deklarace;
+- **E1:** aktivita nebo výstup;
+- **E2:** formalizovaný proces nebo řízený výsledek;
+- **E3:** vazba na kapitál, riziko, produkt, dodavatele, odměnu nebo provoz;
+- **E4:** přesně vymezený výsledek se silnou externí podporou.
 
-### Demonstrační kapitola a syntetický pilot
+Assurance je evidováno samostatně. Externě ověřená zpráva není automaticky důkazem manažerské integrace ani skutečného dopadu.
 
-- `chapters/01-theoretical-framework-demo.md`
-- `data/synthetic-pilot-interviews.md` — **SYNTHETICKÁ / NE EMPIRICKÁ DATA**
-- `analysis/codebook-v1.csv` — **KÓDOVÁNÍ SYNTHETICKÉHO PILOTU**
-- `analysis/synthetic-pilot-analysis.md` — **SYNTHETICKÁ / NE EMPIRICKÁ ANALÝZA**
+## Reprodukce
+
+```bash
+python scripts/validate-manuscript.py
+bash scripts/build-manuscript.sh
+```
+
+GitHub Actions po úspěšné validaci vytvoří DOCX, PDF, předhodnoticí ZIP, odtajňovací ZIP, kontrolní součty a uloží zmrazené výstupy do `deliverables/2026-09-01/`.
+
+## Jak provést hodnocení
+
+1. Hodnotiteli poslat pouze obsah `01-send-to-reviewers` nebo ZIP v této složce.
+2. Nechat jej uzavřít známku, doporučení k obhajobě a věcný posudek.
+3. Teprve potom vyžádat odhad způsobu vzniku textu.
+4. Zachovat původní posudek beze změny.
+5. Následně předat obsah `02-after-review` a zaznamenat oddělenou reflexi po odtajnění.
+
+Podrobnosti jsou v [`PROCESS.md`](PROCESS.md) a [`reviewer-packet/README.md`](reviewer-packet/README.md).
 
 ## Kritická omezení
 
-1. Metadata a DOI nenahrazují četbu plných textů a kontrolu konkrétních tvrzení proti stranám originálu.
-2. Právní závěr pro konkrétní českou firmu vyžaduje aktuální konsolidované právo, českou transpozici a individuální posouzení.
-3. Šablony souhlasu a GDPR jsou pracovní; před náborem je musí potvrdit správce údajů / UJEP.
-4. Syntetický pilot testuje proces, nikoli realitu českých podniků.
+1. Firemní report je oficiální sebeprezentace, nikoli nezávislý audit provozu.
+2. Čtyři velké podniky nejsou reprezentativním vzorkem české ekonomiky.
+3. Analýza hodnotí reporty za rok 2024; pozdější změny nejsou zpětně promítány.
+4. Dokumentový design neověřuje zkušenost zaměstnanců, dodavatelů, zákazníků ani komunit.
+5. Vysoká třída důkazu u konkrétního segmentu není celkovým ESG ratingem firmy.
+6. Skutečná schopnost člověka rukopis obhájit vyžaduje samostatný experiment.
+7. Pozitivní známka neznamená, že konkrétní použití AI studentem dovolují pravidla jeho školy.

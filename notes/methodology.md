@@ -1,195 +1,216 @@
-# Metodologie — kvalitativní výzkum ESG v českých podnicích
+# Metodologie — komparativní kvalitativní analýza firemních ESG reportů
 
-**Verze:** 2026-09-01
-**Navazuje na:** `notes/research-contract.md`
-
----
+**Verze:** 2026-09-01  
+**Navazuje na:** `notes/research-contract.md`  
+**Metodický status:** uzavřený protokol před hlavním kódováním
 
 ## 1. Výzkumný design
 
-Kvalitativní, průřezový, explorační design. Zvolen proto, že výzkumná otázka směřuje k *porozumění* tomu, jak respondenti konstruují význam implementace ESG — nikoli k měření četnosti či k testování hypotéz na reprezentativním vzorku. Design odpovídá doporučením pro výzkum organizační praxe, kde klíčové proměnné (motivace, bariéry, vnímané přínosy) nejsou přímo pozorovatelné a vyžadují interpretaci aktérů.
+Práce používá kvalitativní, průřezový a komparativní design založený na analýze veřejných firemních dokumentů. Dokumentová analýza je systematický postup, při němž jsou dokumenty vyhledány, posouzeny, segmentovány, kódovány a interpretovány s ohledem na podmínky jejich vzniku (Bowen, 2009). Nejde tedy o „čtení reportů a shrnutí zajímavostí“, ale o transparentní výzkumný proces s předem stanovenými jednotkami analýzy, kódovacím rámcem a evidenční stopou.
 
-**Metoda sběru dat:** Polostrukturované rozhovory (semi-structured interviews). Scénář obsahuje tematické okruhy a otevřené otázky; tazatel přizpůsobuje pořadí i formulaci průběhu rozhovoru a umožňuje respondentovi rozvíjet vlastní linie. Tato pružnost je zásadní pro zachycení neočekávaných témat a konkrétních příkladů.
+Jádrem je **řízená kvalitativní obsahová analýza** (directed qualitative content analysis). Počáteční kategorie vycházejí z teoretického rámce a výzkumných otázek: institucionální tlaky, legitimita, materialita, organizační odpovědnost, manažerská integrace, metriky, zveřejňování negativních dopadů a externí ověření. Řízený přístup je vhodný, když existující teorie poskytuje výchozí pojmy, ale analýza musí umožnit jejich upřesnění či doplnění kategoriemi vzniklými z dat (Hsieh & Shannon, 2005). Kódovací rámec proto není uzavřeným checklistem. Při pilotu i hlavním kódování lze přidat induktivní kód, pokud zachycuje významný jev, který stávající rámec nezahrnuje.
 
----
+Design neslouží k měření „ESG výkonnosti“ firem ani k sestavení pořadí. Zkoumá kvalitu a povahu zveřejněných dokladů o implementaci. Firemní reporty jsou zároveň informačními dokumenty a nástroji legitimizace. Jejich obsah je proto analyzován jako organizací vytvořená reprezentace vlastní praxe, nikoli jako nezávislé potvrzení skutečného dopadu.
 
-## 2. Výběr vzorku
+## 2. Výzkumné otázky
 
-### 2.1 Strategie: účelový výběr s maximální variací (maximum variation sampling)
+### Hlavní výzkumná otázka
 
-Cílem není statistická reprezentativita, ale pokrytí co nejširšího spektra kontextů, ve kterých k implementaci ESG dochází. Variace je plánována podél čtyř dimenzí:
+**Jak vybrané velké podniky působící v České republice ve veřejných zprávách za rok 2024 konstruují a dokládají implementaci ESG a které znaky odlišují deklaraci, formalizaci a manažerskou integraci?**
 
-| Dimenze | Kategorie | Zdůvodnění |
-|---|---|---|
-| **Velikost** | malé (<50 zam.), střední (50–249), velké (250–1 000), velmi velké (>1 000) | Velikost ovlivňuje kapacity a formalizaci; právní scope CSRD se testuje odděleně podle zaměstnanců, obratu, skupiny a účinného práva. |
-| **Sektor** | výroba, služby, energetika, stavebnictví, obchod | Různé sektory čelí různým environmentálním dopadům a tlakům hodnotového řetězce. |
-| **Regulatorní expozice** | přímo podléhá CSRD; v řetězci (dodavatel/financování); bez regulatorního tlaku; součást skupiny s reportingem | Dílčí výzkumná otázka 5 a 6. |
-| **Vlastnická struktura** | český kapitál; zahraniční skupina; státní/municipální; private equity | Vlastnictví ovlivňuje reportingové standardy a očekávání mateřské společnosti. |
+### Dílčí výzkumné otázky
 
-### 2.2 Cílový rozsah: 12–16 rozhovorů
+1. Jak podniky vymezují materiální ESG témata a jak vysvětlují jejich vazbu na strategii a podnikatelský model?
+2. Jaké struktury odpovědnosti, dohledu a interní koordinace v reportech uvádějí?
+3. Kde je doložena vazba ESG na investice, řízení rizik, odměňování, produkty, nákup nebo provozní rozhodování?
+4. Jakou evidenční sílu mají zveřejněné cíle a ukazatele: rozlišují vstupy, aktivity, výstupy, výsledky a dopady?
+5. Jak podniky komunikují nesplněné cíle, trade-offy, nejistoty a negativní dopady?
+6. Jak se způsoby dokládání implementace liší mezi energetikou, bankovnictvím, telekomunikacemi a automobilovým průmyslem?
 
-Dolní hranice vychází z požadavku pokrýt všechny variační buňky alespoň jedním případem; horní hranice je nastavena tak, aby při hloubce rozhovoru (60–90 min) zůstala analýza zvládnutelná v rámci diplomové práce. Konečný počet se řídí principem **information power** (Malterud, Siersma & Guassora, 2016):
+## 3. Výběr případů a dokumentů
 
-> Čím silnější je informační síla vzorku (užší cíl, vysoce relevantní respondenti, aplikace teorie, kvalitní dialog), tím menší vzorek postačuje.
+### 3.1 Strategie výběru
 
-Tento projekt vykazuje:
-- **Cíl:** relativně úzký (implementace ESG, nikoli „udržitelnost obecně“) → menší vzorek postačuje
-- **Relevance vzorku:** respondenti jsou klíčoví rozhodovatelé nebo odborníci → vysoká informační hustota na rozhovor
-- **Teoretická opora:** analytická očekávání a konceptuální rozlišení čtyř úrovní ESG → podporuje informační sílu
-- **Kvalita dialogu:** polostrukturovaný formát, možnost hloubkového doptávání → vyšší informační výtěžnost
-- **Design analýzy:** tematická analýza napříč případy → není nutná saturace na úrovni jednotlivých kategorií
+Použit je účelový výběr kontrastních případů. Do korpusu byly zařazeny čtyři velké podniky nebo skupiny s významnou činností a rozhodovací či výrobní základnou v České republice:
 
-Po 10–12 rozhovorech bude posouzena informační síla. Nábor se ukončí při dostatečné informační síle a pokrytí plánované variace; maximum je 16 rozhovorů. Reflexivní tematická analýza zde nepoužívá mechanickou „saturaci kódů“ jako automatické pravidlo.
+| Případ | Sektor | Institucionální charakteristika | Hlavní zdroj |
+|---|---|---|---|
+| ČEZ Group | energetika | kapitálově náročná transformace, regulace, významný podíl státu | integrovaná výroční finanční zpráva a zpráva o udržitelnosti 2024 |
+| MONETA Money Bank | bankovnictví | burzovně obchodovaná banka, finanční dohled, dopady úvěrového portfolia | Sustainability at MONETA 2024 a příslušná část výroční zprávy |
+| O2 Czech Republic | telekomunikace | soukromá skupina, energeticky náročná infrastruktura, digitální bezpečnost | ESG Report 2024 |
+| Škoda Auto | automobilový průmysl | nadnárodní skupina, produktová transformace a rozsáhlý dodavatelský řetězec | Annual Report / Sustainability Report 2024 a oficiální online report |
 
-### 2.3 Kritéria zařazení
+Případy nejsou reprezentativním vzorkem české ekonomiky. Záměrem je analytické srovnání odlišných mechanismů: investiční transformace, finanční zprostředkování, provoz digitální infrastruktury a průmyslová výroba. Všechny organizace mají značnou reportovací kapacitu; výzkum proto nevypovídá o běžné praxi malých a středních podniků.
 
-- Firma působí v ČR a má zde alespoň část provozu nebo řízení.
-- Respondent má přímou zkušenost s ESG agendou (manažer udržitelnosti, CFO, ředitel, facilities manažer, HR ředitel — dle firmy).
-- Rozhovor lze uskutečnit v češtině nebo angličtině.
-- Firma není primárně poradenskou organizací v oblasti ESG (konzultanti by byli vhodní pro doplňkové rozhovory, ale nejsou cílovou skupinou).
+### 3.2 Kritéria zařazení dokumentu
 
-### 2.4 Nábor respondentů
+Dokument musel splnit všechna následující kritéria:
 
-1. **Oslovení:** cílené e-maily s informačním dopisem a žádostí o rozhovor.
-2. **Doporučení (snowball):** na konci rozhovoru dotaz na vhodné kolegy v jiných firmách; omezeně, aby nedošlo k homogenizaci vzorku.
-3. **Veřejné zdroje:** seznam firem s ESG reportingem (CSRD, ESRS), články, konferenční vystoupení.
-4. **Odmítnutí:** zaznamenat počet a důvod (pro posouzení možného zkreslení).
+1. byl zveřejněn samotnou analyzovanou organizací nebo její skupinou;
+2. pokrýval účetní či reportovací období od 1. ledna do 31. prosince 2024;
+3. obsahoval informace o strategii, správě, cílech, metrikách nebo konkrétních ESG opatřeních;
+4. byl dostupný v úplné podobě v PDF nebo na stabilní oficiální webové stránce;
+5. bylo možné určit přesný lokátor — stránku, oddíl nebo stabilní webovou sekci.
 
----
+Mediální články, žebříčky, poradenské komentáře a firemní tiskové zprávy nebyly kódovány jako primární data. Mohou být použity pouze ke kontrole bibliografického kontextu. K ověření faktu, který report sám pouze tvrdí, by bylo třeba nezávislého zdroje; taková triangulace není automaticky součástí tohoto designu.
 
-## 3. Sběr dat
+### 3.3 Uzavření korpusu
 
-### 3.1 Formát a délka
+Korpus byl uzavřen před hlavní analýzou a evidován v `sources/corporate-documents.csv`. Každý dokument má stabilní identifikátor, název, vydavatele, období, rozsah, URL, datum přístupu a roli v analýze. Případné změny online dokumentu po datu přístupu nejsou do zmrazeného korpusu zpětně promítány bez záznamu v changelogu.
 
-- Osobně (preferováno) nebo videohovor (MS Teams, Google Meet, Zoom).
-- Délka: 60–90 minut; při osobním setkání možnost krátké exkurze.
-- Záznam: diktafon (osobně) nebo nahrávka platformy (online), vždy se souhlasem.
-- Přepis: doslovná transkripce inteligentním přepisem (vynechány parazitní výrazy, zachovány významové pauzy); provádí nástroj (např. Whisper od OpenAI, přepisovač Otter.ai nebo manuální korekce).
+## 4. Jednotky analýzy a segmentace
 
-### 3.2 Dokumentace před rozhovorem
+Schreier (2012) rozlišuje jednotku analýzy, jednotku kódování a kontextovou jednotku. V této práci jsou definovány následovně:
 
-- Před každým rozhovorem: rešerše firmy (web, výroční zpráva, ESG report, zmínky v médiích).
-- Zápis do předpřipraveného listu: kontext, klíčová fakta, specifické dotazy.
-- Respondenta o rešerši informovat až po souhlasu; při rozhovoru zmínit až ve vhodný moment (není test).
+- **Jednotka analýzy:** jeden podnik jako případ a jeho uzavřený soubor dokumentů za rok 2024.
+- **Jednotka kódování:** významově ucelený úsek — věta, odstavec, položka tabulky nebo související skupina položek — obsahující tvrzení o cíli, procesu, odpovědnosti, rozhodnutí, metrice, výsledku, negativním dopadu, omezení nebo ověření.
+- **Kontextová jednotka:** celý oddíl dokumentu, případně navazující tabulka a metodická poznámka. Smysl úryvku se neurčuje izolovaně od názvu ukazatele, hranice měření a vysvětlivky.
 
-### 3.3 Etické aspekty
+Segment nesmí být vytvořen jen proto, že obsahuje slovo „ESG“ nebo „udržitelnost“. Naopak může být zařazen i bez těchto slov, pokud popisuje relevantní řídicí mechanismus, například kapitálový plán, pravidlo nákupu, řízení klimatického rizika, pracovní podmínky nebo ochranu zákazníků.
 
-- Každý respondent podepisuje informovaný souhlas (viz `templates/consent-and-information-sheet.md`).
-- Účast je dobrovolná; respondent může kdykoli odstoupit.
-- Všechna data jsou anonymizována (viz sekce 5).
-- Projekt není určen k odevzdání jako školní práce; etické aspekty jsou přesto dodržovány na úrovni odpovídající akademickému výzkumu.
+Jeden segment může nést více kódů, pokud zachycuje různé analytické dimenze. Například tvrzení, že představenstvo schválilo investiční plán navázaný na dekarbonizační cíl, může nést kódy `governance-board`, `decision-capex`, `target-timebound` a `evidence-E3`.
 
----
+## 5. Kódovací rámec
 
-## 4. Analýza dat
+Úplný datový slovník je uložen v `analysis/document-codebook.csv`. Hlavní rodiny kódů jsou:
 
-Metoda: **reflexivní tematická analýza** (reflexive thematic analysis, Braun & Clarke, 2006, 2021). Volba je v souladu s kvalitativním designem — nejde o zjednodušený „tématický přehled“, ale o aktivní proces interpretace, v němž výzkumník konstruuje témata na základě opakovaného čtení dat.
+1. **Tlak a motivace** — regulace, investor, zákazník, mateřská skupina, provozní úspora, řízení rizik, legitimita.
+2. **Materialita a strategie** — proces dvojí materiality, vazba na podnikatelský model, sektorové priority, stakeholder engagement.
+3. **Governance** — odpovědný orgán, vlastník tématu, výbor, pravidelné reportování, interní kontrola, dovednosti a externí expertiza.
+4. **Manažerská integrace** — kapitálové výdaje, provozní rozpočet, úvěrování, produktové portfolio, nákup a dodavatelé, odměňování, řízení rizik.
+5. **Metriky a výsledky** — základní rok, cílový rok, hranice, metodika, časová řada, přepočet dat, splněný či nesplněný cíl.
+6. **Negativní informace a nejistota** — negativní dopad, růst nepříznivého ukazatele, trade-off, omezení dat, změna metodiky, zrušení či reset cíle.
+7. **Ověření a hranice tvrzení** — externí ujištění, omezené ujištění, neověřený report, firemní atribuce, nejasná kauzalita.
+8. **Evidenční síla** — E0 až E4.
 
-### 4.1 Fáze analýzy (Braun & Clarke, 2006 — šest fází, aplikovány reflexivně)
+### 5.1 Škála evidenční síly
 
-| Fáze | Obsah | Výstup |
-|---|---|---|
-| **1. Seznámení s daty** | Opakované čtení přepisů, počáteční poznámky; reflexivní deník (předporozumění, očekávání, reakce) | Seznam prvotních dojmů a neočekávaných momentů |
-| **2. Generování počátečních kódů** | Otevřené kódování — každý segment relevantní k VO označen krátkým kódem (deskriptivním a/nebo interpretativním); software: Taguette / QCoder / MS Word s revizemi | Kódovací schéma (30–80 kódů) |
-| **3. Hledání témat** | Seskupování kódů do kandidátských témat; vizuální mapování (např. myšlenková mapa) | Předběžná tematická mapa |
-| **4. Revize témat** | Ověření, zda témata odpovídají datům i výzkumným otázkám; slučování, štěpení, rušení | Revidovaná tematická struktura |
-| **5. Definování a pojmenování témat** | Jasná definice každého tématu — jeho rozsah, vnitřní variace, vztah k ostatním tématům | Finální témata s definicemi |
-| **6. Psaní** | Prezentace témat v analytickém vyprávění s ukázkami dat | Kapitola výsledků |
+Každému relevantnímu tvrzení je přiřazena nejvyšší obhajitelná třída:
 
-### 4.2 Reflexivita
+| Třída | Definice | Minimální znak | Typický příklad |
+|---|---|---|---|
+| E0 | deklarace | hodnotový nebo strategický závazek bez mechanismu | „Udržitelnost je prioritou.“ |
+| E1 | aktivita | konkrétní provedené opatření nebo objem činnosti | počet proškolených osob, zapojených dodavatelů nebo realizovaný projekt |
+| E2 | řízený výsledek | vlastník či proces, měřitelný cíl a sledovaný vývoj | cíl s výchozím rokem, termínem a časovou řadou |
+| E3 | rozhodovací vazba | prokazatelná vazba na alokaci zdrojů, riziko, produkt, nákup nebo odměnu | investiční plán v souladu s přechodovým plánem; ESG KPI ve variabilní odměně |
+| E4 | ověřitelný dopad | jasná hranice, metodika, časová řada a nezávislé ověření nebo přesvědčivá triangulace | externě ověřená metrika s doloženým výsledkem; nikoli automaticky kauzální společenský dopad |
 
-Po každém rozhovoru je veden **reflexivní deník** (max. 1 strana A4). Zaznamenává se:
-- Co mě překvapilo.
-- Kde jsem já jako tazatel ovlivnil průběh.
-- Jaké předpoklady jsem si uvědomil.
-- Co bych příště udělal jinak.
+E4 se používá restriktivně. Externí ujištění nad reportem samo o sobě nepovyšuje všechna tvrzení na E4. Rozhoduje rozsah ujištění a kvalita konkrétní metriky. Omezené ujištění také není ekvivalentem rozumného ujištění ani auditu účinnosti řízení.
 
-Tyto záznamy slouží jako podklad pro reflexivní komentář v metodologické kapitole a pro posouzení vlivu výzkumníka na konstrukci témat. Deník není součástí anonymizovaných dat a není zveřejňován.
+## 6. Postup analýzy
 
-### 4.3 Software
+### 6.1 Příprava a seznámení s korpusem
 
-- Kódování: open-source nástroj (Taguette, QCoder nebo přepis v .docx s revizemi).
-- Přepisy: uloženy jako `.md` / `.docx`, pojmenované kódem (viz sekce 5).
-- Analýza nevyžaduje specializovaný CAQDAS; při 12–16 rozhovorech postačuje kvalitní tabulkový procesor nebo jednoduchý kódovací nástroj.
+1. Ověření, že dokument pochází z oficiální domény a pokrývá rok 2024.
+2. Uložení bibliografických údajů a kontrolního součtu lokální kopie, je-li technicky dostupná.
+3. První čtení bez kódování se zaměřením na strukturu dokumentu, rozsah, reportingový standard a vztah k výroční zprávě.
+4. Případové memo: podnikatelský model, hlavní dopady, deklarované priority a předběžná rizika interpretačního zkreslení.
 
----
+### 6.2 Pilotní kódování
 
-## 5. Anonymizace a GDPR
+Pilot zahrnuje nejméně dva kontrastní oddíly z každého případu: jeden o strategii či správě a jeden s výkonnostními údaji. Cílem je prověřit:
 
-### 5.1 Anonymizace
+- zda se kódy vzájemně nepřekrývají bez analytického přínosu;
+- zda lze konzistentně odlišit aktivitu od výsledku a rozhodovací vazby;
+- zda lokátor umožňuje nezávisle dohledat segment;
+- zda rámec nezvýhodňuje některý sektor;
+- zda chybí induktivní kategorie.
 
-Všechny výstupy (analýza, text práce, případné přílohy) jsou anonymizovány podle následujících pravidel:
+Po pilotu se provede jednorázová revize definic. Změny jsou zaznamenány v codebooku a changelogu. Již zakódované segmenty jsou následně znovu posouzeny podle finálních definic.
 
-| Prvek | Způsob anonymizace |
-|---|---|
-| Název firmy | F1, F2, …, F16 (případně smyšlený pracovní název) |
-| Jméno respondenta | R1, R2, …, R16; smazána jména z přepisů |
-| Lokalita (město/region) | Pokud relevantní pro kontext (např. „výrobní závod na jižní Moravě“); neuvádět přesné adresy |
-| Specifikační údaj (počet zam., obrat, přesný segment) | Zobecnit nebo uvést v širší kategorii; pokud hrozí jednoznačná identifikace, údaj vynechat |
-| Přímá citace s identifikátorem | Citát označen kódem respondenta; pokud obsahuje jednoznačný identifikátor, parafrázovat |
-| Jména kolegů, zákazníků, dodavatelů | Smazat nebo nahradit popisem („ředitel výroby“, „klíčový zákazník z automotive“) |
+### 6.3 Hlavní kódování
 
-Všechny přepisy jsou uloženy pod kódem respondenta; separátní klíč (jméno ↔ kód) je uložen v samostatném zaheslovaném souboru mimo datovou složku.
+Kódování probíhá po případech a následně napříč případy:
 
-### 5.2 GDPR
+1. označení segmentu a jeho přesného lokátoru;
+2. neutrální parafráze toho, co dokument skutečně sděluje;
+3. přiřazení tematických kódů;
+4. přiřazení třídy E0–E4 s krátkým odůvodněním;
+5. označení statusu tvrzení: `corporate_claim`, `metric`, `interpretation`, `limitation`;
+6. záznam alternativního výkladu nebo chybějícího důkazu;
+7. přenos vybraných segmentů do evidenční matice.
 
-- Účastnický souhlas a informační povinnost jsou odděleny od právního titulu zpracování osobních údajů; správce, právní titul, retenční doby a práva subjektu musí být potvrzeny podle aktuálních pravidel UJEP před náborem.
-- Účel zpracování: akademický výzkum.
-- Data nejsou předávána externím službám bez schváleného režimu, odpovídající informace respondentovi a zpracovatelských podmínek.
-- Zvukové nahrávky jsou smazány po dokončení přepisu a kontrole.
-- Textové přepisy a klíč k anonymizaci jsou uloženy na zaheslovaném úložišti.
-- Respondent má právo na výmaz svých údajů do uzavření analýzy (datum uvedeno v souhlasu).
+Po dokončení každého případu vznikne memo, které obsahuje podporující i rozporné důkazy. Teprve poté se vytvářejí témata napříč případy. Tím se omezuje riziko, že dominantní struktura jednoho reportu určí interpretaci všech ostatních.
 
----
+### 6.4 Kontrolní kódování
 
-## 6. COREQ compliance
+Protože hlavní analýzu provádí jeden výzkumník, není předstírána interkodérská reliabilita. Důvěryhodnost je posílena dvěma kontrolami:
 
-Výzkum bude popsán podle **COREQ** (COnsolidated criteria for REporting Qualitative research, Tong, Sainsbury & Craig, 2007) — 32 položek ve třech doménách:
+- po časovém odstupu je znovu zakódován nejméně desetiprocentní stratifikovaný vzorek segmentů ze všech případů;
+- všechny segmenty označené E3 nebo E4 jsou znovu otevřeny v originálu a kontrolovány proti definici třídy a rozsahu tvrzení.
 
-### Doména 1: Research team and reflexivity (8 položek)
-- Osobní charakteristiky výzkumníka (pohlaví, vzdělání, profese, zkušenost s kvalitativním výzkumem).
-- Vztah s respondenty (jak navázán, co o výzkumu vědí předem).
+Neshoda se neřeší mechanickým procentem shody, ale revizí definice, zúžením interpretace nebo snížením evidenční třídy. Výsledek kontroly je popsán v metodologické kapitole a auditním logu.
 
-### Doména 2: Study design (15 položek)
-- Metodologická orientace, výběr vzorku, setting sběru dat, popis respondenta, topic guide, opakovaná setkání, nahrávání, délka, saturace.
+## 7. Syntéza a tvorba témat
 
-### Doména 3: Analysis and findings (9 položek)
-- Počet kodérů, použití software, participant checking, počet kódů, tvorba témat, nezpracovaná data, audit trail.
+Výsledková témata musí splnit čtyři podmínky:
 
-COREQ checklist bude vyplněn jako příloha práce a referencován v metodologické kapitole.
+1. jsou podložena více než jedním segmentem nebo přesvědčivým kritickým případem;
+2. obsahují minimálně jeden kontrast mezi podniky;
+3. rozlišují firemní tvrzení od interpretace autora;
+4. uvádějí hranici, negativní případ nebo vysvětlení, co korpus neumožňuje tvrdit.
 
----
+Počty kódů jsou používány pouze jako orientační mapa pozornosti, nikoli jako statistický důkaz významnosti. Dlouhý report přirozeně vytváří více segmentů než stručný report; četnosti proto nejsou bez normalizace srovnatelným měřítkem kvality.
 
-## 7. Kvalita výzkumu — kritéria
+Výsledná syntéza postupuje ve třech úrovních:
 
-Pro audit tohoto kvalitativního designu projekt sleduje následující pracovní kritéria:
+- **vnitropřípadová:** jak je implementace konstruována v jednom podniku;
+- **mezipřípadová:** podobnosti a rozdíly v témže mechanismu;
+- **teoretická:** vztah zjištění k institucionalismu, legitimitě, materialitě a debatě o symbolickém versus substantivním reportingu.
 
-| Kritérium | Aplikace v projektu |
-|---|---|
-| **Důvěryhodnost (credibility)** | Triangulace zdrojů (respondent + veřejný report); reflexivní deník; členská validace (member checking) — klíčová zjištění zaslána respondentům ke komentáři |
-| **Přenositelnost (transferability)** | Silný popis kontextu („thick description“) — každá firma popsána co nejpodrobněji v mezích anonymizace; umožňuje čtenáři posoudit přenositelnost do podobného kontextu |
-| **Spolehlivost (dependability)** | Audit trail — výzkumný kontrakt, surová data (anonymizovaná), kódovací schéma, verze tematických map, reflexivní deník |
-| **Potvrditelnost (confirmability)** | Zřetelné oddělení dat a interpretace; přiznání výchozích analytických očekávání; reflexivní deník |
+## 8. Důvěryhodnost a auditovatelnost
 
----
+### 8.1 Dohledatelnost tvrzení
 
-## 8. Harmonogram (orientační)
+Každé klíčové zjištění ve výsledcích je spojeno s položkou v `analysis/evidence-matrix.csv` nebo `audit/claim-evidence-ledger.csv`. Položka obsahuje případ, dokument, lokátor, parafrázi, kódy, evidenční třídu, interpretaci a omezení.
 
-| Fáze | Období | Poznámka |
-|---|---|---|
-| Pilotní rozhovor (1) | 1.–2. týden | Ověření scénáře, délky, techniky doptávání; úprava scénáře |
-| Hlavní sběr (11–15) | 3.–8. týden | Průběžná transkripce a počáteční kódování |
-| Transkripce + kódování | 2.–9. týden (průběžně) | Každý rozhovor přepsán do 1 týdne |
-| Tematická analýza (fáze 2–5) | 9.–11. týden | Kódování, tvorba, revize a definování témat |
-| Psaní | 11.–14. týden | |
-| Odevzdání | 15. týden | |
+### 8.2 Negativní případy
 
----
+Analýza aktivně vyhledává informace, které narušují jednoduchý pozitivní příběh: růst emisí či spotřeby, nesplněný ukazatel, změnu hranice, zrušený cíl, chybějící KPI, nepokrytou oblast nebo výslovné upozornění na nejistotu. Přítomnost negativní informace není automaticky známkou horší implementace; může naopak zvyšovat informační vyváženost reportu.
 
-## 9. Limity
+### 8.3 Reflexivita
 
-- Výsledky nejsou zobecnitelné na populaci českých firem.
-- Výběr vzorku může být zkreslen ochotou firem participovat (firmy s negativní zkušeností s ESG možná odmítnou).
-- Jedna výpověď na firmu (až na výjimky) — nejde o vícepřípadovou etnografii.
-- Autor je zároveň jediným kodérem; reflexivní deník a transparentní popis procesu slouží jako kontrola.
-- Výzkum neprobíhá v rámci oficiálního etického review (demonstrační projekt); etické standardy jsou přesto aplikovány dobrovolně.
+Výchozí očekávání autora jsou zaznamenána před analýzou. Autor počítá s tím, že standardizace ESRS zvýší srovnatelnost struktury a že sektorově materiální témata budou častěji spojena s rozhodováním. Tato očekávání mohou vést k přeceňování formálních vazeb nebo k hledání předem známé typologie. Případová mema proto obsahují sekci „co nesedí na pracovní očekávání“.
+
+### 8.4 Reprodukovatelnost
+
+Repozitář uchovává:
+
+- registr dokumentů;
+- uzavřený kódovací rámec a jeho verze;
+- korpus segmentů s lokátory;
+- evidenční matici;
+- případová mema;
+- claim ledger;
+- log významných AI interakcí a lidských kontrol;
+- zmrazenou verzi rukopisu poskytnutou hodnotitelům.
+
+Reprodukovatelnost zde neznamená, že jiný výzkumník musí dojít ke stejným tématům. Znamená, že může dohledat vstupy, porozumět rozhodnutím a věcně napadnout konkrétní interpretační krok.
+
+## 9. Etické a právní aspekty
+
+Výzkum pracuje s veřejnými dokumenty právnických osob a neprovádí nábor ani zpracování neveřejných osobních údajů. Citováni mohou být veřejně uvedení členové vedení pouze tehdy, je-li jejich funkce významná pro interpretaci dokumentu. Přímé citace jsou omezeny a vždy doplněny lokátorem; převládá přesná parafráze.
+
+Analýza se vyhýbá tvrzením o úmyslu. Z dokumentu nelze spolehlivě určit, zda byla určitá formulace vytvořena primárně pro legitimitu, splnění regulace nebo skutečné řízení. Lze pouze identifikovat znaky, které jsou konzistentní se symbolickým či substantivním pojetím, a uvést alternativní vysvětlení.
+
+## 10. Limity metodiky
+
+1. **Sebeprezentační povaha zdrojů:** podnik určuje, co zveřejní, jak stanoví hranice a jak výsledky interpretuje.
+2. **Nerovný rozsah dokumentů:** počet dostupných tvrzení odráží reportovací kapacitu a povinnosti, nikoli nutně kvalitu praxe.
+3. **Sektorová nesouměřitelnost:** emise energetiky, financované emise banky, digitální bezpečnost telekomunikace a životní cyklus automobilu nelze redukovat na jedinou škálu.
+4. **Skupinové hranice:** u nadnárodní skupiny nemusí být vždy možné oddělit rozhodnutí české společnosti od skupinové politiky.
+5. **Časový řez:** rok 2024 nezachycuje implementaci jako dlouhodobý proces a následné regulatorní změny let 2025–2026 jsou pouze kontextem.
+6. **Bez ověření reality provozu:** analýza neposuzuje závody, smlouvy, interní systémy ani zkušenost zaměstnanců a komunit.
+7. **Jediný analytik:** opakované kontrolní kódování zvyšuje konzistenci, ale neodstraňuje interpretační perspektivu autora.
+8. **AI v procesu:** jazykový model může urychlit extrakci a navrhovat interpretace, avšak může také produkovat přesvědčivé, ale nepodložené vazby. Každé použité tvrzení proto musí projít kontrolou originálu a být připsáno zdroji.
+
+## 11. Kritérium dokončení analýzy
+
+Analýza je považována za dokončenou, když:
+
+- všechny čtyři případy mají úplné případové memo;
+- každý dílčí výzkumný dotaz má podporující i omezující důkazy;
+- všechny E3 a E4 položky byly znovu ověřeny v originálu;
+- výsledková témata obsahují mezipřípadový kontrast a negativní případ;
+- klíčová tvrzení rukopisu jsou napojena na evidenční ledger;
+- žádný syntetický materiál není použit jako empirický výsledek.
