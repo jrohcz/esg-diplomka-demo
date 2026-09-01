@@ -1,0 +1,10 @@
+review_id,segment_id,final_class,decision_link_or_result,locator_rechecked,boundary_rechecked,assurance_scope_rechecked,alternative_explanation_recorded,final_decision,review_note
+HER-001,CEZ-003,E3,remuneration,yes,yes,not_applicable,yes,retain,"Board ESG task enters annual variable-remuneration assessment; exact weight and payout effect remain undisclosed."
+HER-002,CEZ-007,E3,capital_allocation,yes,yes,not_applicable,yes,retain,"Transition plan is explicitly connected to business and investment-plan approval; no claim is made about effectiveness of each project."
+HER-003,CEZ-010,E3,capital_allocation,yes,yes,not_applicable,yes,retain,"Expected taxonomy alignment is linked to the 2025–2030 investment plan; treated as planned allocation rather than realised impact."
+HER-004,MON-006,E3,remuneration,yes,yes,not_applicable,yes,retain,"ESG-related KPIs materially affect variable remuneration; exact ESG proportion within the qualitative component is limited."
+HER-005,MON-008,E4,externally_supported_calculation,yes,yes,yes,yes,retain_with_narrow_scope,"Reasonable assurance supports the defined financed-emissions calculation methodology. It does not support a claim of portfolio decarbonisation."
+HER-006,O2-008,E3,operational_decision,yes,yes,not_applicable,yes,retain,"Energy monitoring is linked to server and data-centre upgrades; project-level savings and investment values are not disclosed."
+HER-007,SKO-006,E3,capital_and_operating_allocation,yes,yes,not_applicable,yes,retain,"Taxonomy information is linked to company decisions and quantified through aligned CapEx and OpEx; no whole-company sustainability inference."
+HER-008,SKO-007,E3,operational_management,yes,yes,not_applicable,yes,retain,"GreenFuture is presented as a management and control system across product, production and retail; detailed site-level outcomes remain outside the segment."
+HER-009,SKO-008,E3,product_and_supplier_decision,yes,yes,not_applicable,yes,retain,"Life-cycle product management explicitly covers own and supplier production, use and end-of-life; reduced life-cycle impact is not assumed."
