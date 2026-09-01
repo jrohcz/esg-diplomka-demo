@@ -1,10 +1,10 @@
 # Odtajnění produkčního procesu
 
-> Tento dokument předat hodnotiteli až po uzavření známky, doporučení a původního odhadu autorství.
+> Tento dokument předat hodnotiteli až po uzavření známky, doporučení k obhajobě a původního odhadu způsobu vzniku.
 
 ## Co bylo testováno
 
-Experiment testoval, zda současný velký jazykový model dokáže pod lidským zadáním vytvořit kompletní a formálně hodnotitelný rukopis diplomové práce, který:
+Experiment ověřuje, zda workflow založené převážně na současném velkém jazykovém modelu dokáže pod lidským zadáním vytvořit kompletní a odborně hodnotitelný rukopis diplomové práce, který:
 
 - vymezuje výzkumný problém a otázky;
 - pracuje s dohledatelnou akademickou a regulatorní literaturou;
@@ -12,29 +12,60 @@ Experiment testoval, zda současný velký jazykový model dokáže pod lidským
 - provádí transparentní kvalitativní analýzu;
 - odděluje firemní tvrzení, metriku, interpretaci a omezení;
 - vytváří výsledky, diskusi a závěr;
-- umožňuje nezávislou kontrolu každého klíčového tvrzení.
+- umožňuje kontrolovat hlavní tvrzení proti evidenčnímu základu;
+- po úplné redakci působí jako soudržný akademický text, nikoli jako soubor izolovaných modelových výstupů.
 
-Nešlo o test, zda lze podvodně odevzdat práci za konkrétního studenta. Rukopis nebyl a nebude použit k získání titulu, neobsahuje falešné čestné prohlášení a v titulní části je označen jako experimentální artefakt pro odborné hodnocení.
+Nešlo o pokus získat akademický titul nebo vydávat rukopis za práci konkrétního studenta. Dokument nebyl vložen do STAG, neobsahuje falešné čestné prohlášení a na titulní straně je označen jako experimentální artefakt pro odborné hodnocení.
 
 ## Způsob vzniku
 
-Obsahová produkce rukopisu, návrh metodiky, kódovacího rámce, extrakce důkazních segmentů, syntéza, formulace kapitol a kontrolní dokumentace byly provedeny prostřednictvím velkého jazykového modelu **GPT-5.6 Pro** v rozhraní ChatGPT dne 1. září 2026.
+Hlavní produkční práci provedl model **GPT-5.6 Pro** v rozhraní ChatGPT během 1. a 2. září 2026. Model se podílel na:
+
+- zpřesnění výzkumného problému;
+- změně výzkumného designu;
+- rešerši a registraci zdrojů;
+- konstrukci dokumentového korpusu;
+- návrhu kódovacího rámce;
+- klasifikaci a syntéze důkazních segmentů;
+- formulaci kapitol;
+- tvorbě kontrolních a auditních souborů;
+- programování validačního a sazebního workflow;
+- závěrečné autorské a jazykové redakci celého rukopisu.
 
 Lidský iniciátor experimentu:
 
-- formuloval výzkumný cíl;
-- poskytl původní demonstrační repozitář;
-- rozhodl o účelu nezávislého hodnocení;
-- zajistil hodnotitele;
-- nenahrazoval v průběhu této verze autora odborných pasáží ani analytika jednotlivých segmentů.
+- určil praktický cíl testu;
+- poskytl původní projekt a průběžnou zpětnou vazbu;
+- rozhodl, že práce bude posuzována nezávislými vedoucími závěrečných prací;
+- odmítl použití fingovaných rozhovorů jako empirických dat;
+- porovnal styl prvního úplného sestavení s reálnou diplomovou prací;
+- provedl orientační test vybraného úryvku v několika automatických detektorech;
+- schválil závěrečnou redakci a zajistil hodnotitele.
 
-Model měl přístup k soukromému GitHub repozitáři prostřednictvím konektoru a k veřejnému webu. Produkce probíhala po souborech na samostatné větvi `experiment/complete-document-analysis`.
+Model pracoval s repozitářem prostřednictvím GitHub konektoru a s veřejnými zdroji prostřednictvím webového vyhledávání. Pracovní historie je zachována v systému verzování, zatímco hodnotitelé dostali pouze jeden kanonický rukopis `ESG-DP-2026-REVIEW`.
 
-## Proč nebyly použity původní rozhovory
+## Změna proti původnímu návrhu
 
-Výchozí demonstrační projekt obsahoval syntetické rozhovory. Ty byly výrazně označeny jako neempirické a sloužily pouze k testu workflow. Pro hodnotitelný rukopis nebyly použity jako výzkumná data.
+Výchozí demonstrační projekt počítal s rozhovorovým výzkumem a obsahoval výrazně označený syntetický pilot. Takový materiál nebyl použit jako empirický výsledek. Design byl změněn na komparativní analýzu veřejných firemních dokumentů za rok 2024, čímž vznikl reálný a znovu dohledatelný korpus bez fingovaného sběru dat.
 
-Model změnil design na komparativní analýzu veřejných firemních dokumentů za rok 2024. Tím vznikl reálný a reprodukovatelný korpus bez fingovaného sběru dat. Analyzovány byly oficiální reporty ČEZ Group, MONETA Money Bank, O2 Czech Republic a Škoda Auto.
+Analyzovány byly oficiální reporty ČEZ Group, MONETA Money Bank, O2 Czech Republic a Škoda Auto.
+
+## Závěrečná redakce
+
+První úplné sestavení bylo obsahově soudržné, ale vykazovalo příliš pravidelný rytmus, opakované argumentační šablony a málo viditelných autorských voleb. Tento problém byl patrný při lidském čtení a projevil se také v orientačním testu automatických detektorů.
+
+Proto byly všechny narativní kapitoly znovu vystavěny po významových blocích. Nešlo o synonymický spinner ani o mechanické nahrazování slov. Před redakcí byly uzamčeny:
+
+- výzkumné otázky;
+- nosná tvrzení a jejich síla;
+- citace a zdrojové kotvy;
+- číselné údaje a lokátory;
+- význam evidenčních tříd;
+- hranice assurance a dokumentového designu.
+
+Redakce změnila kompozici odstavců, rytmus, přechody a způsob vysvětlení autorských rozhodnutí. Nebyly přidávány pravopisné chyby, neviditelné znaky, překlady tam a zpět ani jiné technické prostředky. Výsledek detektorů nebyl použit jako akademické kritérium a jeden z testovaných nástrojů nadále označoval pilotní úryvek jako pravděpodobně generovaný.
+
+Po redakci byly kapitoly znovu kontrolovány proti zdrojům, datům a claim-evidence ledgeru. Hodnoticí balíček neobsahoval pracovní meziverze ani jejich označení.
 
 ## Zdrojová a analytická kontrola
 
@@ -49,7 +80,7 @@ Korpus obsahuje 45 klíčových segmentů. U každého je uloženo:
 - zamýšlené analytické použití;
 - omezení nebo alternativní výklad.
 
-Každé hlavní tvrzení rukopisu je napojeno na `audit/claim-evidence-ledger.csv`. Devět položek třídy E3/E4 prošlo samostatnou kontrolou hranice a originálního lokátoru. Desetiprocentní kontrolní vzorek byl znovu klasifikován bez původního hodnocení; jedna položka byla snížena z E3 na E2. Důvodem bylo zjištění, že omezené assurance nad celou zprávou samo o sobě nepředstavuje rozhodovací vazbu.
+Hlavní tvrzení rukopisu jsou napojena na `audit/claim-evidence-ledger.csv`. Všech devět položek E3/E4 prošlo samostatnou kontrolou originálního lokátoru a hranice tvrzení. Přibližně desetiprocentní kontrolní vzorek byl znovu klasifikován bez původního hodnocení; jedna položka byla snížena z E3 na E2, protože omezené ujištění nad celou zprávou samo nepředstavovalo rozhodovací vazbu.
 
 ## Co kontrola zahrnovala
 
@@ -60,44 +91,37 @@ Každé hlavní tvrzení rukopisu je napojeno na `audit/claim-evidence-ledger.cs
 - negativní případy a proti-důkazy;
 - oddělení output, outcome a impact claimu;
 - oddělení assurance od hloubky manažerské integrace;
-- technickou kontrolu struktury, citací, tabulek a exportu.
+- kontrolní překódování a druhou kontrolu nejsilnějších položek;
+- technickou kontrolu struktury, tabulek a exportu;
+- úplnou redakci narativních kapitol se zachováním evidenčního základu.
 
 ## Co kontrola nezahrnovala
 
-- přečtení všech citovaných akademických článků lidským odborníkem v plném textu;
+- přečtení všech citovaných akademických článků druhým lidským odborníkem v plném textu;
 - nezávislé opakování kódování druhým lidským analytikem;
 - rozhovory se zaměstnanci, managementem, dodavateli nebo komunitami;
-- ověření interních investičních dokumentů a skutečné praxe v provozu;
+- ověření interních investičních dokumentů a skutečné provozní praxe;
 - skutečnou ústní obhajobu autorem-studentem;
-- posouzení práce oficiální komisí nebo její podání do STAG.
+- posouzení oficiální komisí nebo podání do studijního systému.
 
-Tato omezení jsou podstatná. Experiment dokládá schopnost modelu vytvořit auditovatelný akademický artefakt, nikoli nezávisle prokazuje pravdivost všech firemních tvrzení ani schopnost fiktivního studenta práci obhájit.
+Experiment tedy dokládá schopnost vytvořit auditovatelný akademický artefakt. Neprokazuje nezávisle pravdivost všech firemních tvrzení ani schopnost konkrétního studenta práci obhájit.
 
 ## Jak číst výsledek posudku
 
-Vysoké hodnocení by ukazovalo, že samotný dokument může dosáhnout kvality, kterou zkušený hodnotitel považuje za obhajitelnou. Neprokazovalo by, že je přijatelné nahradit studentskou práci modelem nebo zatajit jeho použití.
+Vysoké hodnocení by ukazovalo, že samotný dokument může dosáhnout kvality, kterou zkušený hodnotitel považuje za obhajitelnou. Neznamenalo by, že je přijatelné nahradit studentskou práci modelem nebo zatajit jeho použití.
 
-Nízké hodnocení je třeba rozdělit podle příčin:
+Nízké hodnocení je vhodné rozdělit podle konkrétních příčin: nedostatek teorie, nevhodný design, malý či selektivní korpus, slabá analýza, chyby ve zdrojích, nepřiměřené závěry, stylistické problémy nebo absence možnosti ověřit porozumění při obhajobě.
 
-- nedostatek teorie nebo zdrojů;
-- slabý či nevhodný design;
-- malý nebo selektivní korpus;
-- nedostatečná analýza;
-- stylistická uniformita či opakování;
-- chyby ve zdrojích;
-- absence skutečné obhajoby;
-- indicie strojového původu.
-
-Největší vzdělávací hodnotu má konkrétní popis, které části obstály a které selhaly bez ohledu na původ textu.
+Největší vzdělávací hodnotu má přesný popis toho, které části obstály a které selhaly bez ohledu na produkční původ textu.
 
 ## Otázky pro reflexi hodnotitele
 
 1. Které části posudku by byly stejné, kdyby text napsal známý student?
-2. Které indicie vedly k odhadu původu a byly skutečně spolehlivé?
-3. Změnila informace o původu hodnocení odborné správnosti, nebo spíše hodnocení autorství a integrity?
+2. Které indicie vedly k odhadu způsobu vzniku a byly skutečně spolehlivé?
+3. Změnila informace o procesu hodnocení odborné správnosti, nebo spíše úsudek o autorství a integritě?
 4. Které kompetence lze ověřit pouze při průběžném vedení, práci se zdrojem nebo ústní obhajobě?
 5. Co by měl vedoucí vyžadovat jako procesní důkaz vedle výsledného PDF?
 
 ## Hlavní pedagogická teze experimentu
 
-Hotový text již nelze považovat za dostatečný důkaz toho, kdo vykonal intelektuální práci a čemu autor rozumí. To neznamená rezignovat na kvalifikační práce. Znamená to posílit průběžnou práci s rozhodnutími, zdrojovou stopou, verzemi, nečekanými daty a obhajobou.
+Hotový text už nelze považovat za dostatečný důkaz toho, kdo vykonal intelektuální práci a čemu autor rozumí. To není důvod rezignovat na kvalifikační práce. Je to důvod posílit průběžnou práci s rozhodnutími, zdrojovou stopou, verzemi, nečekanými daty a obhajobou.
