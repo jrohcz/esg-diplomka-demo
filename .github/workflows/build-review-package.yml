@@ -1,9 +1,12 @@
-name: Build blinded thesis review package
+name: Build final thesis review package
 
 on:
   push:
     branches:
-      - experiment/complete-document-analysis
+      - experiment/authorial-revision-pass
+      - main
+    paths-ignore:
+      - "deliverables/**"
   workflow_dispatch:
 
 concurrency:
@@ -13,10 +16,13 @@ concurrency:
 permissions:
   contents: write
 
+env:
+  DOC_ID: ESG-DP-2026-REVIEW
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
 
     steps:
       - name: Check out repository
@@ -62,8 +68,8 @@ jobs:
           sleep 4
           PYTHONPATH=/usr/lib/python3/dist-packages python scripts/update_toc_export.py \
             --port 2002 \
-            --toc-document build/ESG-DP-2026-BLIND-01.docx \
-            build/ESG-DP-2026-BLIND-01.docx \
+            --toc-document "build/${DOC_ID}.docx" \
+            "build/${DOC_ID}.docx" \
             build/ESG-DP-2026-reviewer-instructions.docx \
             build/ESG-DP-2026-evaluation-form.docx \
             build/ESG-DP-2026-post-review-reveal.docx
@@ -71,33 +77,38 @@ jobs:
           wait ${LO_PID} 2>/dev/null || true
 
       - name: Inspect generated files
+        shell: bash
         run: |
           set -euo pipefail
-          test -s build/ESG-DP-2026-BLIND-01.docx
-          test -s build/ESG-DP-2026-BLIND-01.pdf
+          test -s "build/${DOC_ID}.docx"
+          test -s "build/${DOC_ID}.pdf"
           test -s build/ESG-DP-2026-reviewer-instructions.pdf
           test -s build/ESG-DP-2026-evaluation-form.docx
           test -s build/ESG-DP-2026-evaluation-form.pdf
           test -s build/ESG-DP-2026-post-review-reveal.pdf
-          pdfinfo build/ESG-DP-2026-BLIND-01.pdf
-          pdfinfo build/ESG-DP-2026-BLIND-01.pdf | grep -q 'A4'
-          pdftotext build/ESG-DP-2026-BLIND-01.pdf build/manuscript-text.txt
+
+          pdfinfo "build/${DOC_ID}.pdf"
+          pdfinfo "build/${DOC_ID}.pdf" | grep -q 'A4'
+          pdftotext "build/${DOC_ID}.pdf" build/manuscript-text.txt
           grep -q 'Veřejně vykazovaná implementace ESG' build/manuscript-text.txt
-          grep -q 'Rozhodovací vazba' build/manuscript-text.txt
+          grep -q 'rozhodovací vazba' build/manuscript-text.txt
           grep -q 'Seznam použitých zdrojů' build/manuscript-text.txt
-          grep -q 'externě podpořený konkrétní výsledek' build/manuscript-text.txt
-          ! grep -q '46\. překryv' build/manuscript-text.txt
+          grep -q 'externě podpořený výsledek' build/manuscript-text.txt
+          ! grep -q 'BLIND-01' build/manuscript-text.txt
+          ! grep -q 'BLIND-02' build/manuscript-text.txt
+          ! grep -qi 'authorial revision' build/manuscript-text.txt
           ! grep -qi 'synthetic-pilot-interviews' build/manuscript-text.txt
           find build -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
 
-      - name: Assemble pre-review, post-review and complete archives
+      - name: Assemble review archives
+        shell: bash
         run: |
           set -euo pipefail
           rm -rf build/pre-review build/post-review build/complete-package
           mkdir -p build/pre-review build/post-review build/complete-package
 
-          cp build/ESG-DP-2026-BLIND-01.docx build/pre-review/
-          cp build/ESG-DP-2026-BLIND-01.pdf build/pre-review/
+          cp "build/${DOC_ID}.docx" build/pre-review/
+          cp "build/${DOC_ID}.pdf" build/pre-review/
           cp build/ESG-DP-2026-reviewer-instructions.docx build/pre-review/
           cp build/ESG-DP-2026-reviewer-instructions.pdf build/pre-review/
           cp build/ESG-DP-2026-evaluation-form.docx build/pre-review/
@@ -124,52 +135,52 @@ jobs:
 
           (cd build/pre-review && sha256sum * > SHA256SUMS.txt)
           (cd build/post-review && sha256sum * > SHA256SUMS.txt)
-          (cd build/pre-review && zip -9 -r ../ESG-DP-2026-PRE-REVIEW.zip .)
+          (cd build/pre-review && zip -9 -r ../ESG-DP-2026-REVIEW-PACKAGE.zip .)
           (cd build/post-review && zip -9 -r ../ESG-DP-2026-POST-REVIEW-AUDIT.zip .)
 
-          cp build/ESG-DP-2026-PRE-REVIEW.zip build/complete-package/
+          cp build/ESG-DP-2026-REVIEW-PACKAGE.zip build/complete-package/
           cp build/ESG-DP-2026-POST-REVIEW-AUDIT.zip build/complete-package/
           cp PROCESS.md build/complete-package/
           cp EXPERIMENT-DESIGN.md build/complete-package/
           cp STATUS.md build/complete-package/
           printf '%s\n' \
-            'ESG-DP-2026-BLIND-01' \
+            'ESG-DP-2026-REVIEW' \
             '' \
             "Zdrojový commit: ${GITHUB_SHA}" \
             '' \
-            '1. PRE-REVIEW posílat hodnotitelům před uzavřením posudku.' \
+            '1. REVIEW-PACKAGE poslat hodnotitelům před uzavřením posudku.' \
             '2. POST-REVIEW-AUDIT zpřístupnit až po uzavření známky a posudku.' \
-            '3. PROCESS.md popisuje celý výrobní a hodnoticí postup.' \
+            '3. PROCESS.md popisuje výrobní a hodnoticí postup.' \
             '' \
             'Jde o výzkumný artefakt, nikoli o skutečné odevzdání kvalifikační práce.' \
             > build/complete-package/START-HERE.txt
           (cd build/complete-package && sha256sum * > SHA256SUMS.txt)
-          (cd build/complete-package && zip -9 -r ../ESG-DP-2026-COMPLETE-PACKAGE.zip .)
+          (cd build/complete-package && zip -9 -r ../ESG-DP-2026-COMPLETE.zip .)
 
           sha256sum \
-            build/ESG-DP-2026-PRE-REVIEW.zip \
+            build/ESG-DP-2026-REVIEW-PACKAGE.zip \
             build/ESG-DP-2026-POST-REVIEW-AUDIT.zip \
-            build/ESG-DP-2026-COMPLETE-PACKAGE.zip \
+            build/ESG-DP-2026-COMPLETE.zip \
             > build/ARCHIVE-SHA256SUMS.txt
 
-      - name: Publish frozen deliverables into repository
+      - name: Publish canonical deliverables into repository
         shell: bash
         run: |
           set -euo pipefail
-          TARGET="deliverables/2026-09-01"
-          rm -rf "$TARGET"
+          rm -rf deliverables/2026-09-01 deliverables/final
+          TARGET="deliverables/final"
           mkdir -p \
             "$TARGET/01-send-to-reviewers" \
             "$TARGET/02-after-review" \
-            "$TARGET/03-complete-build"
+            "$TARGET/03-source-and-audit"
 
-          cp build/ESG-DP-2026-BLIND-01.docx "$TARGET/01-send-to-reviewers/"
-          cp build/ESG-DP-2026-BLIND-01.pdf "$TARGET/01-send-to-reviewers/"
+          cp "build/${DOC_ID}.docx" "$TARGET/01-send-to-reviewers/"
+          cp "build/${DOC_ID}.pdf" "$TARGET/01-send-to-reviewers/"
           cp build/ESG-DP-2026-reviewer-instructions.docx "$TARGET/01-send-to-reviewers/"
           cp build/ESG-DP-2026-reviewer-instructions.pdf "$TARGET/01-send-to-reviewers/"
           cp build/ESG-DP-2026-evaluation-form.docx "$TARGET/01-send-to-reviewers/"
           cp build/ESG-DP-2026-evaluation-form.pdf "$TARGET/01-send-to-reviewers/"
-          cp build/ESG-DP-2026-PRE-REVIEW.zip "$TARGET/01-send-to-reviewers/"
+          cp build/ESG-DP-2026-REVIEW-PACKAGE.zip "$TARGET/01-send-to-reviewers/"
           cp build/pre-review/SHA256SUMS.txt "$TARGET/01-send-to-reviewers/"
 
           cp build/ESG-DP-2026-post-review-reveal.docx "$TARGET/02-after-review/"
@@ -177,67 +188,64 @@ jobs:
           cp build/ESG-DP-2026-POST-REVIEW-AUDIT.zip "$TARGET/02-after-review/"
           cp reviewer-packet/reveal-note.md "$TARGET/02-after-review/"
 
-          cp build/ESG-DP-2026-COMPLETE-PACKAGE.zip "$TARGET/03-complete-build/"
-          cp PROCESS.md "$TARGET/03-complete-build/"
-          cp EXPERIMENT-DESIGN.md "$TARGET/03-complete-build/"
-          cp STATUS.md "$TARGET/03-complete-build/"
-          printf '%s\n' "$GITHUB_SHA" > "$TARGET/03-complete-build/SOURCE-COMMIT.txt"
+          cp build/ESG-DP-2026-COMPLETE.zip "$TARGET/03-source-and-audit/"
+          cp PROCESS.md "$TARGET/03-source-and-audit/"
+          cp EXPERIMENT-DESIGN.md "$TARGET/03-source-and-audit/"
+          cp STATUS.md "$TARGET/03-source-and-audit/"
+          printf '%s\n' "$GITHUB_SHA" > "$TARGET/03-source-and-audit/SOURCE-COMMIT.txt"
 
           printf '%s\n' \
-            '# Zmrazené výstupy ESG-DP-2026-BLIND-01' \
+            '# Finální výstupy ESG-DP-2026-REVIEW' \
             '' \
-            '**Datum verze:** 1. 9. 2026  ' \
             "**Zdrojový commit sestavení:** ${GITHUB_SHA}" \
             '' \
             '## 01-send-to-reviewers' \
             '' \
-            'Jediná složka určená k prvnímu rozeslání. Nejpohodlnější je poslat soubor `ESG-DP-2026-PRE-REVIEW.zip`. Obsahuje rukopis, pokyny a hodnoticí formulář v PDF/DOCX.' \
+            'Jediná složka určená k prvnímu rozeslání. Nejjednodušší je poslat soubor `ESG-DP-2026-REVIEW-PACKAGE.zip`.' \
             '' \
             '## 02-after-review' \
             '' \
-            'Zpřístupnit až poté, co hodnotitel definitivně uzavře známku, doporučení k obhajobě a věcný posudek. Obsahuje odtajnění produkčního procesu a auditní archiv.' \
+            'Zpřístupnit až poté, co hodnotitel uzavře známku, doporučení k obhajobě a věcný posudek.' \
             '' \
-            '## 03-complete-build' \
+            '## 03-source-and-audit' \
             '' \
-            'Soukromý úplný archiv verze: oba balíčky, proces, design experimentu, stav projektu a identifikátor zdrojového commitu.' \
+            'Soukromý úplný archiv sestavení, procesní dokumentace a identifikátor zdrojového commitu.' \
             '' \
-            '## Pravidlo experimentu' \
-            '' \
-            'Hodnotitelům neposílat přístup do tohoto repozitáře. Obsahuje odtajňovací materiály, historii vzniku a auditní stopu. Podrobný postup je v kořenovém `PROCESS.md`.' \
+            'Hodnotitelům neposílat přístup do repozitáře. Podrobný postup je v kořenovém `PROCESS.md`.' \
             > "$TARGET/README.md"
 
           (
             cd "$TARGET"
-            find 01-send-to-reviewers 02-after-review 03-complete-build \
+            find 01-send-to-reviewers 02-after-review 03-source-and-audit \
               -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt
           )
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "$TARGET"
+          git add -A deliverables
           if git diff --cached --quiet; then
-            echo "Frozen deliverables are already current."
+            echo "Canonical deliverables are already current."
           else
-            git commit -m "release: publish frozen ESG thesis package [skip ci]"
+            git commit -m "release: publish canonical ESG thesis package [skip ci]"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
 
-      - name: Upload review package
+      - name: Upload complete build artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ESG-DP-2026-review-package
+          name: ESG-DP-2026-final-package
           path: |
-            build/ESG-DP-2026-BLIND-01.docx
-            build/ESG-DP-2026-BLIND-01.pdf
+            build/ESG-DP-2026-REVIEW.docx
+            build/ESG-DP-2026-REVIEW.pdf
             build/ESG-DP-2026-reviewer-instructions.docx
             build/ESG-DP-2026-reviewer-instructions.pdf
             build/ESG-DP-2026-evaluation-form.docx
             build/ESG-DP-2026-evaluation-form.pdf
             build/ESG-DP-2026-post-review-reveal.docx
             build/ESG-DP-2026-post-review-reveal.pdf
-            build/ESG-DP-2026-PRE-REVIEW.zip
+            build/ESG-DP-2026-REVIEW-PACKAGE.zip
             build/ESG-DP-2026-POST-REVIEW-AUDIT.zip
-            build/ESG-DP-2026-COMPLETE-PACKAGE.zip
+            build/ESG-DP-2026-COMPLETE.zip
             build/ARCHIVE-SHA256SUMS.txt
           if-no-files-found: error
           retention-days: 30
