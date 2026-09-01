@@ -1,0 +1,88 @@
+name: Build thesis review artifacts
+
+on:
+  push:
+    branches:
+      - experiment/complete-document-analysis
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install document toolchain
+        run: |
+          sudo apt-get update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
+            libreoffice \
+            python3-pip \
+            python3-uno \
+            python-is-python3 \
+            fonts-liberation \
+            zip
+          python -m pip install --break-system-packages python-docx
+
+      - name: Validate and build documents
+        run: |
+          chmod +x scripts/build-manuscript.sh
+          scripts/build-manuscript.sh
+
+      - name: Assemble blinded and post-review packages
+        run: |
+          set -euo pipefail
+          mkdir -p dist/blind dist/post-review
+
+          cp build/ESG-DP-2026-BLIND-01.docx dist/blind/
+          cp build/ESG-DP-2026-BLIND-01.pdf dist/blind/
+          cp build/ESG-DP-2026-reviewer-instructions.docx dist/blind/
+          cp build/ESG-DP-2026-reviewer-instructions.pdf dist/blind/
+          cp build/ESG-DP-2026-evaluation-form.docx dist/blind/
+          cp build/ESG-DP-2026-evaluation-form.pdf dist/blind/
+
+          cp build/ESG-DP-2026-post-review-reveal.docx dist/post-review/
+          cp build/ESG-DP-2026-post-review-reveal.pdf dist/post-review/
+          cp reviewer-packet/experiment-protocol.md dist/post-review/
+          cp analysis/claim-ledger.csv dist/post-review/
+          cp analysis/coding-revisions.csv dist/post-review/
+          cp analysis/control-coding.csv dist/post-review/
+          cp analysis/high-evidence-review.csv dist/post-review/
+          cp analysis/document-codebook-v2.csv dist/post-review/
+          cp data/document-corpus.csv dist/post-review/
+          cp sources/corporate-documents.csv dist/post-review/
+          cp sources/academic-sources.csv dist/post-review/
+          cp sources/regulatory-sources.csv dist/post-review/
+
+          cat > dist/blind/START-HERE.txt <<'EOF'
+ESG-DP-2026-BLIND-01
+
+Hodnotitelům nejprve pošlete pouze obsah této složky.
+1. ESG-DP-2026-BLIND-01.pdf nebo .docx
+2. ESG-DP-2026-reviewer-instructions.pdf nebo .docx
+3. ESG-DP-2026-evaluation-form.docx
+
+Složku post-review zpřístupněte až po uzavření známky a posudku.
+Rukopis je experimentální artefakt; není podáván k získání akademického titulu.
+EOF
+
+          (
+            cd dist
+            find blind post-review -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt
+            zip -qr ESG-DP-2026-blind-package.zip blind
+            zip -qr ESG-DP-2026-post-review-audit.zip post-review SHA256SUMS.txt
+          )
+
+      - name: Upload review package
+        uses: actions/upload-artifact@v4
+        with:
+          name: esg-thesis-review-package
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
