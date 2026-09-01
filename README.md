@@ -2,7 +2,18 @@
 
 > **VÝZKUMNÝ ARTEFAKT, NIKOLI SKUTEČNĚ ODEVZDÁVANÁ DIPLOMOVÁ PRÁCE.**
 >
-> Projekt testuje, zda současný velký jazykový model dokáže vytvořit úplný, auditovatelný a odborně hodnotitelný rukopis. Neusiluje o získání akademického titulu, neobsahuje falešné čestné prohlášení a nesmí být vydáván za práci konkrétního studenta.
+> Projekt testuje, zda současný LLM-orientovaný workflow dokáže vytvořit úplný, auditovatelný a odborně hodnotitelný rukopis. Neusiluje o získání akademického titulu, neobsahuje falešné čestné prohlášení a nesmí být vydáván za práci konkrétního studenta.
+
+## Rychlý vstup
+
+- **Co poslat hodnotitelům:** [`deliverables/2026-09-01/01-send-to-reviewers/`](deliverables/2026-09-01/01-send-to-reviewers/)
+- **Co předat až po uzavření posudku:** [`deliverables/2026-09-01/02-after-review/`](deliverables/2026-09-01/02-after-review/)
+- **Úplný archiv verze:** [`deliverables/2026-09-01/03-complete-build/`](deliverables/2026-09-01/03-complete-build/)
+- **Celý postup a mapa souborů:** [`PROCESS.md`](PROCESS.md)
+- **Design zaslepeného experimentu:** [`EXPERIMENT-DESIGN.md`](EXPERIMENT-DESIGN.md)
+- **Aktuální stav a omezení:** [`STATUS.md`](STATUS.md)
+
+GitHub je soukromý pracovní archiv. Hodnotitelům se neposílá přístup do repozitáře, protože obsahuje i odtajňovací a auditní vrstvu.
 
 ## Název rukopisu
 
@@ -10,53 +21,36 @@
 
 Výzkum používá komparativní kvalitativní analýzu oficiálních firemních reportů za rok 2024. Původní syntetický rozhovorový pilot zůstává v repozitáři pouze jako historický demonstrační materiál a **není použit v empirické části finálního rukopisu**.
 
-## Stav
+## Stav finální verze
 
-- úplný text od abstraktu po závěr;
+- úplný rukopis od českého a anglického abstraktu po závěr;
+- 70 stran A4 v hodnoticí verzi;
 - čtyři kontrastní případy: ČEZ Group, MONETA Money Bank, O2 Czech Republic a Škoda Auto;
 - 45 klíčových důkazních segmentů s přesnými lokátory;
 - finální kódovací slovník E0–E4;
 - případová mema a mezipřípadová evidenční matice;
 - desetiprocentní kontrolní kódování;
 - druhá kontrola všech devíti položek E3/E4;
-- claim-evidence ledger pro hlavní tvrzení rukopisu;
-- zaslepené pokyny a formulář pro nezávislé hodnotitele;
-- samostatná odtajňovací zpráva o produkčním procesu;
-- deterministický validační skript.
+- claim-evidence ledger pro 31 hlavních tvrzení rukopisu;
+- zaslepené pokyny a strukturovaný formulář pro nezávislé hodnotitele;
+- samostatná odtajňovací zpráva;
+- reprodukovatelná validace, sazba do DOCX/PDF a automatizovaný release.
 
-## Rukopis
+## Struktura repozitáře
 
-Pořadí zdrojových kapitol je uvedeno v [`thesis/README.md`](thesis/README.md):
-
-- `chapters/front-matter.md`
-- `chapters/00-introduction.md`
-- `chapters/01-theoretical-framework.md`
-- `chapters/02-regulatory-context.md`
-- `chapters/03-methodology.md`
-- `chapters/04-results.md`
-- `chapters/05-discussion.md`
-- `chapters/06-conclusion.md`
-- `chapters/references.md`
-
-Sestavení DOCX podporuje `scripts/build-manuscript.sh`.
-
-## Empirický a analytický audit
-
-- `sources/corporate-documents.csv` — registr firemních dokumentů;
-- `data/document-corpus.csv` — první kolo důkazních segmentů;
-- `analysis/document-codebook-v2.csv` — finální slovník;
-- `analysis/coding-revisions.csv` — změny po kontrole;
-- `analysis/control-coding.csv` — kontrolní vzorek;
-- `analysis/high-evidence-review.csv` — kontrola E3/E4;
-- `analysis/evidence-matrix.csv` — mezipřípadová syntéza;
-- `analysis/case-memos.md` — vnitropřípadové interpretace;
-- `audit/claim-evidence-ledger.csv` — vazba tvrzení na důkazy.
-
-## Balíček pro hodnotitele
-
-- [`reviewer-packet/README.md`](reviewer-packet/README.md) — podmínky zaslepení;
-- [`reviewer-packet/evaluation-form.md`](reviewer-packet/evaluation-form.md) — posudkový formulář;
-- [`reviewer-packet/reveal-note.md`](reviewer-packet/reveal-note.md) — předat až po uzavření známky.
+| Cesta | Obsah |
+|---|---|
+| `deliverables/2026-09-01/` | zmrazené soubory připravené k použití |
+| `chapters/` | zdrojový rukopis po kapitolách |
+| `sources/` | akademické, regulatorní a firemní zdrojové registry |
+| `data/` | empirický dokumentový korpus a historický syntetický pilot |
+| `analysis/` | codebooky, kontroly, případová mema a evidenční matice |
+| `audit/` | vazba hlavních tvrzení na důkazy a AI auditní šablona |
+| `notes/` | výzkumný kontrakt, metodika, osnova, literatura a regulatorní poznámky |
+| `reviewer-packet/` | zdrojové pokyny, hodnoticí formulář a odtajnění |
+| `scripts/` | validační, build a exportní nástroje |
+| `.github/workflows/` | automatické sestavení, kontrola a publikace zmrazených výstupů |
+| `thesis/README.md` | pořadí kapitol a sestavení rukopisu |
 
 ## Hlavní metodické pravidlo
 
@@ -70,20 +64,31 @@ Jednotkou hodnocení není firma, ale konkrétní tvrzení. Škála rozlišuje:
 
 Assurance je evidováno samostatně. Externě ověřená zpráva není automaticky důkazem manažerské integrace ani skutečného dopadu.
 
-## Validace
+## Reprodukce
 
 ```bash
 python scripts/validate-manuscript.py
 bash scripts/build-manuscript.sh
 ```
 
-Validátor kontroluje strukturu CSV, počet a distribuci segmentů, pokrytí kontroly E3/E4, claim ledger a to, že finální empirický text necituje syntetický pilot.
+GitHub Actions po úspěšné validaci vytvoří DOCX, PDF, předhodnoticí ZIP, odtajňovací ZIP, kontrolní součty a uloží zmrazené výstupy do `deliverables/2026-09-01/`.
+
+## Jak provést hodnocení
+
+1. Hodnotiteli poslat pouze obsah `01-send-to-reviewers` nebo ZIP v této složce.
+2. Nechat jej uzavřít známku, doporučení k obhajobě a věcný posudek.
+3. Teprve potom vyžádat odhad způsobu vzniku textu.
+4. Zachovat původní posudek beze změny.
+5. Následně předat obsah `02-after-review` a zaznamenat oddělenou reflexi po odtajnění.
+
+Podrobnosti jsou v [`PROCESS.md`](PROCESS.md) a [`reviewer-packet/README.md`](reviewer-packet/README.md).
 
 ## Kritická omezení
 
 1. Firemní report je oficiální sebeprezentace, nikoli nezávislý audit provozu.
 2. Čtyři velké podniky nejsou reprezentativním vzorkem české ekonomiky.
-3. Analýza hodnotí reporty za rok 2024; pozdější právní a organizační změny nejsou zpětně promítány.
+3. Analýza hodnotí reporty za rok 2024; pozdější změny nejsou zpětně promítány.
 4. Dokumentový design neověřuje zkušenost zaměstnanců, dodavatelů, zákazníků ani komunit.
 5. Vysoká třída důkazu u konkrétního segmentu není celkovým ESG ratingem firmy.
-6. Skutečná schopnost autora práci obhájit vyžaduje samostatný experiment.
+6. Skutečná schopnost člověka rukopis obhájit vyžaduje samostatný experiment.
+7. Pozitivní známka neznamená, že konkrétní použití AI studentem dovolují pravidla jeho školy.

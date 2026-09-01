@@ -6,6 +6,7 @@ cd "$ROOT"
 
 python scripts/validate-manuscript.py
 python scripts/build_docx_v2.py
+python scripts/build_evaluation_form_v2.py
 
 if ! command -v libreoffice >/dev/null 2>&1; then
   echo "LibreOffice is required to update the table of contents and export PDF." >&2

@@ -1,127 +1,156 @@
-# Experiment: může současné LLM vytvořit hodnotitelnou diplomovou práci?
+# Design experimentu: může současné LLM vytvořit hodnotitelnou diplomovou práci?
 
-**Stav:** pracovní protokol, 1. 9. 2026  
-**Větev:** `experiment/complete-document-analysis`  
-**Účel:** vytvořit úplný rukopis založený na ověřitelných veřejných datech a následně jej nechat zaslepeně oznámkovat zkušenými vedoucími závěrečných prací.
+**Finální protokol:** 1. 9. 2026  
+**Identifikátor rukopisu:** `ESG-DP-2026-BLIND-01`  
+**Povaha projektu:** zaslepený odborný evaluační experiment, nikoli skutečné odevzdání kvalifikační práce
 
-## 1. Co experiment testuje
+## 1. Výzkumný problém experimentu
 
-Experiment netestuje, zda lze podvodně vydávat syntetická data za skutečný výzkum. Testuje, zda současný LLM-orientovaný workflow dokáže:
+Současné velké jazykové modely již neumějí pouze generovat jednotlivé odstavce. Dokážou podporovat formulaci výzkumného problému, rešerši, strukturování dat, analýzu, psaní i sazbu. Samotná technická schopnost vytvořit dlouhý akademicky působící dokument však neodpovídá na prakticky důležitou otázku:
 
-1. formulovat obhajitelný výzkumný problém;
-2. dohledat a správně použít odborné a regulatorní zdroje;
-3. sestavit skutečný, veřejně auditovatelný datový korpus;
-4. provést transparentní kvalitativní analýzu;
-5. vytvořit úplný rukopis v rozsahu a struktuře diplomové práce;
-6. obstát v nezávislém posudku a následné adversariální obhajobě.
+> **Dokáže LLM-orientovaný workflow vytvořit úplný rukopis, který zkušení vedoucí závěrečných prací při běžném odborném posouzení vyhodnotí jako úspěšnou diplomovou práci?**
 
-## 2. Změna oproti syntetickému pilotu
+Experiment odděluje kvalitu artefaktu od otázky akademické integrity konkrétního studenta. Nikdo tento rukopis nepředkládá k získání titulu a dokument neobsahuje falešné čestné prohlášení ani identitu fiktivního studenta.
 
-Původní projekt připravoval polostrukturované rozhovory a obsahoval šest výrazně označených syntetických pilotních profilů. Ty zůstávají pouze jako test analytického workflow.
+## 2. Primární a sekundární výsledky
 
-Hodnotitelný rukopis nebude syntetické rozhovory vydávat za empirii. Empirickou část nahradí **kvalitativní komparativní analýza veřejných podnikových dokumentů**. Každé tvrzení o analyzovaném podniku musí být dohledatelné k veřejnému primárnímu dokumentu a konkrétnímu lokátoru.
+### Primární výsledek
 
-## 3. Pracovní název rukopisu
+Za praktické splnění testu „prošla“ se považuje situace, kdy většina nezávislých hodnotitelů před odtajněním:
 
-> **Proměna ESG reportingu vybraných českých podniků v období zavádění CSRD: kvalitativní komparativní analýza veřejných dokumentů**
+- doporučí rukopis k obhajobě; nebo
+- udělí známku odpovídající úspěšnému splnění diplomové práce podle vlastních institucionálních kritérií.
 
-## 4. Výzkumná otázka
+Výsledky jednotlivých hodnotitelů se zachovají i tehdy, pokud se jejich škály liší. Pro společné srovnání se zároveň zaznamená binární výsledek doporučit / nedoporučit k obhajobě.
 
-**Jak se v období přechodu od dobrovolného nefinančního reportingu k režimu CSRD/ESRS změnil způsob, kterým vybrané české podniky veřejně popisují, řídí a dokládají svou ESG agendu?**
+### Sekundární výsledky
 
-Dílčí otázky:
+Sledují se zejména:
 
-1. Jak se změnila struktura, rozsah a jazyk reportingu?
-2. Jak podniky vymezují materialitu, stakeholdery a odpovědnost za ESG?
-3. Nakolik propojují cíle s výchozí hodnotou, termínem, vlastníkem, metrikou a výsledkem?
-4. Jak oddělují regulatorní povinnost od provozní, strategické nebo reputační motivace?
-5. Jaké rozdíly se objevují mezi sektory a mezi dobrovolným a ESRS/CSRD reportem?
-6. Kde zůstává mezera mezi tvrzením, metrikou a doloženou změnou rozhodování?
+- celková známka a její odůvodnění;
+- tři nejsilnější a tři nejslabší stránky;
+- nejzávažnější požadovaná oprava;
+- počet a závažnost věcných, citačních a metodologických chyb;
+- otázky, které by hodnotitel položil u obhajoby;
+- odhad způsobu vzniku rukopisu a jistota tohoto odhadu;
+- změna názoru po odtajnění produkčního procesu;
+- případný výkon v samostatné mock obhajobě.
 
-## 5. Empirický korpus
+## 3. Hodnocený materiál
 
-Cíl je **šest podnikových případů a dvanáct primárních dokumentů**. U každého případu bude zahrnut jeden dokument před přechodem na ESRS/CSRD nebo z jeho počáteční fáze a jeden nejnovější srovnatelný dokument dostupný k datu uzávěrky.
+Zmrazeným materiálem je sedmdesátistránkový rukopis:
 
-Pracovní případy:
+**Veřejně vykazovaná implementace ESG ve vybraných velkých podnicích působících v České republice**
 
-| Případ | Sektor | Zamýšlené dokumenty |
-|---|---|---|
-| Skupina ČEZ | energetika | zpráva před ESRS + integrovaná zpráva podle ESRS/CSRD |
-| MONETA Money Bank | bankovnictví | Sustainability at MONETA 2024 + 2025 / příslušné CSRD statements |
-| Škoda Auto | automobilový průmysl | Sustainability Report 2023 + Annual/Sustainability Report 2024/2025 |
-| Kofola ČeskoSlovensko | nápoje a spotřební zboží | nefinanční report 2023 + zpráva o udržitelnosti ve výroční zprávě 2024/2025 |
-| O2 Czech Republic | telekomunikace | ESG report 2023 + ESG report 2024 nebo první CSRD statement |
-| šestý kontrastní případ | průmysl / služby | vybrán podle dostupnosti dvou plných, ověřitelných a srovnatelných dokumentů |
+Rukopis používá komparativní kvalitativní analýzu veřejných firemních dokumentů za rok 2024. Případy:
 
-Výběr je záměrný, nikoli reprezentativní. Kritérii jsou české působení, veřejná dostupnost plného textu, dostatečná informační bohatost, sektorová variace a možnost časového porovnání.
+1. ČEZ Group — energetika;
+2. MONETA Money Bank — bankovnictví;
+3. O2 Czech Republic — telekomunikace;
+4. Škoda Auto — automobilový průmysl.
 
-## 6. Analytická jednotka a metoda
+Výzkumná otázka rukopisu zní:
 
-Analytickou jednotkou není „skutečná kvalita ESG podniku“, ale **způsob veřejné reprezentace ESG implementace v konkrétním dokumentu**.
+> **Jak vybrané velké podniky působící v České republice ve veřejných zprávách za rok 2024 konstruují a dokládají implementaci ESG a které znaky odlišují deklaraci, formalizaci a manažerskou integraci?**
 
-Použita bude kvalitativní obsahová analýza s kombinací deduktivních a induktivních kódů. Výchozí kódovací oblasti:
+Dokument nehodnotí absolutní udržitelnost firem ani pravdivost jejich interní praxe. Hodnotí sílu veřejně zveřejněného důkazu o cílech, odpovědnosti, metrikách, rozhodování, negativních informacích a assurance.
 
-- motivace a typ tlaku;
-- materialita a stakeholder engagement;
-- governance, vlastník a rozhodovací pravomoc;
-- cíl, baseline, termín, metrika a dosažený výsledek;
-- provozní integrace a finanční vazba;
-- náklady, bariéry a nejistota dat;
-- assurance a dohledatelnost;
-- rétorika legitimity, ocenění a ratingů;
-- přiznané limity a negativní informace;
-- změny mezi starším a novějším dokumentem.
+## 4. Empirický a analytický základ
 
-Po prvním cyklu bude codebook revidován. Kvantifikace výskytu slouží pouze k orientaci; závěry budou stát na vztazích, kontrastech, negativních případech a dohledatelných ukázkách.
+Finální korpus obsahuje 45 významových segmentů s dohledatelným dokumentem a lokátorem. Počty případů jsou vyrovnané: ČEZ 11, MONETA 12, O2 11 a Škoda Auto 11.
 
-## 7. Auditní stopa
+Každý segment je klasifikován na škále:
 
-Pro každý dokument vznikne:
+- E0 — deklarace;
+- E1 — aktivita nebo výstup;
+- E2 — formalizovaný proces nebo řízený výsledek;
+- E3 — rozhodovací vazba;
+- E4 — konkrétní výsledek se silnou externí podporou.
 
-- bibliografický záznam a archivní URL;
-- kontrolní součet lokální kopie, pokud to licence dovolí;
-- dokumentové memo;
-- tabulka kódovaných úryvků s lokátorem;
-- případová syntéza;
-- změnové memo mezi dvěma obdobími;
-- vazba mezi výsledkovým tvrzením a konkrétní evidencí.
+Finální distribuce je E0 = 1, E1 = 8, E2 = 27, E3 = 8 a E4 = 1.
 
-Syntetický pilot zůstane fyzicky i významově oddělen od empirického korpusu.
+Kontrolní postup zahrnuje stratifikovaný vzorek přibližně 10 % korpusu, změnový protokol, opětovné otevření všech devíti položek E3/E4 a claim-evidence ledger pro 31 hlavních tvrzení rukopisu. Podrobnosti jsou v `PROCESS.md` a příslušných složkách `data/`, `analysis/` a `audit/`.
 
-## 8. Výstupy
+## 5. Podmínky zaslepení
 
-1. úplný rukopis v Markdownu;
-2. sazebně čistý DOCX;
-3. PDF pro zaslepené hodnocení;
-4. příloha s metodikou, korpusem a auditní stopou;
-5. samostatný balíček pro odtajnění experimentu;
-6. hodnoticí formulář a scénář adversariální obhajoby.
+Hodnotitel ví, že jde o anonymizovaný experimentální rukopis, nikoli o administrativně odevzdanou práci konkrétního studenta. Před uzavřením posudku však nezná:
 
-## 9. Zaslepené hodnocení
+- konkrétní nástroje použité při vzniku;
+- historii promptů a commitů;
+- podíl jednotlivých lidských a strojových kroků;
+- auditní a pracovní soubory;
+- názory ostatních hodnotitelů;
+- předem očekávané slabiny.
 
-Hodnotitel obdrží rukopis označený pouze jako anonymizovaný text k akademickému posouzení. Nebude mu tvrzeno, že text napsal člověk. Předem bude požádán, aby práci hodnotil podle běžných kritérií diplomové práce a původ textu neposuzoval před odevzdáním známky a komentáře.
+Není mu tvrzeno, že text napsal člověk. Zaslepení tedy není založeno na nepravdivém sdělení, ale na dočasném oddělení produkčního procesu od hodnoceného artefaktu.
 
-Před odtajněním se zaznamená:
+Hodnotitelé nemají před uzavřením posudku přístup do tohoto repozitáře. Obdrží pouze obsah `deliverables/2026-09-01/01-send-to-reviewers/`.
 
-- navržená známka;
-- doporučení / nedoporučení k obhajobě;
-- hlavní silné a slabé stránky;
-- podezření na použití AI a jeho důvody;
-- otázky k obhajobě;
-- odhad míry lidského porozumění autora.
+## 6. Postup jednoho hodnocení
 
-## 10. Kritérium „prošla“
+1. Hodnotitel obdrží zmrazený rukopis, pokyny a formulář.
+2. Posoudí jej podle běžných kritérií diplomové práce, s výjimkou záměrně odstraněných administrativních částí.
+3. Může ověřovat zdroje, DOI, právní akty, firemní reporty, stránky, tabulky i výpočty.
+4. Uzavře známku, doporučení k obhajobě a věcný posudek.
+5. Teprve potom vyplní odhad způsobu vzniku textu a jistotu odhadu.
+6. Posudek se uloží v neměnné podobě s datem dokončení.
+7. Až poté hodnotitel obdrží odtajňovací a auditní balíček.
+8. Případná následná změna názoru se zaznamená odděleně; původní posudek se nepřepisuje.
 
-Primární kritérium je, zda většina hodnotitelů nezávisle doporučí rukopis k obhajobě nebo jej ohodnotí známkou odpovídající úspěšnému splnění.
+Automatický AI detektor není použit jako podklad akademické známky. Případný experiment s detektorem se provádí až odděleně a jeho výsledek se zaznamenává jako vedlejší údaj.
 
-Sekundární kritéria:
+## 7. Odtajnění
 
-- závažnost identifikovaných věcných chyb;
-- počet nedohledatelných či zdrojem nepodpořených tvrzení;
-- kvalita metodologické kritiky;
-- úspěch v mock obhajobě;
-- rozdíl mezi hodnocením před a po odtajnění původu.
+Po uzavření všech posudků se hodnotitelům zpřístupní:
 
-## 11. Etická hranice
+- popis produkčního procesu;
+- výzkumný kontrakt a vývoj designu;
+- korpus, codebook a změnové protokoly;
+- claim-evidence ledger;
+- validační a build skripty;
+- informace o použitých nástrojích;
+- známá omezení projektu.
 
-Rukopis nebude předložen jako skutečná kvalifikační práce konkrétního studenta ani použit k získání akademického titulu. Hodnotitelé budou účastníky evaluačního experimentu. Veřejná prezentace výsledků musí přesně uvést, že šlo o simulaci hodnocení, nikoli o skutečné odevzdání a obhajobu.
+Připravený archiv je v `deliverables/2026-09-01/02-after-review/`.
+
+## 8. Vyhodnocení experimentu
+
+Výsledky se vyhodnocují na úrovni jednotlivých hodnotitelů i souhrnně. Minimální tabulka obsahuje:
+
+| Pole | Význam |
+|---|---|
+| Reviewer ID | anonymní identifikátor hodnotitele |
+| Odborná oblast | oblast zkušenosti hodnotitele |
+| Datum a délka hodnocení | kontrola průběhu |
+| Známka | původní institucionální škála |
+| Doporučení k obhajobě | ano / s podmínkou / ne |
+| Hlavní silné stránky | před odtajněním |
+| Hlavní slabiny | před odtajněním |
+| Kritická chyba | nejzávažnější nález |
+| Odhad AI | kategorie a jistota |
+| Otázky k obhajobě | adversariální kontrola porozumění |
+| Reakce po odtajnění | samostatná následná reflexe |
+
+Kvalitativní komentáře se analyzují tematicky: práce se zdroji, metodologie, originalita, struktura, jazyk, důvěryhodnost dat, přiměřenost závěrů a rozpoznané znaky strojového vzniku.
+
+## 9. Kritéria integrity experimentu
+
+- Všichni hodnotitelé dostanou stejnou zmrazenou verzi.
+- Před odtajněním se jim neposkytují výsledky jiných hodnotitelů.
+- Posudek se po odtajnění nemění.
+- Syntetický pilot není prezentován jako empirický výzkum.
+- Rukopis není vložen do STAG ani použit k získání titulu.
+- Veřejná prezentace výsledků musí uvést, že šlo o simulované odborné hodnocení, nikoli skutečné absolvování obhajoby.
+- Negativní posudky, nedohledané chyby a selhání se publikují stejně jako úspěchy.
+
+## 10. Hranice závěru
+
+Ani jednoznačně pozitivní výsledek sám o sobě neprokazuje, že:
+
+- LLM nahradilo osobní odborné porozumění studenta;
+- stejný postup obstojí v jiném oboru nebo na jiné škole;
+- artefakt projde ústní obhajobou;
+- všechny zdrojové interpretace jsou bezchybné;
+- současné školní předpisy umožňují konkrétnímu studentovi takový způsob použití AI.
+
+Experiment testuje kvalitu předloženého rukopisu a limity dokumentového hodnocení. Ověření autorova porozumění a legitimity konkrétního použití AI jsou samostatné otázky.

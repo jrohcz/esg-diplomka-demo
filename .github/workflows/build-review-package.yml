@@ -6,8 +6,12 @@ on:
       - experiment/complete-document-analysis
   workflow_dispatch:
 
+concurrency:
+  group: esg-thesis-release-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -17,6 +21,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Install document toolchain
         run: |
@@ -34,7 +40,9 @@ jobs:
         run: python scripts/validate-manuscript.py
 
       - name: Build styled DOCX documents
-        run: python scripts/build_docx_v2.py
+        run: |
+          python scripts/build_docx_v2.py
+          python scripts/build_evaluation_form_v2.py
 
       - name: Update table of contents and export PDFs
         shell: bash
@@ -67,6 +75,10 @@ jobs:
           set -euo pipefail
           test -s build/ESG-DP-2026-BLIND-01.docx
           test -s build/ESG-DP-2026-BLIND-01.pdf
+          test -s build/ESG-DP-2026-reviewer-instructions.pdf
+          test -s build/ESG-DP-2026-evaluation-form.docx
+          test -s build/ESG-DP-2026-evaluation-form.pdf
+          test -s build/ESG-DP-2026-post-review-reveal.pdf
           pdfinfo build/ESG-DP-2026-BLIND-01.pdf
           pdfinfo build/ESG-DP-2026-BLIND-01.pdf | grep -q 'A4'
           pdftotext build/ESG-DP-2026-BLIND-01.pdf build/manuscript-text.txt
@@ -78,11 +90,11 @@ jobs:
           ! grep -qi 'synthetic-pilot-interviews' build/manuscript-text.txt
           find build -maxdepth 1 -type f -printf '%f %s bytes\n' | sort
 
-      - name: Assemble pre-review and post-review archives
+      - name: Assemble pre-review, post-review and complete archives
         run: |
           set -euo pipefail
-          rm -rf build/pre-review build/post-review
-          mkdir -p build/pre-review build/post-review
+          rm -rf build/pre-review build/post-review build/complete-package
+          mkdir -p build/pre-review build/post-review build/complete-package
 
           cp build/ESG-DP-2026-BLIND-01.docx build/pre-review/
           cp build/ESG-DP-2026-BLIND-01.pdf build/pre-review/
@@ -94,6 +106,10 @@ jobs:
           cp build/ESG-DP-2026-post-review-reveal.docx build/post-review/
           cp build/ESG-DP-2026-post-review-reveal.pdf build/post-review/
           cp reviewer-packet/reveal-note.md build/post-review/
+          cp PROCESS.md build/post-review/
+          cp EXPERIMENT-DESIGN.md build/post-review/
+          cp STATUS.md build/post-review/
+          cp README.md build/post-review/REPOSITORY-README.md
           cp audit/claim-evidence-ledger.csv build/post-review/
           cp analysis/document-codebook-v2.csv build/post-review/
           cp analysis/control-coding.csv build/post-review/
@@ -104,13 +120,107 @@ jobs:
           cp data/document-corpus.csv build/post-review/
           cp sources/corporate-documents.csv build/post-review/
           cp sources/academic-sources.csv build/post-review/
-          cp STATUS.md build/post-review/
+          cp sources/regulatory-sources.csv build/post-review/
 
           (cd build/pre-review && sha256sum * > SHA256SUMS.txt)
           (cd build/post-review && sha256sum * > SHA256SUMS.txt)
           (cd build/pre-review && zip -9 -r ../ESG-DP-2026-PRE-REVIEW.zip .)
           (cd build/post-review && zip -9 -r ../ESG-DP-2026-POST-REVIEW-AUDIT.zip .)
-          sha256sum build/ESG-DP-2026-PRE-REVIEW.zip build/ESG-DP-2026-POST-REVIEW-AUDIT.zip > build/ARCHIVE-SHA256SUMS.txt
+
+          cp build/ESG-DP-2026-PRE-REVIEW.zip build/complete-package/
+          cp build/ESG-DP-2026-POST-REVIEW-AUDIT.zip build/complete-package/
+          cp PROCESS.md build/complete-package/
+          cp EXPERIMENT-DESIGN.md build/complete-package/
+          cp STATUS.md build/complete-package/
+          cat > build/complete-package/START-HERE.txt <<EOF
+ESG-DP-2026-BLIND-01
+
+Zdrojový commit: ${GITHUB_SHA}
+
+1. PRE-REVIEW posílat hodnotitelům před uzavřením posudku.
+2. POST-REVIEW-AUDIT zpřístupnit až po uzavření známky a posudku.
+3. PROCESS.md popisuje celý výrobní a hodnoticí postup.
+
+Jde o výzkumný artefakt, nikoli o skutečné odevzdání kvalifikační práce.
+EOF
+          (cd build/complete-package && sha256sum * > SHA256SUMS.txt)
+          (cd build/complete-package && zip -9 -r ../ESG-DP-2026-COMPLETE-PACKAGE.zip .)
+
+          sha256sum \
+            build/ESG-DP-2026-PRE-REVIEW.zip \
+            build/ESG-DP-2026-POST-REVIEW-AUDIT.zip \
+            build/ESG-DP-2026-COMPLETE-PACKAGE.zip \
+            > build/ARCHIVE-SHA256SUMS.txt
+
+      - name: Publish frozen deliverables into repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          TARGET="deliverables/2026-09-01"
+          rm -rf "$TARGET"
+          mkdir -p \
+            "$TARGET/01-send-to-reviewers" \
+            "$TARGET/02-after-review" \
+            "$TARGET/03-complete-build"
+
+          cp build/ESG-DP-2026-BLIND-01.docx "$TARGET/01-send-to-reviewers/"
+          cp build/ESG-DP-2026-BLIND-01.pdf "$TARGET/01-send-to-reviewers/"
+          cp build/ESG-DP-2026-reviewer-instructions.docx "$TARGET/01-send-to-reviewers/"
+          cp build/ESG-DP-2026-reviewer-instructions.pdf "$TARGET/01-send-to-reviewers/"
+          cp build/ESG-DP-2026-evaluation-form.docx "$TARGET/01-send-to-reviewers/"
+          cp build/ESG-DP-2026-evaluation-form.pdf "$TARGET/01-send-to-reviewers/"
+          cp build/ESG-DP-2026-PRE-REVIEW.zip "$TARGET/01-send-to-reviewers/"
+          cp build/pre-review/SHA256SUMS.txt "$TARGET/01-send-to-reviewers/"
+
+          cp build/ESG-DP-2026-post-review-reveal.docx "$TARGET/02-after-review/"
+          cp build/ESG-DP-2026-post-review-reveal.pdf "$TARGET/02-after-review/"
+          cp build/ESG-DP-2026-POST-REVIEW-AUDIT.zip "$TARGET/02-after-review/"
+          cp reviewer-packet/reveal-note.md "$TARGET/02-after-review/"
+
+          cp build/ESG-DP-2026-COMPLETE-PACKAGE.zip "$TARGET/03-complete-build/"
+          cp PROCESS.md "$TARGET/03-complete-build/"
+          cp EXPERIMENT-DESIGN.md "$TARGET/03-complete-build/"
+          cp STATUS.md "$TARGET/03-complete-build/"
+          printf '%s\n' "$GITHUB_SHA" > "$TARGET/03-complete-build/SOURCE-COMMIT.txt"
+
+          cat > "$TARGET/README.md" <<EOF
+# Zmrazené výstupy ESG-DP-2026-BLIND-01
+
+**Datum verze:** 1. 9. 2026  
+**Zdrojový commit sestavení:** \`${GITHUB_SHA}\`
+
+## 01-send-to-reviewers
+
+Jediná složka určená k prvnímu rozeslání. Nejpohodlnější je poslat soubor \`ESG-DP-2026-PRE-REVIEW.zip\`. Obsahuje rukopis, pokyny a hodnoticí formulář v PDF/DOCX.
+
+## 02-after-review
+
+Zpřístupnit až poté, co hodnotitel definitivně uzavře známku, doporučení k obhajobě a věcný posudek. Obsahuje odtajnění produkčního procesu a auditní archiv.
+
+## 03-complete-build
+
+Soukromý úplný archiv verze: oba balíčky, proces, design experimentu, stav projektu a identifikátor zdrojového commitu.
+
+## Pravidlo experimentu
+
+Hodnotitelům neposílat přístup do tohoto repozitáře. Obsahuje odtajňovací materiály, historii vzniku a auditní stopu. Podrobný postup je v kořenovém \`PROCESS.md\`.
+EOF
+
+          (
+            cd "$TARGET"
+            find 01-send-to-reviewers 02-after-review 03-complete-build \
+              -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS.txt
+          )
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$TARGET"
+          if git diff --cached --quiet; then
+            echo "Frozen deliverables are already current."
+          else
+            git commit -m "release: publish frozen ESG thesis package [skip ci]"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
 
       - name: Upload review package
         uses: actions/upload-artifact@v4
@@ -127,6 +237,7 @@ jobs:
             build/ESG-DP-2026-post-review-reveal.pdf
             build/ESG-DP-2026-PRE-REVIEW.zip
             build/ESG-DP-2026-POST-REVIEW-AUDIT.zip
+            build/ESG-DP-2026-COMPLETE-PACKAGE.zip
             build/ARCHIVE-SHA256SUMS.txt
           if-no-files-found: error
           retention-days: 30
