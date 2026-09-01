@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BUILD = ROOT / "build"
 BUILD.mkdir(exist_ok=True)
 OUTPUT = BUILD / "ESG-DP-2026-evaluation-form.docx"
-DOC_ID = "ESG-DP-2026-BLIND-01"
+DOC_ID = "ESG-DP-2026-REVIEW"
 
 CRITERIA = [
     (
