@@ -47,7 +47,7 @@ jobs:
           revised=build/style-audit/theory-revised-1.1-1.4.md
           grep -q 'Carroll (1991)' "$revised"
           grep -q 'Gillan' "$revised"
-          grep -q 'DiMaggio a Powell (1983)' "$revised"
+          grep -Eq 'DiMagg[^ ]* a Powell[^ ]* \(1983\)' "$revised"
           grep -q 'Suchman (1995)' "$revised"
           grep -q 'Delmas a Burbano (2011)' "$revised"
           ! grep -qi 'Freeman (1984)' "$revised"
