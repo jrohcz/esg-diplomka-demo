@@ -2,18 +2,18 @@
 
 ## 3.1 Výzkumný přístup
 
-Práce používá kvalitativní, průřezový a komparativní design založený na analýze veřejných firemních dokumentů. Metodou je dokumentová analýza kombinovaná s řízenou kvalitativní obsahovou analýzou. Dokumentová analýza umožňuje systematicky vyhledávat, hodnotit, segmentovat a interpretovat dokumenty s ohledem na jejich původ, účel a institucionální kontext (Bowen, 2009). Řízená obsahová analýza vychází z předem formulovaných teoretických kategorií, ale ponechává prostor pro doplnění nových kategorií vzniklých z dat (Hsieh & Shannon, 2005).
+Výzkum má kvalitativní, průřezový a komparativní charakter. Vychází z veřejných firemních dokumentů a kombinuje dokumentovou analýzu s řízenou kvalitativní obsahovou analýzou. Dokumentová analýza umožňuje pracovat se zdrojem systematicky: hodnotit jeho původ a účel, hledat relevantní části, rozdělit je na významové segmenty a interpretovat je v institucionálním kontextu (Bowen, 2009). Řízená obsahová analýza naproti tomu poskytuje počáteční kategorie odvozené z teorie, aniž by výzkumníkovi zakazovala doplnit kódy, které se ukážou až při čtení korpusu (Hsieh & Shannon, 2005).
 
-Zvolený design odpovídá výzkumné otázce, která nesměřuje k měření celkové ESG výkonnosti podniků ani k testování kauzálního vztahu mezi ESG a finančními výsledky. Zkoumá, jaké doklady o implementaci podniky zveřejňují, jak jsou tyto doklady propojeny a jaké hranice má jejich interpretace.
+Volba metody odpovídá tomu, na co se práce ptá. Cílem není sestavit souhrnné pořadí firem, změřit jejich celkovou ESG výkonnost ani testovat kauzální vztah mezi udržitelností a finančními výsledky. Předmětem analýzy jsou zveřejněné doklady implementace: jaký proces podnik popisuje, kdo za něj odpovídá, jaké používá cíle a metriky, zda se informace dostává do rozhodování a kde končí možnosti interpretace.
 
-Firemní report je v práci chápán jako dvojí artefakt. Je zdrojem informací o oficiálně deklarovaných cílech, procesech, odpovědnostech a metrikách. Zároveň je výsledkem organizačního výběru a sebeprezentace. Analýza proto důsledně rozlišuje:
+Firemní report přitom nelze chápat ani jako čistě neutrální databázi, ani jako pouhý marketing. Je to oficiální dokument, v němž organizace zveřejňuje určité cíle, role, metody a výsledky. Současně vzniká výběrem: podnik rozhoduje, co zahrne, jak stanoví hranici a jak údaje vysvětlí. Během analýzy proto byly oddělovány čtyři roviny:
 
-- co organizace přímo tvrdí;
-- jaký proces nebo metriku zveřejňuje;
-- co lze z dokumentu analyticky odvodit;
-- co dokument neumožňuje ověřit.
+- přímé tvrzení organizace;
+- zveřejněný proces, pravidlo nebo metrika;
+- interpretace, kterou lze z dokumentu důvodně odvodit;
+- skutečnost, kterou dokument neumožňuje ověřit.
 
-Toto rozlišení brání tomu, aby firemní tvrzení byla prezentována jako nezávisle potvrzený fakt nebo aby naopak byla všechna firemní sdělení automaticky odmítnuta jako marketing.
+Toto rozlišení je podstatné. Bez něj by se firemní sdělení snadno změnilo v nezávisle potvrzený fakt, případně by bylo předem odmítnuto jen proto, že pochází od analyzované organizace. Ani jeden postup by nebyl pro zvolenou výzkumnou otázku užitečný.
 
 ## 3.2 Výzkumné otázky
 
@@ -30,19 +30,21 @@ Dílčí výzkumné otázky jsou následující:
 5. Jak podniky komunikují nesplněné cíle, trade-offy, nejistoty a negativní dopady?
 6. Jak se způsoby dokládání implementace liší mezi energetikou, bankovnictvím, telekomunikacemi a automobilovým průmyslem?
 
+Otázky byly během výzkumu zachovány beze změny. Způsob jejich operacionalizace se však zpřesňoval při pilotním kódování, zejména u hranice mezi formalizovaným procesem a skutečnou rozhodovací vazbou.
+
 ## 3.3 Výběr případů
 
-Použit byl účelový výběr kontrastních případů. Cílem nebyla statistická reprezentativita, ale analytická variace v mechanismech, jimiž mohou environmentální, sociální a governance informace vstupovat do řízení.
+Případy byly vybrány účelově, s důrazem na kontrast. Nešlo o statistickou reprezentativnost, ale o to, aby se v malém souboru objevily rozdílné mechanismy, jimiž mohou environmentální, sociální a governance informace vstupovat do řízení.
 
-Případ musel splnit pět podmínek:
+Pro zařazení musel podnik splnit pět podmínek:
 
 1. mít významnou podnikatelskou činnost a rozhodovací nebo výrobní základnu v České republice;
 2. zveřejnit oficiální report pokrývající rok 2024;
 3. poskytnout dostatečně rozsáhlé informace o strategii, správě, cílech a metrikách;
 4. reprezentovat odlišný sektor a typ materiálních dopadů;
-5. umožnit přesnou identifikaci zdrojového místa.
+5. umožnit přesně identifikovat zdrojové místo jednotlivých tvrzení.
 
-Do korpusu byly zařazeny čtyři případy.
+Konečný soubor tvoří čtyři případy.
 
 **Tabulka 1: Charakteristika analyzovaných případů**
 
@@ -53,58 +55,56 @@ Do korpusu byly zařazeny čtyři případy.
 | O2 Czech Republic | telekomunikace | digitální infrastruktura, energie, kyberbezpečnost, zákazníci a dodavatelé | soukromá skupina a přechod mezi reportovacími rámci |
 | Škoda Auto | automobilový průmysl | produkt, výroba, CapEx, materiály a dodavatelský řetězec | nadnárodní průmyslová skupina a skupinové standardy |
 
-Výběr obsahuje pouze velké organizace s vysokou reportovací kapacitou. Neumožňuje proto zobecnění na malé a střední podniky. Zároveň nejde o srovnání celkové ekologické stopy. Přímé emise energetické skupiny, financované emise banky a životní cyklus automobilu nejsou převoditelné na jednu společnou výkonnostní škálu.
+Tento výběr má zřetelnou hranici. Všechny organizace jsou velké a mají vysokou kapacitu připravovat rozsáhlé reporty. Závěry proto nelze bez dalšího přenášet na malé a střední podniky, u nichž může být provozní praxe podstatně méně formalizovaná i méně veřejná.
+
+Stejně důležité je, že práce nesrovnává absolutní ekologickou nebo sociální stopu. Přímé emise energetické skupiny, financované emise banky a emise z životního cyklu automobilu nevstupují do jedné společné výkonnostní škály. Srovnávány jsou mechanismy zveřejnění a řízení, nikoli velikost vzájemně nesouměřitelných dopadů.
 
 ## 3.4 Dokumentový korpus
 
-Primární korpus tvořily oficiální výroční, udržitelnostní nebo ESG zprávy za období od 1. ledna do 31. prosince 2024. Zařazený dokument musel:
+Primární korpus tvoří oficiální výroční, udržitelnostní nebo ESG zprávy za období od 1. ledna do 31. prosince 2024. Dokument byl zařazen, pokud pocházel z oficiální domény analyzované organizace, pokrýval sledovaný rok, obsahoval relevantní informace o strategii, správě, materialitě, politikách, opatřeních, cílech nebo metrikách a byl dostupný v úplné podobě s dostatečně stabilním lokátorem.
 
-- pocházet z oficiální domény analyzované organizace;
-- pokrývat rok 2024;
-- obsahovat informace o strategii, správě, materialitě, politikách, opatřeních, cílech nebo metrikách;
-- být dostupný v úplné podobě v PDF nebo ve stabilním oficiálním online reportu;
-- umožnit určit stránku, oddíl nebo stabilní webovou sekci.
+Použity byly zejména tyto zdroje:
 
-Korpus zahrnoval:
-
-- *CEZ Group Annual Financial Report 2024*, v němž je začleněna konsolidovaná zpráva o udržitelnosti;
-- *Sustainability at MONETA 2024*, používaný společně s odkazy na povinné zveřejnění ve výroční zprávě;
+- *CEZ Group Annual Financial Report 2024*, jehož součástí je konsolidovaná zpráva o udržitelnosti;
+- *Sustainability at MONETA 2024*, čtený společně s odkazy na povinné zveřejnění ve výroční zprávě;
 - *O2 ESG Report 2024*;
 - oficiální online *Škoda Annual Report 2024* a související úplný sustainability report.
 
-Mediální články, komerční žebříčky, poradenské interpretace a tiskové zprávy nebyly použity jako primární empirická data. Akademické zdroje sloužily pro teorii a metodiku; právní akty pro vysvětlení reportovacího kontextu.
+Mediální články, komerční žebříčky, poradenské komentáře ani tiskové zprávy nebyly použity jako primární empirická data. Odborná literatura sloužila pro teoretické a metodické ukotvení, právní akty pro vysvětlení reportovacího prostředí.
 
-Registr korpusu byl uzavřen před hlavní syntézou. Každý dokument obdržel stabilní identifikátor, záznam o vydavateli, období, verzi, URL, datu přístupu a roli v analýze. Online report Škoda Auto byl použit jako hlavní citační rozhraní, protože umožňuje stabilní odkaz na tematickou sekci; plný PDF report sloužil k doplnění metodického kontextu.
+Registr dokumentů byl uzavřen před hlavní syntézou. Každý zdroj získal stabilní identifikátor, údaj o vydavateli a období, odkaz, datum přístupu a popis role v analýze. U Škoda Auto sloužilo online rozhraní jako hlavní citační rozcestník, protože dovolovalo odkazovat na konkrétní tematické sekce; úplný PDF report byl používán k doplnění metodického a skupinového kontextu.
+
+Rozdílná podoba zdrojů byla přijata jako vlastnost korpusu, ne jako chyba, kterou by bylo možné beze zbytku odstranit. Integrovaná zpráva, samostatný čtenářský report a online výroční zpráva mají odlišnou informační architekturu. Tato odlišnost byla zaznamenána a později zahrnuta mezi limity srovnání.
 
 ## 3.5 Strategie čtení a extrakce
 
-Analýza nebyla založena na prostém vyhledávání klíčových slov. Každý primární dokument byl nejprve přečten na úrovni struktury a následně byly celé relevantní oddíly čteny v kontextu. Klíčová slova, rejstříky ESRS/GRI a obsah sloužily jako navigace, nikoli jako automatické kritérium zařazení.
+Analýza nezačínala vyhledáním několika klíčových slov a automatickým vytažením okolních vět. Nejprve byla přečtena struktura každého dokumentu: jeho rozsah, deklarovaný standard, reportovací hranice, materialitní témata, assurance a způsob navigace. Teprve potom následovalo detailní čtení relevantních oddílů. Rejstříky ESRS a GRI, obsah a textové vyhledávání sloužily jako navigace, nikoli jako samostatné kritérium pro zařazení segmentu.
 
-Postup měl tři průchody:
+Práce probíhala ve třech průchodech:
 
-1. **orientační průchod:** typ dokumentu, hranice reportu, standard, assurance, struktura a hlavní materialitní témata;
-2. **analytický průchod:** segmentace tvrzení o odpovědnosti, procesu, rozhodnutí, cíli, metrice, negativním výsledku nebo omezení;
-3. **kontrolní průchod:** ověření lokátorů, hranic metrik, rozhodovací vazby a všech položek s vyšší evidenční silou.
+1. **Orientační průchod** zachytil typ dokumentu, hranice, použitý standard, rozsah ujištění, strukturu a hlavní materialitní oblasti.
+2. **Analytický průchod** vyhledával významově ucelená tvrzení o odpovědnosti, procesu, rozhodnutí, cíli, metrice, výsledku, negativním vývoji nebo omezení.
+3. **Kontrolní průchod** znovu ověřoval lokátory, hranice metrik, všechny rozhodovací vazby a položky s nejvyšší evidenční silou.
 
-Do hlavního evidenčního korpusu byly zařazovány pouze segmenty, které byly přímo relevantní alespoň k jedné výzkumné otázce a přinášely odlišný analytický mechanismus, významný kontrast nebo hranici interpretace. Opakované obecné formulace, duplikované KPI a dlouhé katalogy aktivit bez nové analytické informace byly vyřazeny.
+Do hlavního korpusu se dostaly jen segmenty přímo relevantní alespoň k jedné výzkumné otázce. Musely přinést nový mechanismus, podstatný kontrast nebo důležitou hranici interpretace. Opakované obecné formulace, duplikované KPI a rozsáhlé seznamy aktivit bez nové analytické informace byly ponechány mimo hlavní evidenční soubor.
 
-Výsledný ledger obsahuje **45 klíčových segmentů**: 11 pro ČEZ, 12 pro MONETA, 11 pro O2 a 11 pro Škoda Auto. Tento počet nepředstavuje všechny výskyty ESG témat v dokumentech. Jde o účelově zúžený soubor důkazních jednotek použitých pro hlavní argumentaci. Deskriptivní informace o dalších tématech byly zachyceny v poznámkách, ale nebyly používány jako samostatný důkaz ve výsledkové kapitole.
+Výsledný korpus obsahuje **45 klíčových segmentů**: 11 pro ČEZ, 12 pro MONETA, 11 pro O2 a 11 pro Škoda Auto. Nejde o všechny výskyty ESG témat ani o úplný katalog zveřejněných aktivit. Je to záměrně zúžený soubor důkazních jednotek, na kterých stojí hlavní argumentace. Další popisné informace byly zachyceny v pracovních poznámkách, ale nevstupovaly do výsledků jako samostatné důkazy.
 
 ## 3.6 Jednotky analýzy a segmentace
 
-V návaznosti na Schreier (2012) byly rozlišeny tři jednotky:
+V návaznosti na Schreier (2012) byly rozlišeny tři úrovně:
 
-- **jednotka analýzy:** jeden podnik a jeho uzavřený soubor dokumentů za rok 2024;
-- **jednotka kódování:** významově ucelený segment obsahující tvrzení o cíli, odpovědnosti, procesu, rozhodnutí, metrice, výsledku, negativním dopadu, změně nebo ověření;
-- **kontextová jednotka:** celý dokumentový oddíl, související tabulka, metodická poznámka a případně assurance report.
+- **jednotkou analýzy** je jeden podnik a uzavřený soubor jeho dokumentů za rok 2024;
+- **jednotkou kódování** je významově ucelený segment s tvrzením o cíli, odpovědnosti, procesu, rozhodnutí, metrice, výsledku, negativním dopadu, změně nebo ověření;
+- **kontextovou jednotku** tvoří celý související oddíl, tabulka, metodická poznámka a případně assurance report.
 
-Kódovací jednotkou mohl být odstavec, několik souvisejících vět nebo položka tabulky. Segment nebyl vytržen z kontextu nadpisu a poznámky. Například meziroční změna emise byla interpretována společně s informací o změně organizační hranice nebo přepočtu historických dat.
+Kódovací jednotka mohla mít podobu jednoho odstavce, několika souvisejících vět nebo tabulkové položky. Nebyla však čtena bez nadpisu a poznámek. To je důležité například u časových řad emisí. Samotná meziroční změna může vypadat jednoznačně, ale její význam se změní, pokud podnik současně rozšířil organizační hranici nebo přepočítal historická data.
 
-Jeden segment mohl nést více tematických kódů. Tvrzení, že představenstvo schválilo přechodový plán prostřednictvím investičního plánu, současně nese znaky governance, kapitálové alokace, strategické vazby a evidenční třídy E3.
+Jeden segment mohl nést více tematických kódů. Tvrzení, že představenstvo schvaluje přechodový plán prostřednictvím investičního plánu, patří současně do governance, strategické vazby i kapitálové alokace a může být klasifikováno jako E3. Vícenásobné kódování bylo přijato tam, kde zachycovalo rozdílné analytické funkce téhož tvrzení, nikoli jen jako mechanické násobení kategorií.
 
 ## 3.7 Kódovací rámec
 
-Počáteční kódovací rámec vznikl z teoretické kapitoly a výzkumných otázek. Pilotní kódování následně zpřesnilo hranice mezi kategoriemi. Kódy byly seskupeny do osmi rodin.
+Počáteční rámec vycházel z teoretické kapitoly a výzkumných otázek. Během pilotu se ukázalo, že některé kategorie jsou příliš široké, zatímco jiné v původním návrhu chyběly. Finální kódy byly uspořádány do osmi rodin.
 
 **Tabulka 2: Rodiny kódů**
 
@@ -119,11 +119,13 @@ Počáteční kódovací rámec vznikl z teoretické kapitoly a výzkumných ot�
 | ověření | omezené ujištění, přiměřené ujištění, absence ujištění | Co bylo nezávisle prověřeno a v jakém rozsahu? |
 | status tvrzení | firemní tvrzení, metrika, omezení, interpretace | Kdo je zdrojem výroku a co z něj plyne? |
 
-Kódovací slovník obsahoval definici, pravidla zahrnutí a vyloučení, příklad a vztah k evidenční síle. Nový kód mohl být přidán, pokud zachycoval jev, který se opakoval nebo zásadně narušoval počáteční rámec. Významnou induktivně posílenou kategorií se stala **negativní informace a revize**. Původní rámec se soustředil hlavně na přítomnost governance a rozhodovacích vazeb; dokumenty však ukázaly, že přiznaný restatement, nesplněný KPI nebo chybějící cíl významně ovlivňují informační hodnotu reportu.
+Každý kód měl definici, pravidlo zahrnutí a vyloučení, příklad a vztah k evidenční síle. Nová kategorie byla doplněna jen tehdy, pokud se jev opakoval nebo zásadně narušoval původní rámec. Takto zesílila zejména rodina **negativní informace a revize**. Počáteční návrh se soustředil hlavně na governance a rozhodovací vazby, ale během čtení se ukázalo, že přiznaný restatement, zhoršený KPI, změna cíle nebo chybějící outcome metrika výrazně ovlivňují informační hodnotu reportu.
+
+Kódovací rámec proto nesloužil jen k označení toho, co organizace má. Stejně důležitou funkcí bylo zachytit místa, kde je systém neúplný, v přechodu nebo kde dokument sám omezuje příliš pozitivní interpretaci.
 
 ## 3.8 Škála evidenční síly E0–E4
 
-Pro srovnání různých typů tvrzení byla použita škála evidenční síly. Jednotkou klasifikace je segment, nikoli podnik.
+Pro porovnání odlišných typů tvrzení byla použita škála evidenční síly. Hodnocenou jednotkou je vždy konkrétní segment, nikoli podnik jako celek.
 
 **Tabulka 3: Škála evidenční síly**
 
@@ -135,53 +137,43 @@ Pro srovnání různých typů tvrzení byla použita škála evidenční síly.
 | E3 | rozhodovací vazba | doložený vstup do kapitálu, rizika, produktu, nákupu, odměny nebo provozního pravidla | dostatečnost rozhodnutí ani konečný dopad |
 | E4 | externě podpořený výsledek | konkrétní výsledek s jasnou hranicí a metodikou v rozsahu silného nezávislého ověření nebo triangulace | širší kauzalitu, pokud nebyla součástí designu ověření |
 
-Třídy nejsou kumulativním hodnocením „dobré firmy“. E3 je považována za silný znak manažerské integrace, i když výsledek zatím nemusí být externě ověřen. E4 se týká spolehlivosti konkrétního výsledku, nikoli automaticky hloubky řízení. Proto jsou evidenční třída a status assurance zaznamenávány odděleně.
+Třídy netvoří pořadí „dobrých“ a „špatných“ firem. E3 zachycuje silný znak manažerské integrace, i když výsledná metrika nemusí být externě ověřena. E4 naproti tomu vypovídá o síle podpory konkrétního výsledku; sama neříká, jak hluboko je téma zapojeno do rozhodování. Status assurance a evidenční třída jsou proto zaznamenány odděleně.
 
-Příklad ilustruje rozdíl: počet účastníků programu digitální gramotnosti je E1, pokud dokládá dosah aktivity. Meziroční změna spotřeby s vysvětlenou hranicí a metodikou je E2. Požadavek, aby energetická účinnost ovlivňovala výběr technologie v datovém centru, je E3. Externě ověřený výpočet přesně vymezené metriky může být E4, ale nepodporuje tvrzení, že program způsobil širší společenský dopad.
+Rozdíl lze ukázat na jednoduchých příkladech. Počet účastníků programu digitální gramotnosti je E1, pokud dokládá rozsah aktivity. Meziroční změna spotřeby s jasnou hranicí a metodikou patří do E2. Informace, že energetická účinnost vstupuje do výběru technologie datového centra, je E3. Externě ověřený výpočet přesně vymezené metriky může být E4, ale ani tehdy nemusí dokládat širší společenský dopad programu.
+
+Při klasifikaci se vždy zapisovalo také omezení. Tím se mělo zabránit tomu, aby stručné označení třídy nahradilo interpretaci konkrétního tvrzení.
 
 ## 3.9 Pilotní kódování
 
-Pilot zahrnoval nejméně dva kontrastní úseky z každého případu: jeden zaměřený na strategii nebo governance a jeden na metriky a výsledky. Pilot sledoval pět problémů:
+Pilot zahrnoval nejméně dva kontrastní úseky z každého případu: jeden zaměřený na strategii nebo governance a druhý na metriky a výsledky. Jeho účelem nebylo předběžně „potvrdit“ očekávaná témata, ale ověřit, zda navržené kategorie skutečně fungují na různých typech dokumentů.
 
-1. překryv kódů bez analytické hodnoty;
-2. odlišení aktivity od výsledku a rozhodovací vazby;
-3. dostatečnost lokátoru;
-4. sektorové zkreslení rámce;
-5. potřebu induktivních kategorií.
+Kontrolovalo se pět problémů:
 
-Na základě pilotu byly provedeny tři změny. Za prvé byl kód „ESG integrace“ rozdělen podle typu rozhodnutí na kapitál, riziko, odměnu, produkt, nákup a provoz. Za druhé byly odděleny aktivita, outcome metrika a širší impact claim. Za třetí byla assurance vyčleněna jako samostatná dimenze, aby existence nezávislého ujištění nevytvářela automatické vysoké hodnocení celého reportu.
+1. zda se kódy nepřekrývají bez analytického přínosu;
+2. zda je možné konzistentně odlišit aktivitu, výsledek a rozhodovací vazbu;
+3. zda lokátor umožňuje segment znovu dohledat v původním kontextu;
+4. zda rámec nezvýhodňuje jeden sektor;
+5. zda korpus vyžaduje nové induktivní kategorie.
 
-Po uzavření slovníku byly pilotní segmenty znovu posouzeny podle finálních definic.
+Pilot vedl ke třem hlavním úpravám. Obecný kód „ESG integrace“ byl rozdělen podle typu rozhodnutí na kapitál, riziko, odměnu, produkt, nákup a provoz. Aktivita, outcome metrika a širší impact claim byly odděleny, protože je původní kategorie nedokázala bezpečně rozlišit. A konečně assurance se stalo samostatnou dimenzí, aby přítomnost externího ujištění automaticky nezvyšovala hodnocení celé zprávy.
+
+Po uzavření finálního slovníku byly pilotní segmenty znovu posouzeny. Tím se zajistilo, že v korpusu nezůstaly položky klasifikované podle starších a širších definic.
 
 ## 3.10 Hlavní kódování a případová mema
 
-Hlavní kódování probíhalo nejprve po případech. Pro každý segment byly zaznamenány:
+Hlavní kódování probíhalo nejprve uvnitř jednotlivých případů. U každého segmentu byl uložen identifikátor firmy a dokumentu, přesný lokátor, neutrální parafráze, tematické kódy, evidenční třída, status zdroje, plánované analytické využití a alternativní výklad nebo omezení.
 
-- identifikátor případu a dokumentu;
-- přesný lokátor;
-- neutrální parafráze;
-- tematické kódy;
-- evidenční třída;
-- status zdroje;
-- analytické využití;
-- alternativní výklad nebo omezení.
+Po dokončení jednoho podniku vzniklo případové memo. Jeho účelem nebylo převyprávět celý report. Soustředilo se na vnitřní logiku zveřejněné implementace: která témata jsou skutečně spojena s podnikatelským modelem, jak je popsána governance, kde se objevuje rozhodovací vazba, které metriky mají nejsilnější oporu a co narušuje pozitivní příběh dokumentu.
 
-Po dokončení jednoho podniku vzniklo případové memo. Memo se nesoustředilo na shrnutí všech aktivit, ale na vnitřní logiku implementace: které téma je propojeno s podnikatelským modelem, jaká governance je zveřejněna, kde se objevuje rozhodovací vazba, jaké metriky mají nejvyšší sílu a co narušuje pozitivní narativ.
+Každé memo obsahovalo i část věnovanou tomu, co nesedělo na pracovní očekávání. Tento krok měl omezit konfirmační zkreslení, k němuž je řízená obsahová analýza náchylná. U MONETA se například nepotvrdilo očekávání výhradně pozitivního tónu: report otevřeně kritizoval reportovací zátěž, uváděl chybějící outcome cíl i zhoršený ukazatel. U O2 se zase ukázalo, že vysoký počet KPI a aktivit není automatickým dokladem hluboké integrace.
 
-Každé memo obsahovalo sekci „co nesedí na pracovní očekávání“. Tato část měla omezit konfirmační zkreslení řízené obsahové analýzy. Například u MONETA se nepotvrdilo očekávání jednostranně pozitivní komunikace, protože report otevřeně uváděl kritiku reportovací zátěže, chybějící outcome cíl i zhoršený ukazatel. U O2 se nepotvrdil předpoklad, že velké množství KPI automaticky znamená vysokou integraci.
-
-Teprve po uzavření všech případových mem vznikla mezipřípadová témata.
+Teprve po uzavření všech čtyř případových mem začalo mezipřípadové srovnání. Tím se mělo zabránit tomu, aby první výrazný případ předem určil interpretaci ostatních.
 
 ## 3.11 Mezipřípadová syntéza
 
-Kandidátní téma muselo splnit čtyři podmínky:
+Kandidátní téma bylo přijato jen tehdy, pokud splnilo čtyři podmínky. Muselo být podloženo více segmenty nebo jedním analyticky zásadním kritickým případem, obsahovat kontrast alespoň mezi dvěma podniky, jasně oddělovat firemní tvrzení od interpretace autora a uvádět negativní případ, hranici nebo alternativní vysvětlení.
 
-1. být podloženo více segmenty nebo jedním analyticky zásadním kritickým případem;
-2. obsahovat kontrast mezi nejméně dvěma podniky;
-3. oddělit firemní tvrzení od interpretace autora;
-4. uvést hranici, negativní případ nebo alternativní vysvětlení.
-
-Počty kódů nebyly používány jako statistický důkaz významnosti. Jednotlivé reporty mají výrazně rozdílný rozsah a strukturu. Dokument o stovkách stran by přirozeně vytvořil více segmentů než stručnější zpráva, aniž by to znamenalo kvalitnější řízení.
+Počty kódů nebyly používány jako statistický důkaz významnosti. Rozsah dokumentů se výrazně lišil a dlouhý integrovaný report by přirozeně vytvořil více výskytů než stručnější zpráva. Samotná četnost by proto snadno zaměnila publikační formát za kvalitu řízení.
 
 Syntéza vedla k pěti tématům:
 
@@ -191,78 +183,74 @@ Syntéza vedla k pěti tématům:
 4. metriky upřednostňují aktivity a provozní výsledky před ověřeným širším dopadem;
 5. přiznané napětí, revize a negativní informace zvyšují informační hodnotu reportu.
 
+Témata byla dále porovnána s dílčími výzkumnými otázkami. Pokud některá otázka neměla vedle podpůrného materiálu také omezující nebo kontrastní důkaz, byla syntéza znovu otevřena.
+
 ## 3.12 Kontrola konzistence
 
-Analýzu provedl jeden autor. Práce proto netvrdí interkodérskou reliabilitu a nevytváří umělý dojem objektivity prostřednictvím koeficientu shody. Konzistence byla posilována jinými postupy.
+Analýzu provedl jeden autor. Práce proto netvrdí interkodérskou reliabilitu ani nevytváří koeficient shody, který by předstíral nezávislé kódování. Konzistence byla posilována jinými postupy.
 
-Po uzavření prvního kola byl stratifikovaný desetiprocentní vzorek segmentů znovu klasifikován bez využití původně přiřazené evidenční třídy. Při neshodě se posuzovalo, zda je problém ve výkladu segmentu, nebo v definici kategorie. Výsledek kontroly a změny jsou zachyceny v samostatném protokolu.
+Po uzavření prvního kola byl zvolen stratifikovaný vzorek přibližně deseti procent segmentů. Položky byly znovu klasifikovány bez nahlížení na původně přiřazenou evidenční třídu. Při neshodě se zkoumalo, zda problém vznikl interpretací konkrétního segmentu, nebo nejasnou definicí kategorie. Výsledek kontroly i provedené změny byly zaznamenány v samostatném protokolu.
 
-Všechny segmenty označené E3 nebo E4 byly znovu otevřeny v originálním dokumentu. Kontrola ověřovala zejména:
+Všechny segmenty E3 a E4 byly následně znovu otevřeny v původních dokumentech. Kontrola se zaměřila na pět bodů:
 
-- zda je rozhodovací vazba explicitní a nikoli pouze předpokládaná;
-- zda se tvrzení vztahuje ke správné organizační hranici;
-- zda assurance skutečně pokrývá danou metriku;
-- zda parafráze nepřekračuje rozsah firemního tvrzení;
-- zda omezení zachycuje alternativní výklad.
+- je rozhodovací vazba skutečně uvedena, nebo pouze předpokládána;
+- vztahuje se tvrzení ke správné organizační hranici;
+- pokrývá assurance právě danou metriku;
+- nepřekračuje parafráze rozsah firemního výroku;
+- zachycuje uvedené omezení realistický alternativní výklad.
 
-Jedna původně vyšší klasifikace obecného assurance tvrzení byla snížena, protože existence omezeného ujištění nad zprávou sama o sobě nedokládá rozhodovací vazbu ani externě ověřený dopad. Tato korekce vedla k důslednějšímu oddělení třídy důkazu a statusu ověření.
+Jedna původně vyšší klasifikace obecného assurance tvrzení byla po této kontrole snížena. Samotná existence omezeného ujištění nad zprávou nedokládala rozhodovací vazbu ani externě potvrzený dopad. Korekce pomohla důsledněji oddělit sílu konkrétního důkazu od obecného statusu ověření dokumentu.
 
 ## 3.13 Důvěryhodnost a auditní stopa
 
-Důvěryhodnost kvalitativní analýzy je podporována pěti prvky.
+Důvěryhodnost analýzy byla podporována několika vzájemně propojenými postupy.
 
 ### 3.13.1 Dohledatelnost
 
-Každé klíčové zjištění je spojeno s položkou evidenční matice a přesným lokátorem. Čtenář může otevřít zdroj a zkontrolovat, zda parafráze a interpretace odpovídají kontextu.
+Každé klíčové zjištění je spojeno s položkou evidenční matice a přesným lokátorem. Čtenář tak může otevřít původní zdroj a posoudit, zda parafráze i interpretace odpovídají širšímu kontextu. Dohledatelnost nezaručuje jediný správný výklad, ale umožňuje konkrétní výklad věcně napadnout.
 
 ### 3.13.2 Negativní případy
 
-Analýza aktivně vyhledávala zhoršené ukazatele, změny hranic, restatementy, zrušené cíle, chybějící KPI, nevyřešené negativní dopady a výslovná omezení. Negativní informace nebyla automaticky interpretována jako horší řízení. Mohla zvyšovat vyváženost zveřejnění.
+Během čtení byly cíleně vyhledávány zhoršené ukazatele, restatementy, změny hranic, zrušené cíle, chybějící KPI, nevyřešené negativní dopady a explicitní omezení. Taková informace nebyla automaticky hodnocena jako důkaz horšího řízení. V některých situacích naopak zvyšovala vyváženost a kontrolovatelnost reportu.
 
 ### 3.13.3 Alternativní výklad
 
-Každý významný segment obsahuje omezení. Například vysoký taxonomicky sladěný CapEx může dokládat vazbu na investiční plán, ale ne celkovou udržitelnost firmy. Růst emisí může znamenat zhoršení, změnu hranice nebo přesnější výpočet. Výbor může být formálně silný, ale z reportu nemusí být patrný jeho skutečný vliv.
+Každý významný segment má zapsanou hranici. Vysoký taxonomicky sladěný CapEx může dokazovat vazbu na investiční plán, nikoli celkovou udržitelnost firmy. Růst emisí může představovat zhoršení provozu, rozšíření hranice nebo přesnější metodu. Výbor může mít formálně silný mandát, ale dokument nemusí ukázat jeho skutečný vliv. Uvedení alternativy mělo zabránit tomu, aby jediná plausibilní interpretace byla vydávána za prokázaný fakt.
 
 ### 3.13.4 Reflexivita
 
-Před analýzou byla zaznamenána očekávání, že ESRS zvýší podobnost struktury, že nejvyšší integrace se objeví u sektorově materiálních témat a že firemní reporty budou mít převážně pozitivní tón. Případová mema zachycují místa, kde se tato očekávání nepotvrdila.
+Před hlavní analýzou byla zaznamenána očekávání, že ESRS zvýší strukturální podobnost reportů, že nejsilnější integrace se objeví u sektorově materiálních témat a že firemní komunikace bude převážně pozitivní. Případová mema pak zachycovala místa, kde se tato očekávání nepotvrdila nebo byla příliš jednoduchá.
 
 ### 3.13.5 Verzování
 
-Registr zdrojů, kódovací rámec, důkazní segmenty, případová mema a výsledková syntéza jsou verzovány. Klíčová tvrzení rukopisu jsou napojena na evidenční ledger. Reprodukovatelnost zde neznamená, že jiný výzkumník musí vytvořit stejná témata. Znamená, že může dohledat vstupy a věcně napadnout konkrétní interpretační krok.
+Registr zdrojů, kódovací rámec, důkazní segmenty, případová mema i mezipřípadová syntéza byly verzovány. Hlavní tvrzení rukopisu jsou propojena s evidenčním ledgerem. Reprodukovatelnost zde neznamená, že jiný analytik musí vytvořit identická témata. Znamená, že může dohledat vstupy, pochopit postup a ukázat, ve kterém konkrétním kroku s interpretací nesouhlasí.
 
 ## 3.14 Etické aspekty
 
-Výzkum používá veřejně dostupné dokumenty právnických osob. Neprovádí nábor respondentů, nezpracovává neveřejné osobní údaje a nezasahuje do činnosti podniků. Jména členů vedení nejsou pro výsledkovou argumentaci potřebná; analyzovány jsou funkce a governance mechanismy.
+Výzkum pracuje s veřejně dostupnými dokumenty právnických osob. Nezahrnuje nábor respondentů, neveřejné osobní údaje ani zásah do fungování analyzovaných podniků. Jména členů vedení nebyla pro výsledkovou argumentaci potřebná; pozornost je věnována funkcím, rolím a governance mechanismům.
 
-Přímé citace jsou používány omezeně a převládá přesná parafráze s lokátorem. Analýza se vyhýbá tvrzením o úmyslu. Z textu nelze určit, zda byla určitá formulace vytvořena s cílem manipulovat, splnit regulaci, koordinovat řízení nebo kombinovat více účelů. Práce proto hovoří o znacích symbolické a substantivní implementace, nikoli o prokázaném úmyslu greenwashingu.
+Přímé citace jsou používány střídmě a převládá přesná parafráze s lokátorem. Analýza se vyhýbá tvrzením o úmyslu. Z veřejného textu nelze bezpečně určit, zda určitá formulace vznikla s cílem manipulovat, splnit regulatorní povinnost, koordinovat řízení nebo kombinovat více účelů. Proto práce hovoří o pozorovatelných znacích symbolické a substantivní implementace, nikoli o prokázaném úmyslu greenwashingu.
+
+Stejná opatrnost se vztahuje k negativním výsledkům. Zhoršený ukazatel není používán jako morální soud nad organizací a absence informace není interpretována jako důkaz, že daná praxe neexistuje.
 
 ## 3.15 Limity výzkumného designu
 
-Prvním omezením je sebeprezentační povaha zdrojů. Podnik rozhoduje, jaké informace zveřejní, jak stanoví hranice a jak vysvětlí výsledek. Absence informace neprokazuje absenci praxe.
+Prvním omezením je sebeprezentační povaha zdrojů. Podnik určuje, které informace zveřejní, jak nastaví hranici a jak výsledek vysvětlí. Dokument může praxi zvýraznit i podhodnotit; mlčení samo o sobě nic definitivního nedokazuje.
 
-Druhým omezením je nerovný rozsah dokumentů. Integrovaná zpráva ČEZ má jinou strukturu a detail než samostatný report O2 nebo online rozhraní Škoda Auto. Výzkum proto nesrovnává četnost kódů jako přímou míru kvality.
+Druhým omezením je nerovný rozsah a forma reportů. Integrovaná zpráva ČEZ má jinou informační hustotu než samostatný report O2 nebo online rozhraní Škoda Auto. Proto nejsou četnosti kódů používány jako přímá míra kvality.
 
-Třetím omezením je sektorová nesouměřitelnost. Jednotné kategorie rozhodovací vazby pomáhají srovnávat mechanismy, nikoli absolutní dopady.
+Třetím omezením je sektorová nesouměřitelnost. Společné kategorie rozhodovací vazby umožňují porovnávat mechanismy, nikoli absolutní velikost dopadů.
 
-Čtvrtým omezením jsou skupinové hranice. U ČEZ a Škoda Auto se část politik a dat vztahuje ke skupině, zatímco jiná k právnické osobě nebo vybraným závodům. Každý závěr je proto formulován podle zveřejněné hranice.
+Čtvrtou hranici představují skupinové úrovně. U ČEZ a Škoda Auto se část politik a dat vztahuje ke skupině, jiná k právnické osobě nebo vybraným závodům. Každý závěr proto respektuje hranici uvedenou v konkrétním zdroji.
 
-Pátým omezením je časový řez. Rok 2024 zachycuje počáteční fázi nového evropského reportovacího režimu. Neumožňuje určit, které systémy přetrvají po pozdějších legislativních změnách ani zda budou cíle dosaženy.
+Pátým omezením je časový řez. Rok 2024 zachycuje ranou fázi evropského reportovacího režimu. Z těchto dokumentů nelze určit, které procesy přetrvají po pozdějších legislativních změnách ani zda budou dlouhodobé cíle splněny.
 
-Šestým omezením je absence provozní triangulace. Výzkum neověřuje interní zápisy, smlouvy, investiční modely, zkušenost zaměstnanců, dodavatelů nebo komunit. E3 proto znamená zveřejněnou rozhodovací vazbu, nikoli nezávislé potvrzení každého rozhodnutí.
+Šestým omezením je absence provozní triangulace. Výzkum nemá přístup k interním zápisům, smlouvám, investičním modelům ani zkušenosti zaměstnanců, dodavatelů nebo komunit. E3 proto znamená zveřejněnou rozhodovací vazbu, nikoli nezávislé potvrzení každého rozhodnutí.
 
-Sedmým omezením je jediný analytik. Kontrolní kódování, přesné lokátory a negativní případy zvyšují transparentnost, ale neodstraňují interpretační perspektivu autora.
+Sedmým omezením je jediný analytik. Kontrolní překódování, přesné lokátory a práce s negativními případy zvyšují transparentnost, ale neodstraňují interpretační perspektivu autora.
 
 ## 3.16 Kritérium analytické dostatečnosti
 
-Analýza byla uzavřena, když byly splněny následující podmínky:
+Analýza byla uzavřena ve chvíli, kdy byly dokončeny případové memo pro všechny čtyři podniky, každá výzkumná otázka měla podpůrné i omezující důkazy, všechny položky E3 a E4 byly znovu zkontrolovány v originálu a každé výsledkové téma obsahovalo mezipřípadový kontrast. Hlavní tvrzení musela být současně napojena na evidenční matici.
 
-- všechny čtyři případy měly dokončené případové memo;
-- každá výzkumná otázka měla podporující i omezující důkazy;
-- všechny položky E3 a E4 byly znovu ověřeny v originálu;
-- každé výsledkové téma obsahovalo mezipřípadový kontrast;
-- klíčová tvrzení byla napojena na evidenční matici;
-- syntetická data nebyla použita v empirické části;
-- další čtení nepřinášelo nový typ implementačního mechanismu relevantní k hlavní otázce, ale převážně další příklady již zachycených kategorií.
-
-Takto definované uzavření není statistickou saturací. Jde o analytickou dostatečnost pro úzce vymezenou otázku a čtyři kontrastní případy.
+Další čtení už nepřinášelo nový typ implementačního mechanismu relevantní k hlavní otázce, ale převážně další příklady již zachycených kategorií. Takto chápané uzavření není statistickou saturací a nemá tuto ambici. Jde o analytickou dostatečnost pro úzce vymezenou dokumentovou otázku a čtyři záměrně kontrastní případy.
