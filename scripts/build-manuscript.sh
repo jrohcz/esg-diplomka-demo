@@ -2,43 +2,40 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-BUILD="$ROOT/build"
-mkdir -p "$BUILD"
+cd "$ROOT"
 
-FILES=(
-  "$ROOT/chapters/front-matter.md"
-  "$ROOT/chapters/00-introduction.md"
-  "$ROOT/chapters/01-theoretical-framework.md"
-  "$ROOT/chapters/02-regulatory-context.md"
-  "$ROOT/chapters/03-methodology.md"
-  "$ROOT/chapters/04-results.md"
-  "$ROOT/chapters/05-discussion.md"
-  "$ROOT/chapters/06-conclusion.md"
-  "$ROOT/chapters/references.md"
-)
+python scripts/validate-manuscript.py
+python scripts/build_docx_v2.py
 
-if ! command -v pandoc >/dev/null 2>&1; then
-  echo "Pandoc is required to build the manuscript." >&2
+if ! command -v libreoffice >/dev/null 2>&1; then
+  echo "LibreOffice is required to update the table of contents and export PDF." >&2
   exit 1
 fi
 
-pandoc "${FILES[@]}" \
-  --from=gfm \
-  --to=docx \
-  --toc \
-  --number-sections \
-  --metadata title="Veřejně vykazovaná implementace ESG ve vybraných velkých podnicích působících v České republice" \
-  --metadata lang=cs-CZ \
-  -o "$BUILD/ESG-DP-2026-BLIND-01.docx"
+PROFILE="/tmp/esg-thesis-lo-$$"
+mkdir -p "$PROFILE"
+libreoffice \
+  -env:UserInstallation=file://$PROFILE \
+  --headless \
+  --accept='socket,host=127.0.0.1,port=2002;urp;StarOffice.ComponentContext' \
+  --norestore \
+  --nofirststartwizard \
+  >/tmp/esg-thesis-libreoffice.log 2>&1 &
+LO_PID=$!
+trap 'kill ${LO_PID} 2>/dev/null || true; rm -rf "$PROFILE"' EXIT
+sleep 4
 
-pandoc "$ROOT/reviewer-packet/evaluation-form.md" \
-  --from=gfm \
-  --to=docx \
-  --metadata title="Formulář nezávislého posudku" \
-  --metadata lang=cs-CZ \
-  -o "$BUILD/ESG-DP-2026-evaluation-form.docx"
+PYTHONPATH="/usr/lib/python3/dist-packages${PYTHONPATH:+:$PYTHONPATH}" \
+python scripts/update_toc_export.py \
+  --port 2002 \
+  --toc-document build/ESG-DP-2026-BLIND-01.docx \
+  build/ESG-DP-2026-BLIND-01.docx \
+  build/ESG-DP-2026-reviewer-instructions.docx \
+  build/ESG-DP-2026-evaluation-form.docx \
+  build/ESG-DP-2026-post-review-reveal.docx
 
-echo "Created:"
-echo "  $BUILD/ESG-DP-2026-BLIND-01.docx"
-echo "  $BUILD/ESG-DP-2026-evaluation-form.docx"
-echo "Convert the reviewed DOCX to PDF with a layout-preserving office suite."
+kill "$LO_PID" 2>/dev/null || true
+wait "$LO_PID" 2>/dev/null || true
+
+printf 'Created review documents in %s/build\n' "$ROOT"
+find build -maxdepth 1 -type f \( -name '*.docx' -o -name '*.pdf' \) -printf '  %f\n' | sort
