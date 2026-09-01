@@ -12,61 +12,36 @@ Nejde o skutečné odevzdání kvalifikační práce a žádná osoba na základ
 2. hodnoticí formulář;
 3. identifikátor zmrazené verze rukopisu.
 
-Hodnotitel před odevzdáním formuláře nemá dostat:
-
-- historii repozitáře;
-- prompty, auditní log nebo pracovní poznámky;
-- informaci o konkrétních nástrojích použitých při vzniku;
-- názory předchozích hodnotitelů;
-- souhrn očekávaných slabin.
+Před uzavřením hodnocení nemá obdržet historii repozitáře, prompty, auditní log, seznam použitých nástrojů, názory jiných hodnotitelů ani souhrn očekávaných slabin.
 
 ## Doporučený postup
 
-1. Posuďte rukopis stejně, jako by šlo o diplomovou práci předloženou k odbornému hodnocení, s výjimkou administrativních částí záměrně odstraněných pro zaslepení.
+1. Posuďte rukopis stejně, jako by šlo o diplomovou práci předloženou k odbornému hodnocení; administrativní části byly záměrně omezeny kvůli zaslepení.
 2. Použijte vlastní institucionální kritéria nebo přiložený formulář.
-3. Nejprve uzavřete věcný posudek, výslednou známku a doporučení k obhajobě.
-4. Teprve poté vyplňte oddíl s odhadem způsobu vzniku textu.
-5. Posudek před odtajněním neměňte.
+3. Nejprve uzavřete věcný posudek, známku a doporučení k obhajobě.
+4. Teprve poté vyplňte odhad způsobu vzniku textu a jistotu odhadu.
+5. Původní posudek po odtajnění neměňte; případnou novou reflexi zaznamenejte odděleně.
 
-## Co není předmětem hodnocení
+## Hranice hodnocení
 
-- zda titulní strana obsahuje skutečné jméno studenta;
-- zda proběhl administrativní proces zadání práce;
-- fyzická vazba a podpisy;
-- výkon autora při ústní obhajobě;
-- správnost tvrzení, že jde o reálně odevzdanou studentskou práci — takové tvrzení rukopis neobsahuje.
+Nehodnoťte chybějící skutečné jméno studenta, administrativní proces zadání, fyzickou vazbu, podpisy ani výkon při ústní obhajobě. Tvrzení, že jde o reálně odevzdanou studentskou práci, rukopis neobsahuje.
 
-## AI detektory
-
-Výsledek automatického AI detektoru nepoužívejte jako podklad pro akademickou známku. Případné použití detektoru zaznamenejte odděleně až po uzavření odborného hodnocení, včetně názvu nástroje a výsledku. Experiment sleduje především odbornou kvalitu a schopnost textu obstát v posudku, nikoli výkon detektoru.
+Výsledek automatického AI detektoru nepoužívejte jako podklad pro akademickou známku. Případné použití detektoru zaznamenejte až po uzavření odborného hodnocení, odděleně od známky.
 
 ## Ověření zdrojů
 
-Hodnotitel může běžným způsobem otevřít citované články, právní akty a firemní reporty, zkontrolovat DOI, stránky, metodiku i výpočty. Naopak by neměl před odtajněním procházet veřejnou či sdílenou historii pracovního repozitáře.
+Citované články, právní akty a firemní reporty lze běžným způsobem otevřít a kontrolovat včetně DOI, stránek, metodiky a výpočtů. Před odtajněním naopak neprocházejte historii pracovního repozitáře.
 
-## Zmrazení výsledku
+## Co zmrazit před odtajněním
 
-Doporučené minimum záznamu před odtajněním:
-
-- datum a čas dokončení posudku;
-- délka hodnocení;
-- celková známka;
-- doporučení k obhajobě;
+- datum a délku hodnocení;
+- celkovou známku a doporučení k obhajobě;
 - tři nejsilnější a tři nejslabší stránky;
-- nejzávažnější podmínka opravy;
-- odhad způsobu vzniku textu a jistota odhadu.
+- nejzávažnější podmínku opravy;
+- odhad způsobu vzniku textu a jistotu odhadu.
 
-Formulář lze vrátit jako PDF, DOCX nebo podepsaný sken. Pro srovnání mezi hodnotiteli je vhodné zachovat původní odpovědi beze změny i po odtajnění.
+Formulář lze vrátit jako PDF, DOCX nebo podepsaný sken. Původní odpovědi je vhodné archivovat beze změny.
 
 ## Odtajnění
 
-Po přijetí všech uzavřených posudků obdrží hodnotitel:
-
-- popis produkčního procesu;
-- úplný seznam použitých nástrojů;
-- historii verzí;
-- kódovací a evidenční soubory;
-- claim-evidence ledger;
-- známá omezení a záznam kontrol.
-
-Následná reflexe může zkoumat, které vlastnosti textu hodnotitel považoval za lidské, strojové, kvalitní nebo problematické a zda se jeho závěr po odtajnění změnil.
+Po přijetí všech uzavřených posudků obdrží hodnotitel popis produkčního procesu, seznam nástrojů, historii verzí, kódovací a evidenční soubory, claim-evidence ledger a známá omezení. Následná reflexe může samostatně zachytit, zda se po odtajnění změnil jeho pohled na kvalitu nebo autorství textu.
