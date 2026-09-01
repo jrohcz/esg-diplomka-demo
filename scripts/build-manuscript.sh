@@ -4,6 +4,8 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
+DOC_ID="ESG-DP-2026-REVIEW"
+
 python scripts/validate-manuscript.py
 python scripts/build_docx_v2.py
 python scripts/build_evaluation_form_v2.py
@@ -29,8 +31,8 @@ sleep 4
 PYTHONPATH="/usr/lib/python3/dist-packages${PYTHONPATH:+:$PYTHONPATH}" \
 python scripts/update_toc_export.py \
   --port 2002 \
-  --toc-document build/ESG-DP-2026-BLIND-01.docx \
-  build/ESG-DP-2026-BLIND-01.docx \
+  --toc-document "build/${DOC_ID}.docx" \
+  "build/${DOC_ID}.docx" \
   build/ESG-DP-2026-reviewer-instructions.docx \
   build/ESG-DP-2026-evaluation-form.docx \
   build/ESG-DP-2026-post-review-reveal.docx
