@@ -1,0 +1,81 @@
+name: Check authorial revision pilot
+
+on:
+  push:
+    branches:
+      - experiment/authorial-revision-pass
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate Python helper
+        run: python -m py_compile scripts/style-audit.py
+
+      - name: Extract comparable theory sections
+        run: |
+          mkdir -p build/style-audit
+          python - <<'PY'
+          from pathlib import Path
+
+          baseline = Path('chapters/01-theoretical-framework.md').read_text(encoding='utf-8')
+          start = baseline.index('## 1.1 Od společenské odpovědnosti k ESG')
+          end = baseline.index('## 1.5 Materialita jako mechanismus prioritizace')
+          Path('build/style-audit/theory-baseline-1.1-1.4.md').write_text(
+              baseline[start:end].strip() + '\n', encoding='utf-8'
+          )
+
+          revised = Path('variants/authorial-pass/pilot/01-theory-opening-after.md').read_text(encoding='utf-8')
+          start = revised.index('## 1.1 Od společenské odpovědnosti k ESG')
+          Path('build/style-audit/theory-revised-1.1-1.4.md').write_text(
+              revised[start:].strip() + '\n', encoding='utf-8'
+          )
+          PY
+
+      - name: Check required source anchors
+        run: |
+          set -euo pipefail
+          revised=build/style-audit/theory-revised-1.1-1.4.md
+          grep -q 'Carroll (1991)' "$revised"
+          grep -q 'Gillan' "$revised"
+          grep -q 'DiMaggio a Powell (1983)' "$revised"
+          grep -q 'Suchman (1995)' "$revised"
+          grep -q 'Delmas a Burbano (2011)' "$revised"
+          ! grep -qi 'Freeman (1984)' "$revised"
+
+      - name: Generate style comparison
+        run: |
+          python scripts/style-audit.py \
+            build/style-audit/theory-baseline-1.1-1.4.md \
+            --label BLIND-01-theory-1.1-1.4 \
+            --compare build/style-audit/theory-revised-1.1-1.4.md \
+            --compare-label BLIND-02-pilot-theory-1.1-1.4 \
+            --output build/style-audit/style-comparison.md
+          cat build/style-audit/style-comparison.md
+
+      - name: Save machine-readable metrics
+        run: |
+          python scripts/style-audit.py \
+            build/style-audit/theory-baseline-1.1-1.4.md \
+            --label BLIND-01-theory-1.1-1.4 \
+            --compare build/style-audit/theory-revised-1.1-1.4.md \
+            --compare-label BLIND-02-pilot-theory-1.1-1.4 \
+            --format json \
+            --output build/style-audit/style-comparison.json
+
+      - name: Upload style audit
+        uses: actions/upload-artifact@v4
+        with:
+          name: ESG-DP-2026-authorial-pilot-style-audit
+          path: build/style-audit/
+          if-no-files-found: error
+          retention-days: 30
